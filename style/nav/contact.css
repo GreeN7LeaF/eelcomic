@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');
+
+.container{
+    background: var(--clr-br-content);
+    color: var(--clr-font);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 
+    12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.entry-content{
+    margin-top: 40px;
+}
+
+.entry-content h2{
+    color: var(--clr-font-sub);
+    font-weight: 800;
+}
+
+.map{
+    position: relative;
+}
+
+.br{
+    height: 400px;
+    border-radius: 10px;
+    background: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+        ),
+        url(/img/banner.jfif);
+    background-size: cover;
+    background-position: center top;
+}
+
+.br-content{
+    position: absolute;
+    color: var(--clr-font);
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#yourmail input,
+#yourname input,
+#yourmessage textarea {
+  width: 80%;
+  padding: 15px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border-radius: 30px;
+  box-sizing: border-box;
+
+  border: 5px solid var(--clr-font);
+  background-color: transparent;
+  color: var(--clr-font);
+  font-size: 20px;
+  transition: 0.4s;
+
+  box-shadow: 
+  12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+#yourmail input,
+#yourname input{
+    height: 70px;
+}
+
+#yourmessage textarea {
+    height: 200px;
+}
+
+#yourmail input:focus,
+#yourname input:focus,
+#yourmessage textarea:focus{
+    width: 100%;
+  }
+/* btn */
+.send{
+    width: 300px;
+    transform: translateY(-20px);
+    box-shadow: 
+    12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+    color: var(--clr-font-content);
+    background-color: var(--clr-font);
+    font-size: 20px;
+    text-transform: uppercase;
+
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+
+    transition: var(--trans-time);
+}
+
+.send:hover{
+    box-shadow: none;
+  background-color: rgba(0, 0, 255, .2);
+  color: var(--clr-font);
+}
+
+.intro{
+    padding: 50px 20px;
+
+}
+
+.br-content{
+    font-family: 'Exo', sans-serif;
+    font-size: 80px;
+}
+
+.comic-name{
+    font-family: 'Exo', sans-serif;
+    color: var(--clr-font-title);
+}

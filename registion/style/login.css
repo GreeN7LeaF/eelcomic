@@ -1,0 +1,44 @@
+#login{
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    background-color: pink;
+    text-align: center;
+}
+
+#login img{
+    height: 60px;
+}
+
+#login .logo{
+    margin-bottom: 30px;
+}
+
+#login input[type ="text"],
+#login input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin-top: 20px auto;
+    text-align: center;
+    border: 2px solid var(--clr-br-content);
+    padding: 14px 10px;
+    width: 250px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: var(--trans-time);
+
+    margin-bottom: 10px;
+}
+
+#login input[type ="text"]:focus,
+#login input[type="password"]:focus{
+    width: 300px;
+    color: var(--clr-font);
+}

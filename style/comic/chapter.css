@@ -1,0 +1,115 @@
+.product--wrapper{
+    padding: 0;
+}
+
+.product-inner{
+    position: relative;
+}
+
+.header-chapters{
+    color: var(--clr-font);
+    padding-bottom: 20px;
+    display: block;
+}
+
+.chapter-name h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+
+    color: var(--clr-font-link);
+}
+
+.chapter-btn{
+    display: flex;
+    padding-top: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.chapter-btn div{
+    border-radius: 20px;
+    margin-left: 50px;
+
+    cursor: pointer;
+}
+
+.next-chapter{
+    margin-right: auto;
+}
+
+#comic-infor{
+    margin-left: auto;
+}
+
+#comic-infor{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.pre-chapter,
+.next-chapter{
+    background-color: red;
+    width: 20%;
+    text-align: center;
+    padding-top: 10px;
+    background-color: var(--clr-sub-nav);
+}
+
+.selectChapter{
+    width: 500px;
+}
+
+.danh-sach-chuong{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--clr-font);
+    cursor: pointer;
+
+    background-color: var(--clr-main-nav);
+}
+
+.pageWrapper{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    
+    background-color: var(--clr-main-nav);
+}
+
+pre{
+    color: var(--clr-font);
+    padding: 0 20px;
+    font-size: 25px;
+    white-space: pre-wrap;
+    border: none;
+    background-color: transparent !important;
+}
+
+.pageWrapper img{
+    width: 100%;
+}
+
+/* checkbox */
+.checkmark{
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+input[type="checkbox"]{
+    background-color: pink;
+    display: inline-block;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+/* side slideshow */

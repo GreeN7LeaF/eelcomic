@@ -1,0 +1,73 @@
+footer{
+    /* height: 100%; */
+    background-color: white;
+}
+
+ul{
+    padding: 0;
+}
+
+.comic-foot{
+    margin-top: 30px;
+}
+
+.foot-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+}
+
+.foot-list li{
+    margin-left: 50px;
+    padding-left: 50px;
+    margin-top: 10px;
+    font-weight: 800;
+    border-left: 1px solid black;
+}
+
+.foot-list li:first-child{
+    border-left: none;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+}
+
+.foot-list li:last-child{
+    margin-right: auto;
+}
+
+footer .title{
+    /* background-color: red; */
+    width: 55%;
+    color: gray;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+footer .facebook{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+
+footer .facebook img{
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+@media all and (min-width: 1200px){
+    .foot-list li{
+        font-size: 25px;
+    }
+    footer .title{
+        font-size: 20px;
+    }
+}

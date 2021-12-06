@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐÓA HỒNG CỦA CON MÈO - chương 1</title>
+    <!-- ulkit -->
+    <link rel="stylesheet" href="/uikit-3.9.1/css/uikit.min.css" />
+  <script src="/uikit-3.9.1/js/uikit.min.js"></script>
+  <script src="/uikit-3.9.1/js/uikit-icons.min.js"></script>
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="scroll-up-bar.min.js"></script>
+
+  <!-- bootstrap cdn -->
+  <link
+  rel=" stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  crossorigin="anonymous"
+/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+  integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<link rel="stylesheet" href="/style/main-content.css">
+<link rel="stylesheet" href="/style/nav.css" />
+<link rel="stylesheet" href="/style/main.css" />
+<link rel="stylesheet" href="/style/comic/comic.css" />
+<link rel="stylesheet" href="/style/styleV2.css">
+<link rel="stylesheet" href="/style/foot.css">
+<link rel="stylesheet" href="/style/comic/chapter.css">
+
+<script src="/comicColection/comic/change.js"></script>
+</head>
+<body>
+    <button onclick="topFunction()" id="btn_top" title="Go to top"
+    >
+      <i class="fas fa-chevron-up"
+      style="color: white;"
+      ></i>
+    </button>
+    <script>
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction(){
+        if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 20){
+          document.getElementById("btn_top").style.display = "block";
+        }else{
+          document.getElementById("btn_top").style.display = "none";
+        }
+      }
+
+      function topFunction(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+      }
+    </script>
+    <div id="side-slideshow"
+    class="uk-visible-toggle uk-light left" 
+    tabindex="-1" 
+    uk-slideshow="ratio: 3:7; animation: push; autoplay: true; autoplay-interval: 5000">
+      <h1>
+        Cập nhật nhanh nhất tại Eel Comic
+      </h1>
+
+      <ul class="uk-slideshow-items">
+        <li>
+          <img src="/img/sideSlideshow/001.jpg" alt="" uk-cover>
+        </li>
+        <li>
+          <img src="/img/sideSlideshow/002.jpg" alt="" uk-cover>
+        </li>
+        <li>
+          <img src="/img/sideSlideshow/003.jpg" alt="" uk-cover>
+        </li>
+        <li>
+          <img src="/img/sideSlideshow/004.jpg" alt="" uk-cover>
+        </li>
+        <li>
+          <img src="/img/sideSlideshow/005.jpg" alt="" uk-cover>
+        </li>
+      </ul>
+    </div>
+    <div id="side-slideshow"
+    class="uk-visible-toggle uk-light right" 
+    tabindex="-1" 
+    uk-slideshow="ratio: 3:7; animation: push; autoplay: true; autoplay-interval: 5000">
+      <h1>
+        Cập nhật nhanh nhất tại Eel Comic
+      </h1>
+
+      <ul class="uk-slideshow-items">
+        <li>
+          <img src="/img/sideSlideshow/001.jpg" alt="" uk-cover>
+        </li>
+        <li>
+          <img src="/img/sideSlideshow/002.jpg" alt="" uk-cover>
+        </li>
+        <li>
+          <img src="/img/sideSlideshow/003.jpg" alt="" uk-cover>
+        </li>
+        <li>
+          <img src="/img/sideSlideshow/004.jpg" alt="" uk-cover>
+        </li>
+        <li>
+          <img src="/img/sideSlideshow/005.jpg" alt="" uk-cover>
+        </li>
+      </ul>
+    </div>
+    <script>
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction(){
+        var tmp = (document.body.scrollHeight - 1500);
+
+        if((document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) && document.documentElement.scrollTop < tmp){
+          document.getElementsByClassName("left")[0].style.display = "block";
+          document.getElementsByClassName("right")[0].style.display = "block";
+        }else{
+          document.getElementsByClassName("left")[0].style.display = "none";
+          document.getElementsByClassName("right")[0].style.display = "none";
+        }
+      }
+    </script>
+    <header>
+      <div id="search-area">
+          <div class="search-area-wrap">
+              <input type="text" placeholder="Nhập tên truyện, tên nhóm dịch, thể loại" id="find">
+              <div class="btn">
+                <i class="fas fa-search"
+                style="font-size: 30px; color: white; margin-top: 15px;"
+                ></i>
+              </div>
+          </div>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav-wrap">
+          <div class="container-tool">
+            <div class="logo">
+              <a href="/index.html"><img src="/img/logo.png" alt="" /></a>
+            </div>
+            <ul class="toolbar-list">
+              <li class="comic"><a href="/comicColection/manhwaList/manhwaList-page1.html">TRUYỆN TRANH</a></li>
+              <li class="novel"><a href="/comicColection/novelList/novel-page1.html">TIỂU THUYẾT</a></li>
+              <li class="post"><a href="#">ĐĂNG TRUYỆN</a></li>
+            </ul>
+          </div>
+          <div class="container-btn">
+            <ul class="btn-list">
+              <li class="book-wrapper">
+                  <a href="/bookshelf.html">
+                    <div class="book icon">
+                    </div>
+                  </a>
+              </li>
+              <button type="button" onclick="showSearch()" class="search-btn icon">
+              </button>
+              <li class="open-side-menu">
+                <a class="open" onclick="openSideMenu()"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="sub-nav">
+        <div class="sub-nav-wrap">
+          <div class="sub-nav-content">
+            <ul class="content-list">
+              <li class="question"><a href="#">HỎI & ĐÁP</a></li>
+              <li class="books"><a href="/bookshelf.html">KỆ SÁCH</a></li>
+              <li class="contact"><a href="/contact.html">LIÊN HỆ</a></li>
+              <li class="about"><a href="/about.html">VỀ CHÚNG TÔI</a></li>
+              <!-- <li class="three-dots">
+                <input type="checkbox" id="dots" />
+                <label for="dots"></label>
+              </li> -->
+            </ul>
+          </div>
+          <div class="registion">
+            <a href="/login/login.html">Đăng nhập</a>
+            <a href="/Sign up/sign-up.html">Đăng ký</a>
+          </div>
+        </div>
+      </nav>
+      <script>
+        var content = document.getElementById('search-area');
+        function showSearch(){
+          console.log(content);
+          if(content.style.display == "none"){
+            content.style.display = "block";
+          }else{
+            content.style.display = "none";
+          }
+        }
+      </script>
+    </header>
+    <div id="side-menu">
+      <div class="btn-close">
+        <a href="#" class="--close" onclick="closeSideMenu()">&times;</a>
+      </div>
+      <div class="regis-side">
+        <a href="/login/login.html">Đăng nhập</a>
+        <a href="/Sign up/sign-up.html">Đăng ký</a>
+      </div>
+      <div class="nav-side">
+        <ul class="menu-list">
+          <li class="comic"><a href="/comicColection/manhwaList/manhwaList-page1.html">TRUYỆN TRANH</a></li>
+          <li class="novel"><a href="/comicColection/novelList/novel-page1.html">TIỂU THUYẾT</a></li>
+          <li class="books"><a href="/bookshelf.html">TỦ SÁCH CỦA TUI</a></li>
+          <li class="post"><a href="#">ĐĂNG TRUYỆN</a></li>
+        </ul>
+      </div>
+      <script>
+        function openSideMenu() {
+          document.getElementById("side-menu").style.width = "400px";
+        }
+        function closeSideMenu() {
+          document.getElementById("side-menu").style.width = "0px";
+        }
+      </script>
+    </div>
+    <div class="hyper-link">
+      <nav class="breadcrumb-wrap" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/home.html">Trang chủ</a></li>
+          <li class="breadcrumb-item"><a href="/comicColection/novelList/novel-page1.html">Tiểu thuyết</a></li>
+          <li class="breadcrumb-item"><a href="/comicColection/comic/novel/Đóa hồng của con mèo/doa_hong_cua_con_meo.html">Đóa hồng của con mèo</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Đóa hồng của con mèo - chap 1</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="product--wrapper">
+        <div class="product-inner header-chapters">
+            <div class="chapter-name">
+                <h2>
+                  ĐÓA HỒNG CỦA CON MÈO - chương 1
+                </h2>
+            </div>
+            <div class="chapter-btn">
+                <button id="comic-infor" onclick="window.location.href='/comicColection/comic/novel/Đóa hồng của con mèo/doa_hong_cua_con_meo.html'">
+                    <i class="fas fa-info"></i>
+                </button>
+                <div class="pre-chapter" onclick="preChapter()">Chương trước</div>
+                <div class="selectChapter">
+                  <select class="danh-sach-chuong" class="form-conntrol" onchange="window.location=this.value" id="">
+                    <option value="/comicColection/comic/novel/Đóa hồng của con mèo/doa_hong_cua_con_meo_chap_1.html">Chương 1</option>
+                  </select>
+                </div>
+                <div class="next-chapter" onclick="nextChapter()">Chương sau</div>
+            </div>
+        </div>
+    </div>
+    <div class="novel-mode">
+      <div class="row1">
+        Mode: <br>
+        <label for="darkMode">
+          Dark
+          <input type="checkbox" name="novelMode" id="darkMode" value="dark">
+          <span class="checkmark"></span>
+        </label>
+        <label for="lightMode">
+          Light
+          <input type="checkbox" name="novelMode" id="lightMode" value="light">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    <script>
+
+    </script>
+    <div class="viewer">
+      <div class="pageWrapper cw-list">
+        <pre>
+            “Lâm, tại anh bận rộn mà không kịp có mặt nhưng anh vẫn phải nói chuyện với mọi người trong bữa
+
+          tiệc kỷ niệm lớn này – tóm tắt về công việc của chúng ta trong một năm qua” nữ trợ lý tóc vàng
+
+          người Pháp nháy mắt: “Đến đây đi, thân mến.”
+
+          Cô bước đến bên cạnh rồi ngồi xuống. Đoạn video cho thấy cảnh từ phòng tiệc khu 1. Trêи chiếc bàn
+
+          tròn kia, một phụ nữ da đen ăn mặc như một học
+
+          giả đang nhìn thẳng vào màn hình chỗ Lâm Tư ngồi.
+
+          “Rất vui được gặp bà, Trần phu nhân.” Giọng nói của Lâm Tư lạnh lùng nhưng không hề vô lễ, chào hỏi
+
+          xong lập tức vào thẳng chủ đề: “Ngày hôm qua, chín mươi sáu người thí nghiệm chính thức vượt qua
+
+          giai đoạn giám sát và bàn giao cho quân đội. Giai đoạn thứ hai của kế hoạch ‘Vô hạn’ được bắt đầu
+
+          cách đây 5 năm trước bây giờ đã được hoàn thành xuất sắc. Trong dữ liệu đánh giá chính thức cách
+
+          đây 4 ngày, tất cả các vật thí nghiệm đã hoàn thành sự chuyển đổi cơ bản về sức mạnh gấp ba lần,
+
+          tốc độc phản ứng thần kinh gấp năm lần, mỗi cá thể có một cách cải tiến khác nhau, trạng thái ổn
+
+          định.”
+
+          Mọi người trong phòng đồng loạt vỗ tay. Các nhà nghiên cứu rất hài lòng về kết quả thành công trong
+
+          5 năm qua, những vị khách được mời cũng than thở đầy ngưỡng mộ.
+
+          “Lâm, nghe nói kế hoạch của cậu còn nhiều hơn thế.” Người phụ nữ ở trung tâm được gọi là “Trần phu
+
+          nhân” mỉm cười.
+
+          (1) Thi thoảng gọi Lâm, thi thoảng gọi Lâm Tư, không phải biên tập thiếu từ.
+
+          “Cấu trúc của cơ thể con người không thể chống đối sự biến đổi sức mạnh gấp ba lần của cơ bắp, với
+
+          lại- tốc độ phản xạ vẫn còn tồn tại trong không gian. Trong quá trình này, chúng tôi thậm chí còn
+
+          thấy cơ hội để tăng cường chức năng não” Anh nói chuyện bình tĩnh, điềm đạm. Gần đây, máy móc càng
+
+          làm tăng thêm lòng tin của con người – giống như họ luôn tin vào những phép tính của máy móc thay
+
+          vì những dự đoán trực giác.
+
+          “Quân đội bảo thủ quá mức với kế hoạch sống sót của nhân loại, gây khó khăn cho việc thực hiện thí
+
+          nghiệm. Đáng tiếc là, cách đây không lâu nguyên soái Sjoss chính thức từ chối giai đoạn 3 của kế
+
+          hoạch, nhưng tôi nghĩ mìnhcó đầy đủ lý do để tiến hành giai đoạn tiếp theo của kế hoạch, còn về lý
+
+          tại sao nó được tiến hành là: Nó có thể mang lại cho chúng ta— ” “Diz— ” Âm thanh dòng điện đột
+
+          nhiên vang lên.
+
+          Hình ảnh chiếu trước mặt mọi người mấy lần nhiễu, cuối cùng thì vỡ tan, âm thanh đột nhiên dừng
+
+          lại, trêи mặt đất rung chuyển dữ dội.
+
+          Lâm Tư nắm vào mép bàn điều khiển để ổn định cơ thể. Một giọng nữ hệ thống báo động vang lên trong
+
+          đại sảnh của khu vực thứ sáu: “Khu thứ sáu đang tách tàu chính, khu thứ sáu đang tách khỏi tàu
+
+          chính…”
+
+          Anh nhanh chóng gọi hệ điều hành độc lập của khu sáu: “Lucia, kết nối với phần tàu chính.”
+
+          “Lỗi, lệnh không thực hiện được.”
+
+          Anh nhanh chóng vừa điều chỉnh các thông số vừa nói: “Nói tỉ mỉ lại, lỗi ở đâu.”
+
+          “Lệnh bị xung đột, cấp độ quá thấp không thể thực thi được.”
+
+          Lâm Tư nói cực nhanh: “Một lần nữa nói lại lệnh thật cụ thể tỉ mỉ.”
+
+          Mười giây đọc lệnh: “Lệnh được ban hành bởi: Mặt trận thống nhất của khu ba, nguyên soái Sjos. Nói
+
+          lý do: Tàu vũ trụ khổng lồ B-II đi vào cạnh miệng hố đen, yêu cầu tăng tốc độ gấp 12 lần để bứt phá
+
+          giới hạn, do động cơ cung cấp phóng vào khu sáu, cung cấp ba mức độ giật.”
+
+          Tiếng nổ ầm ầm vang lên, toàn bộ khu sáu di chuyển, tiếng chuông báo động dồn dập xen lẫn âm thanh
+
+          của kệ thiết bị thí nghiệm bị đổ, hàng trăm ống nghiệm thủy tinh rơi xuống đất. Lâm Tư bám chặt tay
+
+          vào bảng điều khiển, sử dụng sức nhắm chặt mắt rồi lại mở ra, cố gắng vượt qua cơn choáng váng do
+
+          trọng lực bất thường gây ra, giọng nói anh vững vàng để hệ thống có thể phân biệt rõ ràng: “Chuyển
+
+          qua hệ thống dẫn đường độc lập để tính toán động lượng” (1)
+
+          *Trong cơ học Newton, động lượng tuyến tính, động lượng tịnh tiến hay đơn giản là động lượng là
+
+          tích của khối lượng và vận tốc của một vật. Nó là một đại lượng vectơ, sở hữu độ lớn và hướng trong
+
+          không gian ba chiều.
+
+          Nếu m là khối lượng của một vật và v là vận tốc (cũng là một vectơ), thì động lượng là p=mv
+
+          Vd: Động lượng của một quả bóng bi-a được chuyển sang cho các quả bóng khác sau khi va chạm.
+
+          Lần thứ hai đường tiến trình ở màn hình lần sáng lên.
+
+          Cùng lúc đấy, Lâm Tư cảm thấy cơn đau rát đột ngột trêи người, anh nhanh chóng mở ngăn kéo khẩn cấp
+
+          dưới bàn điều khiển mở thiết bị chống phóng xạ—— sau khi bị tách khỏi tàu chính, anh mất đi sự bảo
+
+          vệ, khu 6 tiếp xúc với phóng xạ mạnh của hố đen.
+
+          Làm xong chuyện này, máu như dâng trào, anh cảm thấy buồn nôn vô cùng. Ở trước mắt chiếu lên một
+
+          màu sắc lộng lẫy lộn xộn, anh không thể khống chế được cơ thể của mình, lực ly tâm do quay nhanh
+
+          mang đến đè nặng anh lên bức tường cứng.
+
+          *Lực ly tâm là một lực quán tính xuất hiện trêи mọi vật nằm yên trong hệ quy chiếu quay so với một
+
+          hệ quy chiếu quán tính, Chúng ta cảm thấy lực này khi ngồi trong xe ô tô đang đổi hướng, hay chơi
+
+          trò cảm giác mạnh như xe lao tốc độ ở công viên.
+
+          Lâm Tư thở mệt nhọc, cổ họng ngọt tanh, anh ngẩng đầu lên, trước mắt mơ hồ, cảnh tượng bên ngoài
+
+          cửa sổ thay đổi nhanh chóng, miệng hố đen to kia
+
+          càng ngày càng xa càng lúc càng nhỏ, cuối cùng biến mất vào trong biển sao rộng lớn.
+
+          —— giây tiếp theo, biển sao ngoài đó cũng biến mất không còn tăm tích, ngoài cửa sổ chỉ còn lại một
+
+          màu đen kịt.
+
+          Tình trạng rung chuyển vẫn còn tiếp tục, anh không chịu nổi mà ngất đi. Lâm Tư bị đánh thức.
+
+          Không phải, là anh bị ép thức dậy.
+
+          Rất nhiều tiếng gào hét hỗn loạn “Lâm” và “Bác sĩ Lâm”, dường như còn có ai đó cấu anh, ấn vào ngực
+
+          anh nữa.
+
+          Anh mở mắt ra thấy mình đang nằm trêи bàn giải phẫu.
+
+          Mấy thanh niên mặc áo trắng nhìn thấy anh mở mắt ra thì cực kỳ vui vẻ: “Dậy rồi! Dậy rồi!”
+
+          Cái giọng vui vẻ quá mức này y hệt như “Sinh rồi! Sinh rồi!”
+
+          “Ấn nhân trung thì ấn dứt khoát ở vị trí huyệt nằm giữa 1/3 trêи và 2/3 dưới rãnh nhân trung. Mà
+
+
+
+          tôi chỉ cảm nhận thấy sức mạnh tập trung ở môi trêи, phương pháp hô hấp nhân tạo chỉ được sử dụng
+
+          cho trường hợp ngừng tim. Tôi không ngờ tình huống này sẩy trêи người mình đấy.”
+
+          Lâm Tư vô cảm nói: “Tôi thấy mấy cậu rời khỏi trái đất lâu quá nên quên mất những kiến thức sinh lý
+
+          cơ bản nhất rồi.”
+
+          Cậu thanh niên kia vò đầu: “….Bác sĩ à, tại máy sơ cứu hỏng chúng em mới làm như vậy, ngài không
+
+          phải cũng đã tỉnh rồi sao.”
+
+          Lâm Tư được đỡ ngồi dậy, Anh vẫn thấy mình còn chóng mặt, nhưng so với lúc trước khi bất tỉnh thì
+
+          tốt hơn. Những cậu thanh niên trước mặt là nghiên cứu viên hoặc trợ lý của một số phòng thí nghiệm.
+
+          Do hôm nay hầu hết mọi người ở khu sáu đều sang khu một tham gia tiệc kỷ niệm, còn một ít số máy
+
+          thông minh không thể xứ lý hoàn toàn, anh không thể để lại những dự án này cho mấy đứa nhỏ trông.
+
+          Phòng thí nghiệm số 1 nơi anh ở ở rìa khu sáu, bị *quay ảnh hưởng quá nhiều, nhưng tình trạng của
+
+          họ rõ ràng là tốt hơn trước, ít nhất là họ không ngất xỉu hết như đợt đó.
+
+          (*)Quay hoặc xoay tròn là sự di chuyển tròn của một vật xung quanh một tâm (hay điểm) quay. Một vật
+
+          thể ba chiều luôn luôn quay quanh một đường tưởng tượng gọi là trục quay.
+
+          Lúc này, Phi thuyền đang ở trạng thái ổn định, anh nhìn về phía cửa sổ – một khoảng bóng tối trống
+
+          rỗng, khó có biết được liệu nó có đi thật hay không.
+
+          Anh ấn huyệt thái dương, nhìn năm đứa trẻ ở độ tuổi hai mươi trước mặt rồi hỏi: “Còn ai bị gì nữa
+
+          không?”
+
+          “Chúng em đã kiểm tra lại rồi, không còn ạ” một trong số họ trả lời, lại hỏi: “Thưa bác sĩ, đây có
+
+          phải là một sự cố không? Hệ thống cũng đang trục trặc.”
+
+          “Tôi đã cắt hệ thống thành ‘Lucia’ rồi. Cậu không được truy cập, Lâm Tư nói nói “Xin chào, Lucia.”
+
+          “Xin chào, thưa ngài phù thủy.” Giọng cô gái máy móc vang lên. “Báo cáo tình hình đi.”
+
+          “Dữ liệu đang được cập nhật, vui lòng đợi trong giây lát.”
+
+          Đôi mắt của mấy đứa trẻ sáng lên: “Lucia trong truyền thuyết đây ư! Đây có phải là hệ thống siêu
+
+          thông minh mà khu thứ năm đã nghiên cứu ra không?”
+
+          Lâm Tư gật đầu: “Là cô ấy, mấy ngày trước Đường Ninh mang đến đây để thử nghiệm.Với lại, chúng ta
+
+          không phải gặp phải tai nạn điều hướng, mà bị ném vào chân trời sự kiện* để tạo độ giật cho phần
+
+          thân chính của “voyager”
+
+          (*)Chân trời sự kiện là biên phía trong của không-thời gian gần một điểm kỳ dị, tất cả các loại vật
+
+          chất nếu nằm dưới giới hạn này, kể cả các sóng điện từ (gồm cả ánh sáng) đều không thể vượt ra
+
+          ngoài để đến với người quan sát, ánh sáng bên trong phát ra bên trong chân trời sự kiện không thể
+
+          thoát ra ngoài, chính vì thế điểm kỳ dị của chân trời sự kiện được gọi là hố đen.
+
+          Đứa nhỏ rất kinh ngạc: “Nhưng chúng ta vẫn còn sống.”
+
+          Một đứa khác dơ tay phát biểu: “Về mặt lý thuyết, xác suất chết sau khi vào hố đen là 100%, vậy
+
+          chúng ta bây giờ đã chết và trở thành trạng thái lượng tử ư?”
+
+          Trong vật lý lượng tử, một trạng thái lượng tử là một đối tượng toán học diễn tả đầy đủ về một hệ
+
+          lượng tử. Trạng thái lượng tử có thể được tạo nên bởi việc trộn lẫn các giá trị thống kê của các
+
+          tham số, trạng thái được tạo nên bằng cách đó gọi là trạng thái hỗn hợp.
+
+          Lâm Tư nghe tụi nó níu ra níu ríu đầu óc anh cũng tỉnh táo hơn một chút, đoán được rồi nói với
+
+          Lucia: “Phù hợp với phương trình của Einstein.” Einstein: Albert Einstein là nhà vật lý lý thuyết
+
+          người Đức, người đã phát triển thuyết tương đối tổng quát, một trong hai trụ cột của vật lý hiện
+
+          đại. Lucia bắt đầu song song xử lý hai cái lệnh.
+
+          Lâm Tư bước ra khỏi bàn giải phẫu rồi nhìn xung quanh đống hỗn độn trong đại sảnh.
+
+          Lọ đựng hoá chất trong phòng thí nghiệm vỡ vụn chảy khắp sàn, nhiều chất vụn trôi nổi.
+
+          “Các phòng thí nghiệm khác cũng bị phá hỏng hoàn toàn, còn có rất nhiều mẫu vật quý giá từ trái đất
+
+          mang lên, giờ không còn nữa rồi.” Tâm trạng của đứa nhỏ rất phiền muộn “Đáng tiếc thật đó.”
+
+          Một đứa khác vỗ vai anh: “May mắn rằng, bản sao lưu mô hình 3D cũng không tệ, nhưng nó vô dụng-dù
+
+          sao tất cả chúng ta cũng chết chắc rồi.”
+
+          Bên trong và bên ngoài và miệng hố đen là hai thế giới không liên quan đến nhau. Bên trong là giới
+
+          hạn bôn, độ cong không gian-thời gian là rất lớn, với tốc độ ánh sáng đó, ngay cả ánh sáng đi vào
+
+          rồi cũng không thể thoát ra và phi thuyền này sẽ bị kéo căng, xé rách và bị phá hủy bởi tất cả các
+
+          loại đặc tính vật lý kỳ lạ.
+
+          Lâm Tư ngồi trêи ghế trước bàn điều khiển, bắt chéo tay, nheo mắt xem dữ liệu.
+
+          Anh hỏi: “Ai trong mấy đứa hiểu vật lý cơ bản?”
+
+          Đứa trẻ vừa nói vừa giơ tay: “Em đã nghiên cứu về cơ sinh học.”
+
+          Lâm Tư giống như cười mà không phải cười nói: “Ai ở đây chả học về cơ sinh học”
+
+          Cơ sinh học nghiên cứu về cấu trúc, chức năng, ứng xử cơ học của các hệ thống sinh học như người,
+
+          động vật, cây, các bộ phân cơ thể, tế bào[1] theo nghĩa các phương pháp cơ học.[2]
+
+          Khu vực số sáu là khu vực hóa sinh. Chắc chắn kiến thức về vật lý của họ rất thiếu thốn – chắc chỉ
+
+          dừng ở trình độ vật lý đại học.
+
+          Nếu so sánh với mấy đứa nó, anh cảm thấy mình có thể được gọi là một nhà vật lý học.
+
+          Anh xem xét kết quả tính toán của Lucia và nói: “Chúng ta đi vào một hố đen xoay tròn kỳ lạ, vì thế
+
+          mà chúng ta không bị phá hủy ngay lập tức. Nếu chúng ta tiếp tục đi tiếp, thì phần trăm khả năng
+
+          thoát ra từ hố trắng là rất nhỏ… Nguyên liệu của tàu vũ trụ chắc có khả năng chống lại điểm hấp
+
+          dẫn.”
+
+          “voyager” là một con tàu khổng lồ, bao gồm chín khu vực, được đặt tên từ một đến chín, khu vực thứ
+
+          nhất, thứ hai và thứ ba là khu vực chính được bao quanh bởi các khu vực khác, ở trung tâm và mỗi
+
+          khu vực là một tàu vũ trụ độc lập, được trang bị động cơ với khả năng điều hướng độc lập khoảng
+
+          cách xa giữa các ngôi sao.
+
+          Đây không phải là lần đầu tiên xảy ra hiện tượng ly tâm, trong các lần sự cố hành trình trước đây,
+
+          chủ thể “voyager” đã tách ra khu thứ 4 và thứ 7 để thoát khỏi khu vực nguy hiểm và bây giờ là khu
+
+          vực thứ sáu. Khu vực thứ sáu là trung tâm của dự án “vô hạn” của Lâm Tư, cũng là một trong những
+
+          khu vực ít dân cư nhất trêи tàu.
+
+
+
+          Là khu vực có ít người nhất —— nhưng nó chắc chắn không phải là khu vực thích hợp để tách ra.
+
+          Ai đó đã nói điều này.
+
+          “Khu thứ sáu có ít người sinh sống nhất và nhiều rô bốt nhất. Bởi vì thế mà tổn thất về người cũng
+
+          ít nhất, nhưng khu của chúng tôi có rất nhiều kết quả nghiên cứu quý giá. Mất đi chúng tôi là mất
+
+          đi toàn bộ nền khoa học hiện có. Quá ngu ngốc.”
+
+          “Nguyên tắc đầu tiên của chuyến du hành giữa các vì sao là đảm bảo sự sống sót của con người, dễ
+
+          hiểu thôi” Lâm Tư nhướng mày. “Mặc dù khu sáu luôn là cái gai mắt nguyên soái Sjos, nhưng chúng ta
+
+          phải cố gắng thử nghiệm để trở về với Nguyên soái và phu nhân Trần.”
+
+          Anh cân nhắc một lúc và đánh dấu một số vị trí trêи biểu đồ sao: “Sau khi tàu du hành rời khỏi hố
+
+          đen, nó chắc chắn sẽ đi vào vũ trụ con. Theo kế hoạch bay, nó sẽ rời không gian con gần tiểu hành
+
+          tinh TN-III33876- 87624 Cetus rồi Lơ lửng ít nhất một tháng, trong thời gian đó chúng ta ở trạng
+
+          thái khả quan. Nếu chúng ta có thể thoát khỏi hố đen, chúng ta sẽ ngay lập tức đi vào không gian
+
+          con với tốc độ cao nhất, đi đến TN-III hội tụ với voyager.”
+
+          Đứa trẻ khen ngợi Lâm Tư: “Ngài Phù thủy, ngài giống y hệt như lời đồn.” Lâm Tư: “…”
+
+          Phù Thủy là biệt danh của anh —— vì một trong những thí nghiệm chỉnh sửa gen ấn tượng của anh là
+
+          cho phép cá thực phẩm mọc ra hai chân ngon lành.”
+
+          Anh nhíu mày nói với Lucia: “Hãy tính tỷ lệ sống sót.”
+
+          Lucia, với tư cách là một siêu hệ thống với trữ lượng kiến thức và chỉ số IQ vượt trội so với tất
+
+          cả những người ở đây, sử dụng sức mạnh tính toán mạnh mẽ để mô hình các tình huống khác nhau, nhưng
+
+          thật đáng tiếc, tỷ lệ thành công kế hoạch của Lâm Tư dưới 3%.
+
+          Lâm Tư vô cảm đưa ra lệnh “Thực thi ngay bây giờ”, bắt đầu điều chỉnh sự phân bố năng lượng của tàu
+
+          vũ trụ, giảm tất cả các chỉ số của hệ thống sản xuất oxy, trọng lực và kiểm soát nhiệt độ.
+
+          Những đứa trẻ hoảng sợ ôm chầm lấy nhau. Một trong số chúng hỏi: “Thưa ngài phù thủy, liệu chúng ta
+
+          có đủ năng lượng để bay đến chòm sao Cetus không?”
+
+          (*)là một trong 48 chòm sao Ptolemy và cũng là một trong 88 chòm sao hiện đại, mang hình ảnh Cá
+
+          Voi. Chòm sao này có diện tích 1231 độ vuông, nằm trêи thiên cầu bắc, chiếm vị trí thứ 4 trong danh
+
+          sách các chòm sao theo diện tích. Chòm sao Kình Ngư nằm kề các chòm sao Bạch Dương, Song Ngư, Bảo
+
+          Bình, Ngọc Phu, Thiên Lô, Ba Giang, Kim Ngưu.
+
+          Lâm Tư gõ ngón tay vào bàn điều khiển và nói “Seth, tôi đề nghị cậu nên đi ngay tới chỗ Lucia nộp
+
+          đơn xin học một khóa học vật lý.”
+
+          Giọng của Lucia vang lên:“Khu thứ sáu có khả năng lấy năng lượng từ xung lực của hố trắng.”
+
+          (*)Nếu hố đen hút mọi vật chất đến mức ngay cả ánh sáng cũng không thể thoát ra, còn hố trắng ngăn
+
+          bất kỳ vật thể nào tiến vào bên trong, hiện tại chưa có bất cứ tài liệu nào chứng minh hố trắng có
+
+          thật.
+
+          Bọn trẻ thở phào nhẹ nhõm và bắt đầu sôi nổi.
+
+          Lâm Tư nhìn chúng nó: “Trước khi thoát khỏi hố đen, chúng ta phải tiết kiệm năng lượng ở mức tối
+
+          đa. Tôi hy vọng các cậu có thể đóng góp một vai trò nào đó … À, ngoài việc tích trữ thức ăn.”
+
+          —— Bọn trẻ im thin thít.
+
+          Đứa nhỏ kia ngập ngừng thăm dò: “Cái gì mà ngoài dự trữ thức ăn ạ?” Lâm Tư nhìn thấy cặp kính gọng
+
+          bạc mỏng trêи bàn, vươn tay đeo lên. Đứa trẻ bắt đầu tỏ ra lấy lòng: “Thưa bác sĩ, thiết bị trị
+
+          liệu mới nhất trong phòng thí nghiệm của chúng em có thể chữa cận thị trong vòng nửa giờ.” “Thưa
+
+          bác sĩ, kỹ thuật sửa chữa mô sinh học trong phòng thí nghiệm của chúng em -”
+
+          Lucia lành lạnh nói: “Căn cứ theo phân tính cách, kính là một đồ tượng trưng, giúp cho bác sĩ Lâm
+
+          trông nghiêm khắc hơn, giúp giữ bình tĩnh hơn.” Lâm Tư xoay ghế lại và đối mặt với chúng nó, nở một
+
+          nụ cười: “Vai trò khác ngoài dự trữ thức ăn là … chẳng hạn như lấy lòng tôi.”
+
+          Anh nhìn rất đẹp trai, môi mỏng, màu nhạt, khi không cười thường nhìn lạnh lùng, khi cười thì có
+
+          chút xấu xa, cười như không phải cười, vô cùng nhã nhặn trộn thêm ít cầm thú.
+
+          Bọn trẻ kinh hoàng.
+
+          Những đứa trẻ bàng hoàng trao nhau ánh mắt dành riêng của nạn nhân, vô cùng lo lắng cho trinh tiết
+
+          của mình.
+
+          Lâm Tư khoanh tay, lạnh lùng nhìn họ và dùng ánh mắt ra hiệu mặt đất lộn xộn: “Dọn dẹp ở đây.”
+
+          Cơn sợ mất ‘trinh tiết’ của bọn trẻ đã hết, thở phào nhẹ nhõm và bắt đầu chăm chỉ dọn dẹp phòng thí
+
+          nghiệm.
+
+          “Hầu như tất cả đều hỏng”, một người trong số họ đã dùng nhíp gắp nhiều mảnh mô có hình dạng kỳ dị
+
+          trêи mặt đất và đưa chúng dưới kính hiển vi soi lần lượt “Ngoài ra còn có sự sinh sôi bất thường.”
+
+          “Đột biến” một đứa vừa điều chỉnh số vừa nói “Phóng xạ ở rìa hố đen quá mạnh, không có giá trị tham
+
+          khảo, toàn bộ đã xử lý xong.”
+
+          Đứa trẻ trả lời, than thở tiếc nuối “Thật đáng tiếc” sau đó bắt đầu đâm đầu vào dọn dẹp.
+
+          Một lúc sau, một người đột nhiên nói: “Ừm…các bồ có nghe thấy âm thanh gì không?”
+
+          “Gì cơ?”
+
+          “Khộng nghe thấy.”
+
+          Bọn họ vừa dứt lời, cùng nhau nín thở, phòng thí nghiệm hoàn toàn im lặng, chỉ có tiếng ù nhẹ của
+
+          trí não máy chủ đang chạy tốc độ cao để tản nhiệt. “Cạch cạch”
+
+          Một tiếng động nhẹ bỗng xuất hiện trong yên tĩnh, dường như từ một chỗ rất xa và sâu.
+
+          Lâm nhắm mắt lắng nghe một lúc, cau mày đứng dậy khỏi ghế, đi đến bên cạnh phòng thí nghiệm.
+
+          Những người khác cũng đi theo anh từng bước, họ càng đến gần bức tường, càng có thể nghe thấy tiếng
+
+          động rõ ràng hơn.
+
+          “Cạch cạch” “Cạch cạch”
+
+          Tiếng động nhịp nhàng trong yên tĩnh, khiến người ta ớn lạnh. “Bác… Bác sĩ” đứa nhỏ sợ hãi “Bên
+
+          cạnh có cái gì thế?”
+
+          Tiếng chuông báo động chói tai đột nhiên vang lên phá vỡ sự im lặng, giọng nói nữ máy móc nói cực
+
+          nhanh.
+
+          “Báo động, báo động, phát hiện tín hiệu sự sống bất thường. Nguồn tín hiệu: Khoang bỏ hoang số 97
+
+          của nhà kho số 1. Đánh giá cấp bậc: Cực kỳ nguy hiểm, cực kỳ nguy hiểm, cực kỳ nguy hiểm.”
+        </pre>
+      </div>
+    </div>
+    <div class="product--wrapper">
+      <div class="product-inner header-chapters">
+          <div class="chapter-btn">
+              <button id="comic-infor" onclick="window.location.href='/comicColection/comic/manhwa/cach_hiep_si_song_nhu_tieu_thu_quyen_quy/cach_hiep_si_song_nhu_tieu_thu_quyen_quy.html'">
+                  <i class="fas fa-info"></i>
+              </button>
+              <div class="pre-chapter" onclick="preChapter()">Chương trước</div>
+              <div class="selectChapter">
+                <select class="danh-sach-chuong" class="form-conntrol" onchange="window.location=this.value">
+                  <option value="/comicColection/comic/manhwa/cach_hiep_si_song_nhu_tieu_thu_quyen_quy/cach_hiep_si_song_nhu_tieu_thu_quyen_quy_chap_1.html">Chương 1</option>
+                  <option value="/comicColection/comic/manhwa/cach_hiep_si_song_nhu_tieu_thu_quyen_quy/cach_hiep_si_song_nhu_tieu_thu_quyen_quy_chap_2.html">Chương 2</option>
+                  <option value="/comicColection/comic/manhwa/cach_hiep_si_song_nhu_tieu_thu_quyen_quy/cach_hiep_si_song_nhu_tieu_thu_quyen_quy_chap_3.html">Chương 3</option>
+                  <option value="/comicColection/comic/manhwa/cach_hiep_si_song_nhu_tieu_thu_quyen_quy/cach_hiep_si_song_nhu_tieu_thu_quyen_quy_chap_4.html">Chương 4</option>
+                  <option value="/comicColection/comic/manhwa/cach_hiep_si_song_nhu_tieu_thu_quyen_quy/cach_hiep_si_song_nhu_tieu_thu_quyen_quy_chap_5.html">Chương 5</option>
+                  <option value="/comicColection/comic/manhwa/cach_hiep_si_song_nhu_tieu_thu_quyen_quy/cach_hiep_si_song_nhu_tieu_thu_quyen_quy_chap_6.html">Chương 6</option>
+                  <!-- <option value="">Chương 7</option>
+                  <option value="">Chương 8</option>
+                  <option value="">Chương 9</option> -->
+                </select>
+              </div>
+              <div class="next-chapter" onclick="nextChapter()">Chương sau</div>
+              <script>
+                // const select = document.querySelector(".danh-sach-chuong");
+                // const options = document.querySelectorAll(".danh-sach-chuong option");
+
+                // // 1
+                // select.addEventListener("change", function() {
+                //   const url = this.options[this.selectedIndex].dataset.url;
+                //   if(url) {
+                //     location.href = url;
+                //   }
+                // });
+
+                // // 2
+                // for(const option of options) {
+                //   const url = option.dataset.url;
+                //   if(location.href.includes(url)) {
+                //     option.setAttribute("selected", "");
+                //     break;
+                //   }
+                // }
+              </script>
+          </div>
+      </div>
+  </div>
+  <!-- binh luan -->
+    <div class="widget-comic">
+      <div class="widget-comic-inner">
+        <div id="mainComment" class="widget-comic">
+          <div class="widget-comic-hd">
+            <span class="h3-before"></span>
+            <h3>Bình luận mới</h3>
+          </div>
+          <!-- comments -->
+          <div id="khungpostComment" class="wrap-form-binhluan"
+          >
+            <div class="avatar-binh-luan"
+            style="border-radius: 50%; overflow: hidden;">
+              <a href="#" target="_blank">
+                <img class="avar" src="/img/avatar-basic.jpg" alt="">
+              </a>
+            </div>
+            <div class="text-binh-luan">
+              <input id="content-comment" type="text"
+              name="content-comment" placeholder="Nhập bình luận của bạn"
+              >
+              <a class="btn btn-comment" href="#"
+              style="margin-top: auto; margin-bottom: auto;"
+              >
+                <!-- Đăng nhập -->
+                <i class="fas fa-paper-plane"
+                ></i>
+              </a>
+            </div>
+          </div>
+          <!-- end-comments -->
+          <input type="hidden" id="id_manga" value="1">
+          <input type="hidden" id="load_comment" value="4">
+          <input type="hidden" id="type_comment" value="0">
+          <div id="comment" class="selector-zero">
+            <ul id="showComments" class="detail-list-comment"
+            >
+              <li>
+                <div class="detail-list-comment-cover">
+                  <a href="#" target="_blank">
+                    <img class="avar" src="/img/avatar-basic.jpg" alt="">
+                  </a>
+                </div>
+                <div class="detail-list-comment-infor">
+                  <p class="detail-list-comment-title">
+                    thiaomie.ou
+                    <span>1 ngày trước</span>
+                  </p>
+                  <p class="detail-list-comment-content recommentbtn">
+                    thiếu chương thì phải ad ơi
+                  </p>
+                  <div class="chan">
+                    <span id="comment_reaction_31128_1">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 1)"
+                    >
+                      <i class="fas fa-heart comment-tags"></i>
+                    </span>
+                    <span id="comment_reaction_31128_2">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 2)"
+                    >
+                    <i class="fas fa-comment comment-tags"></i>
+                    </span>
+                    <span id="comment_reaction_31128_3">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 3)"
+                    >
+                    <i class="fas fa-flag comment-tags"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="detail-list-comment-cover">
+                  <a href="#" target="_blank">
+                    <img  class="avar" src="/img/avatar-basic.jpg" alt="">
+                  </a>
+                </div>
+                <div class="detail-list-comment-infor">
+                  <p class="detail-list-comment-title">
+                    thiaomie.ou
+                    <span>1 ngày trước</span>
+                  </p>
+                  <p class="detail-list-comment-content recommentbtn">
+                    thiếu chương thì phải ad ơi
+                  </p>
+                  <div class="chan">
+                    <span id="comment_reaction_31128_1">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 1)"
+                    >
+                      <i class="fas fa-heart comment-tags"></i>
+                    </span>
+                    <span id="comment_reaction_31128_2">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 2)"
+                    >
+                    <i class="fas fa-comment comment-tags"></i>
+                    </span>
+                    <span id="comment_reaction_31128_3">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 3)"
+                    >
+                    <i class="fas fa-flag comment-tags"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="detail-list-comment-cover">
+                  <a href="#" target="_blank">
+                    <img  class="avar" src="/img/avatar-basic.jpg" alt="">
+                  </a>
+                </div>
+                <div class="detail-list-comment-infor">
+                  <p class="detail-list-comment-title">
+                    thiaomie.ou
+                    <span>1 ngày trước</span>
+                  </p>
+                  <p class="detail-list-comment-content recommentbtn">
+                    thiếu chương thì phải ad ơi
+                  </p>
+                  <div class="chan">
+                    <span id="comment_reaction_31128_1">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 1)"
+                    >
+                      <i class="fas fa-heart comment-tags"></i>
+                    </span>
+                    <span id="comment_reaction_31128_2">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 2)"
+                    >
+                    <i class="fas fa-comment comment-tags"></i>
+                    </span>
+                    <span id="comment_reaction_31128_3">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 3)"
+                    >
+                    <i class="fas fa-flag comment-tags"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="detail-list-comment-cover">
+                  <a href="#" target="_blank">
+                    <img class="avar" src="/img/avatar-basic.jpg" alt="">
+                  </a>
+                </div>
+                <div class="detail-list-comment-infor">
+                  <p class="detail-list-comment-title">
+                    thiaomie.ou
+                    <span>1 ngày trước</span>
+                  </p>
+                  <p class="detail-list-comment-content recommentbtn">
+                    thiếu chương thì phải ad ơi
+                  </p>
+                  <div class="chan">
+                    <span id="comment_reaction_31128_1">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 1)"
+                    >
+                      <i class="fas fa-heart comment-tags"></i>
+                    </span>
+                    <span id="comment_reaction_31128_2">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 2)"
+                    >
+                    <i class="fas fa-comment comment-tags"></i>
+                    </span>
+                    <span id="comment_reaction_31128_3">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 3)"
+                    >
+                    <i class="fas fa-flag comment-tags"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="detail-list-comment-cover">
+                  <a href="#" target="_blank">
+                    <img class="avar" src="/img/avatar-basic.jpg" alt="">
+                  </a>
+                </div>
+                <div class="detail-list-comment-infor">
+                  <p class="detail-list-comment-title">
+                    thiaomie.ou
+                    <span>1 ngày trước</span>
+                  </p>
+                  <p class="detail-list-comment-content recommentbtn">
+                    thiếu chương thì phải ad ơi
+                  </p>
+                  <div class="chan">
+                    <span id="comment_reaction_31128_1">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 1)"
+                    >
+                      <i class="fas fa-heart comment-tags"></i>
+                    </span>
+                    <span id="comment_reaction_31128_2">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 2)"
+                    >
+                    <i class="fas fa-comment comment-tags"></i>
+                    </span>
+                    <span id="comment_reaction_31128_3">0</span>
+                    <span class="reaction-comment"
+                    onclick="comment_reaction(31128, 3)"
+                    >
+                    <i class="fas fa-flag comment-tags"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- mainComment -->
+      </div>
+    </div>
+    <!-- ket thuc binh luan -->
+    <div class="comic-type widget-comic">
+        <div class="widget-comic-inner">
+          <div class="widget-comic-hd">
+            <h3 style="text-align: center; padding-left: 0; text-transform: uppercase;">
+              Thể loại
+            </h3>
+          </div>
+          <div class="the-loai">
+            <div class="widget-comic-body the-loai-comic-wrap">
+              <div class="theloai-list">
+                <a href="index.html">18+</a>
+                <a href="#">Âu Cổ</a>
+                <a href="#">Bách Hợp</a>
+                <a href="#">Cổ Đại</a>
+                <a href="#">Đam Mỹ</a>
+                <a href="#">Hài Hước</a>
+                <a href="#">Harem</a>
+                <a href="#">Không màu</a>
+                <a href="#">Manga</a>
+                <a href="#">Manhwa</a>
+                <a href="#">Novel</a>
+                <a href="#">Xuyên Không</a>
+                <a href="#">Sugar Daddy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space">
+          <div class="widget-comic-inner">
+            <div class="widget-comic-hd widget-space"></div>
+          </div>
+        </div>
+    </div><!-- the loai 
+    --><footer class="comic-foot">
+    <div class="foot-wrapper">
+        <div class="facebook">
+        <a href="https://www.facebook.com/thaomy317/"><img src="/img/facebook.png" alt=""></a>
+        </div>
+        <ul class="foot-list">
+        <li>Trang chủ</li>
+        <li>Về chúng tôi</li>
+        <li>Điều khoản sử dụng</li>
+        <li>Hỏi & Đáp</li>
+        <li>Liên hệ</li>
+        </ul>
+        <div class="title">
+        EC © 2021 Eel Comic - Nền tảng truyện tranh bản quyền duy nhất tại Việt Nam. 
+        </div>
+    </div>
+
+    </footer>
+    <!-- foot -->
+</body>
+</html>

@@ -1,0 +1,149 @@
+:root{
+    --width-li: 155px;
+    --height-img: 220px;
+    --width-img: 100;
+}
+
+
+/*  */
+.genre-list{
+    background-image: pink;
+}
+
+.wrapper{
+    min-height: fit-content;
+    padding: 0;
+    margin: 0 auto;
+
+    width: 90vw;
+    max-width: 1300px;
+}
+
+/*  */
+.cw--list{
+    width: 100%;
+    margin: 0 10px;
+    font-size: 0;
+    overflow: hidden;
+    padding: 15px 12px;
+    border-radius: 15px;
+
+    margin-top: 50px;
+    background-color: var(--clr-br-content);
+}
+
+.cw--list a{
+    display: block;
+    position: relative;
+}
+
+.cw--list li{
+    float: left;
+    
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+/*  */
+.thumbBox{
+    height: var(--height-img);
+    width: var(--width-li);
+
+    position: relative;
+}
+
+.thumb{
+    height: 100%;
+    display: flex;
+}
+
+.thumb img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumbBox img{
+    height: 100%;
+    width: var(--width-img);
+    border-radius: 20px;
+}
+
+.thumbBox .status{
+    height: 25px;
+    position: absolute;
+    top: 0;
+}
+
+/*  */
+.infor{
+    display: block;
+    width: var(--width-li);
+
+    font-size: 18px;
+    /* font-weight: 900; */
+
+    margin-top: 10px;
+    margin-left: 5px;
+    /* margin-bottom: 8px; */
+    padding-top: 20px;
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.infor span{
+    padding: 5px 0;
+}
+
+.infor .title,
+.infor .author{
+    display: block;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.infor .author{
+    font-weight: 200;
+    padding: 0;
+}
+
+/* page-nav-inline */
+.pagination{
+    text-align: center;
+    width: fit-content;
+    white-space: nowrap;
+
+    font-size: 30px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination li,
+.disable,
+.pagination li a{
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-right: 10px; 
+    color: var(--clr-br-content);
+}
+
+.pagination li .current{
+    background-color: var(--clr-br-content);
+    color: white;
+    border-radius: 5px;
+    padding: 0 10px;
+}

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TỒN TẠI NHƯ MỘT NỮ HẦU</title>
+    <!-- bootstrap cdn -->
+    <link
+      rel=" stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style/main-content.css">
+    <link rel="stylesheet" href="/style/nav.css" />
+    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="stylesheet" href="/style/comic/comic.css" />
+    <link rel="stylesheet" href="/style/styleV2.css">
+    <link rel="stylesheet" href="/style/foot.css">
+
+ <!-- ulkit -->
+ <link rel="stylesheet" href="./uikit-3.9.1/css/uikit.min.css" />
+ <script src="/uikit-3.9.1/js/uikit.min.js"></script>
+ <script src="/uikit-3.9.1/js/uikit-icons.min.js"></script>
+
+    <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="scroll-up-bar.min.js"></script>
+    
+    <script>
+      var onResizing = function(event){
+        var tb = document.getElementById('infor-content');
+
+        if(window.innerWidth > 1500){
+          tb.style.height = "390px";
+        }else{
+          tb.style.height = "100px";
+        }
+      };
+
+      window.onresize = onResizing;
+      window.onload = onResizing;
+    </script>
+  </head>
+  <body>
+    <button onclick="topFunction()" id="btn_top" title="Go to top"
+    >
+      <i class="fas fa-chevron-up"
+      style="color: white;"
+      ></i>
+    </button>
+    <script>
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction(){
+        if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 20){
+          document.getElementById("btn_top").style.display = "block";
+        }else{
+          document.getElementById("btn_top").style.display = "none";
+        }
+      }
+
+      function topFunction(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+      }
+    </script>
+    <header>
+      <div id="search-area">
+          <div class="search-area-wrap">
+              <input type="text" placeholder="Nhập tên truyện, tên nhóm dịch, thể loại" id="find">
+              <div class="btn">
+                <i class="fas fa-search"
+                style="font-size: 30px; color: white; margin-top: 15px;"
+                ></i>
+              </div>
+          </div>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav-wrap">
+          <div class="container-tool">
+            <div class="logo">
+              <a href="/index.html"><img src="/img/logo.png" alt="" /></a>
+            </div>
+            <ul class="toolbar-list">
+              <li class="comic"><a href="/comicColection/manhwaList/manhwaList-page1.html">TRUYỆN TRANH</a></li>
+              <li class="novel"><a href="/comicColection/novelList/novel-page1.html">TIỂU THUYẾT</a></li>
+              <li class="post"><a href="/postComic.html">ĐĂNG TRUYỆN</a></li>
+            </ul>
+          </div>
+          <div class="container-btn">
+            <ul class="btn-list">
+              <li class="book-wrapper">
+                  <a href="/bookshelf.html">
+                    <div class="book icon">
+                    </div>
+                  </a>
+              </li>
+              <button type="button" onclick="showSearch()" class="search-btn icon">
+              </button>
+              <li class="open-side-menu">
+                <a class="open" onclick="openSideMenu()"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="sub-nav">
+        <div class="sub-nav-wrap">
+          <div class="sub-nav-content">
+            <ul class="content-list">
+              <li class="books"><a href="/index.html">TRANG CHỦ</a></li>
+              <li class="question"><a href="/ask.html">HỎI & ĐÁP</a></li>
+              <li class="contact"><a href="/contact.html">LIÊN HỆ</a></li>
+              <li class="about"><a href="/about.html">VỀ CHÚNG TÔI</a></li>
+              </li> -->
+            </ul>
+          </div>
+          <div class="registion">
+            <a href="/login.html">Đăng nhập</a>
+            <a href="/sign-up.html">Đăng ký</a>
+          </div>
+        </div>
+      </nav>
+      <script>
+        var content = document.getElementById('search-area');
+        function showSearch(){
+          console.log(content);
+          if(content.style.display == "none"){
+            content.style.display = "block";
+          }else{
+            content.style.display = "none";
+          }
+        }
+      </script>
+    </header>
+    <div id="side-menu">
+      <div class="btn-close">
+        <a href="#" class="--close" onclick="closeSideMenu()">&times;</a>
+      </div>
+      <div class="regis-side">
+        <a href="/login.html">Đăng nhập</a>
+        <a href="/sign-up.html">Đăng ký</a>
+      </div>
+      <div class="nav-side">
+        <ul class="menu-list">
+          <li class="comic"><a href="/comicColection/new_comic/new_comic-page1.html">TRUYỆN TRANH</a></li>
+          <li class="novel"><a href="/comicColection/novelList/novel-page1.html">TIỂU THUYẾT</a></li>
+          <li class="books"><a href="/bookshelf.html">TỦ SÁCH CỦA TUI</a></li>
+          <li class="post"><a href="/postComic.html">ĐĂNG TRUYỆN</a></li>
+        </ul>
+      </div>
+      <script>
+        function openSideMenu() {
+          document.getElementById("side-menu").style.width = "400px";
+        }
+        function closeSideMenu() {
+          document.getElementById("side-menu").style.width = "0px";
+        }
+      </script>
+    </div>
+    <div class="hyper-link"></div>
+    <div class="product-wrapper">
+      <div class="product-inner">
+        <div class="cover-wrapper">
+          <div class="cover-img">
+            <img src="/img/Kho truyện/truyện tranh/manhwa/TÔI SẼ SỐNG NHƯ MỘT HOÀNG TỬ/bìa/toi-se-song-nhu-mot-hoang-tu.jpg" />
+          </div>
+          <div class="cover-spec">
+            <h2 class="cover-title">TÔI SẼ SỐNG NHƯ MỘT HOÀNG TỬ</h2>
+            <p class="cover-artist">
+              <span> Tên khác: </span>
+              <span>Đang cập nhật</span>
+            </p>
+            <p class="cover-artist">
+              <span> Tác giả: </span>
+              <a href="#">Đang cập nhật</a>
+            </p>
+            <p class="cover-artist">
+              <span>Thể loại: </span>
+              <a
+                href="#"
+                style="
+                  margin-right: 5px;
+                  font-size: 19px;
+                  text-transform: uppercase;
+                "
+                >Xuyên Không</a
+              >
+              <a
+                href="#"
+                style="
+                  margin-right: 5px;
+                  font-size: 19px;
+                  text-transform: uppercase;
+                "
+                >Cổ Đại</a
+              >
+              <a
+                href="#"
+                style="
+                  margin-right: 5px;
+                  font-size: 19px;
+                  text-transform: uppercase;
+                "
+                >Manhwa</a
+              >
+            </p>
+            <p class="cover-artist">
+              <span>Lượt xem</span>
+              <a href="#">1592</a>
+            </p>
+            <p class="cover-artist">
+              <img class="top-tags" src="/img/newc.png" alt="" />
+              <img class="top-tags" src="/img/on-going.png" alt="" />
+              <img class="top-tags" src="/img/hot.png" alt="" />
+            </p>
+            <p class="cover-artist">
+              <a href="#">
+                <span itemprop="name">TỒN TẠI NHƯ MỘT NỮ HẦU</span>
+              </a>
+              <span
+                itemprop="aggreateRating"
+                itemscope=""
+                itemtype="#"
+                style="font-size: 18px"
+              >
+                Xếp hạng
+                <span
+                  itemprop="ratingValue"
+                  style="color: var(--clr-font-link)"
+                >
+                  4.8
+                </span>
+                /
+                <span itemprop="ratingCount"> 5 </span>
+              </span>
+            </p>
+            <div
+              class="h0rating"
+              slug="lo-lem-thoi-co-dai"
+              style="height: 32px"
+            >
+              <i class="rating-star far fa-star"></i>
+              <i class="rating-star far fa-star"></i>
+              <i class="rating-star far fa-star"></i>
+              <i class="rating-star far fa-star"></i>
+              <i class="rating-star far fa-star"></i>
+            </div>
+            <script>
+              const ratingStars = [
+                ...document.getElementsByClassName("rating-star"),
+              ];
+
+              function executeRating(stars) {
+                const starClassActive = "rating__star fas fa-star";
+                const starClassInactive = "rating__star far fa-star";
+                const starsLength = stars.length;
+                let i;
+                stars.map((star) => {
+                  star.onclick = () => {
+                    i = stars.indexOf(star);
+
+                    if (star.className === starClassInactive) {
+                      for (i; i >= 0; --i) stars[i].className = starClassActive;
+                    } else {
+                      for (i; i < starsLength; ++i)
+                        stars[i].className = starClassInactive;
+                    }
+                  };
+                });
+              }
+              executeRating(ratingStars);
+            </script>
+            <!-- rating star -->
+          </div>
+        </div>
+        <div class="product-synosis">
+          <div class="product-synosis-inner">
+            <h3 style="text-align: center">GIỚI THIỆU</h3>
+            <div id="infor-content" class="product-synosis-content">
+              <p>
+                Truyện tranh
+                <a href="#" style="color: var(--clr-font-title)"
+                  >TỒN TẠI NHƯ MỘT NỮ HẦU</a
+                >
+                được cập nhật nhanh và đầy đủ nhất tại EEL COMIC. Bạn đọc vui
+                lòng ủng hộ bằng cách theo dõi, bình luận và chia sẻ giúp EEL
+                COMIC để có thể đọc các chương mới nhất truyện
+                <a href="#" style="color: var(--clr-font-title)"
+                  >TỒN TẠI NHƯ MỘT NỮ HẦU</a
+                >
+
+                Từ giờ nhóm dịch sẽ chỉ up duy nhất truyện ở eelcomic.net.
+                Những thành viên đã nạp tiền và đăng kí đọc trước bên nhóm dịch
+                nhóm dịch sẽ nhận được pass từ fanpage nhóm dịch. Và
+                truyện sẽ được mở khoá đọc free sau vài ngày nha.
+              </p>
+            </div>
+            <button id="see-more" onclick="openMore()">
+                Xem thêm
+            </button>
+            <script>
+              function openMore(){
+                var tb = document.getElementById('infor-content');
+                var moreBtn = document.getElementById('see-more');
+
+                if(tb.style.height === "100px"){
+                  tb.style.height = "200px";
+                  moreBtn.innerHTML = "Rút gọn";
+                }else{
+                  tb.style.height = "100px";
+                  moreBtn.innerHTML = "Xem thêm";
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- product-wrapper -->
+    <div class="product-infor">
+      <div id="user_action" class="product-btn">
+        <div class="view-groups">
+          <span class="groups-img">
+            <a href="#">
+              <img src="/img/logo.png" alt="">
+            </a>
+          </span>
+          <span class="groups-name">
+            <a href="#">hELLOgUY</a>
+          </span>
+        </div>
+        <div class="extra-div" style="clear: both;"></div>
+        <div class="col1">
+          <button id="subcribe_button" class="btn-subcribe"
+          type="button" onclick="">
+            Theo dõi [
+            <em id="count_bookmark">2470</em>
+            ]
+          </button>
+        </div>
+        <div class="col2">
+          <button id="like_button" class="btn-like"
+          type="button" onclick="btn_like()">
+            Thích [
+            <em id="count_like">370</em>
+            ]
+          </button>
+        </div>
+        <script>
+          function btn_like(){
+            var val = parseInt(document.getElementById("count_like").innerHTML, 10);
+            val = isNaN(val) ? 0 : val;
+            val++;
+            // console.log(val);
+            document.getElementById("count_like").innerHTML = val;
+          }
+        </script>
+      </div>
+      <script>
+        function like()
+        {
+            var value = parseInt(document.getElementById('count_like').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('count_like').value = value;
+        }
+      </script>
+      <!-- product-btn -->
+    </div>
+    <!-- product-infor -->
+    <div class="space">
+      <div class="widget-comic-inner">
+        <div class="widget-comic-hd widget-space"></div>
+      </div>
+    </div>
+    <!-- space -->
+    <div id="mainChapterList" class="widget-comic">
+      <div class="widget-comic-inner">
+        <div class="widget-comic-hd">
+          <span class="h3-before"></span>
+          <h3>Danh sách chương</h3>
+        </div>
+        <!-- widget-main-hd -->
+        <div class="widget-comic-body">
+          <div class="chapter-list-action">
+            <ul id="chapter-list-tabs" data-row="1">
+              <li>
+                <button id="order-lastest" class="btn-chuong-doc"
+                  type="button" value="LASTEST" 
+                >
+                Đọc chương mới nhất
+                </button>
+              </li>
+              <li>
+                <button id="order-first" class="btn-chuong-doc active"
+                  type="button" value="REGIST" 
+                >
+                Đọc từ đầu
+                </button>
+              </li>
+            </ul>
+            <!-- schedule-week -->
+            
+          </div>
+          <ul id="episode_list" class="episode-list">
+            <!-- dont understand :) -->
+            <li idx="0">
+              <a href="/comicColection/comic/manhwa/ton_tai_nhu_mot_nu_hau/ton_tai_nhu_mot_nu_hau_chap_1.html" 
+              class="episode-item"
+              name="episode_item"
+              >
+              <span class="episode-item-cols">
+                <span class="infor">
+                  <span class="no">Chương 1</span>
+                  <span class="views">
+                    <i class="fas fa-eye"></i>
+                    6360
+                  </span>
+                  <span class="date">
+                    2 tháng trước
+                  </span>
+                  
+                </span>
+              </span>
+              </a>
+            </li>
+            <li idx="1">
+              <a href="/comicColection/comic/manhwa/ton_tai_nhu_mot_nu_hau/ton_tai_nhu_mot_nu_hau_chap_2.html"
+              class="episode-item"
+              name="episode_item"
+              >
+              <span class="episode-item-cols">
+                <span class="infor">
+                  <span class="no">Chương 2</span>
+                  <span class="views">
+                    <i class="fas fa-eye"></i>
+                    6360
+                  </span>
+                  <span class="date">
+                    2 tháng trước
+                  </span>
+                  
+                </span>
+              </span>
+              </a>
+            </li>
+            <li idx="2">
+              <a href="/comicColection/comic/manhwa/ton_tai_nhu_mot_nu_hau/ton_tai_nhu_mot_nu_hau_chap_3.html" 
+              class="episode-item"
+              name="episode_item"
+              >
+              <span class="episode-item-cols">
+                <span class="infor">
+                  <span class="no">Chương 3</span>
+                  <span class="views">
+                    <i class="fas fa-eye"></i>
+                    6360
+                  </span>
+                  <span class="date">
+                    1 tháng trước
+                  </span>
+                  
+                </span>
+              </span>
+              </a>
+            </li>
+            <li idx="3">
+              <a href="/comicColection/comic/manhwa/ton_tai_nhu_mot_nu_hau/ton_tai_nhu_mot_nu_hau_chap_4.html" 
+              class="episode-item"
+              name="episode_item"
+              >
+              <span class="episode-item-cols">
+                <span class="infor">
+                  <span class="no">Chương 4</span>
+                  <span class="views">
+                    <i class="fas fa-eye"></i>
+                    6360
+                  </span>
+                  <span class="date">
+                    1 tháng trước
+                  </span>
+                </span>
+              </span>
+              </a>
+            </li>
+          </ul>
+          <script>
+            function hasClass(element, className){
+              return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
+            }
+            document.querySelectorAll('.btn-chuong-doc').forEach(button => {
+              button.addEventListener('click', () => {
+                var ele = document.getElementById('order');
+                if(!hasClass(button, 'active')){
+                  var list_name = document.getElementById('episode_list'),
+                  btnParent = button.parentElement.parentElement;
+
+                  btnParent.querySelectorAll('.btn-chuong-doc').forEach(button => {
+                    button.classList.remove('active');
+                  });
+                  button.classList.add('active');
+
+                  var i = list_name.childNodes.length;
+                  while(i--){
+                    list_name.appendChild(list_name.childNodes[i]);
+                  }
+                  
+                  // tab = [];
+                  // // populate array with li values
+                  // for(var i = 0; i < items.length; i++){
+                  //   tab.push(items[i].innerHTML);
+                  // }
+
+                  // console.log(tab);
+
+                  // // clear UL
+                  // var list = document.getElementById('episode_list');
+                  // list.innerHTML = "";
+
+                  // tab.reverse();
+                  // for(var i = 0; i < tab.length; i++){
+                  //   var textNode = document.createElement(tab[i]),
+                  //   liNode = document.createElement('li');
+
+                  //   liNode.appendChild(textNode);
+                  //   list.appendChild(liNode);
+                  // }
+                }
+              });
+            });
+          </script>
+          <!-- episode_list -->
+          <div id="mainComment" class="widget-comic">
+            <div class="widget-comic-hd">
+              <span class="h3-before"></span>
+              <h3>Bình luận mới</h3>
+            </div>
+            <!-- comments -->
+            <div id="khungpostComment" class="wrap-form-binhluan"
+            >
+              <div class="avatar-binh-luan"
+              style="border-radius: 50%; overflow: hidden;">
+                <a href="#" target="_blank">
+                  <img class="avar" src="/img/avatar-basic.jpg" alt="">
+                </a>
+              </div>
+              <div class="text-binh-luan">
+                <input id="content-comment" type="text"
+                name="content-comment" placeholder="Nhập bình luận của bạn"
+                >
+                <a class="btn btn-comment" href="#"
+                style="margin-top: auto; margin-bottom: auto;"
+                >
+                  <!-- Đăng nhập -->
+                  <i class="fas fa-paper-plane"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <!-- end-comments -->
+            <input type="hidden" id="id_manga" value="1">
+            <input type="hidden" id="load_comment" value="4">
+            <input type="hidden" id="type_comment" value="0">
+            <div id="comment" class="selector-zero">
+              <ul id="showComments" class="detail-list-comment"
+              >
+                <li>
+                  <div class="detail-list-comment-cover">
+                    <a href="#" target="_blank">
+                      <img class="avar" src="/img/avatar-basic.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="detail-list-comment-infor">
+                    <p class="detail-list-comment-title">
+                      thiaomie.ou
+                      <span>1 ngày trước</span>
+                    </p>
+                    <p class="detail-list-comment-content recommentbtn">
+                      thiếu chương thì phải ad ơi
+                    </p>
+                    <div class="chan">
+                      <span id="comment_reaction_31128_1">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 1)"
+                      >
+                        <i class="fas fa-heart comment-tags"></i>
+                      </span>
+                      <span id="comment_reaction_31128_2">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 2)"
+                      >
+                      <i class="fas fa-comment comment-tags"></i>
+                      </span>
+                      <span id="comment_reaction_31128_3">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 3)"
+                      >
+                      <i class="fas fa-flag comment-tags"></i>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="detail-list-comment-cover">
+                    <a href="#" target="_blank">
+                      <img  class="avar" src="/img/avatar-basic.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="detail-list-comment-infor">
+                    <p class="detail-list-comment-title">
+                      thiaomie.ou
+                      <span>1 ngày trước</span>
+                    </p>
+                    <p class="detail-list-comment-content recommentbtn">
+                      thiếu chương thì phải ad ơi
+                    </p>
+                    <div class="chan">
+                      <span id="comment_reaction_31128_1">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 1)"
+                      >
+                        <i class="fas fa-heart comment-tags"></i>
+                      </span>
+                      <span id="comment_reaction_31128_2">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 2)"
+                      >
+                      <i class="fas fa-comment comment-tags"></i>
+                      </span>
+                      <span id="comment_reaction_31128_3">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 3)"
+                      >
+                      <i class="fas fa-flag comment-tags"></i>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="detail-list-comment-cover">
+                    <a href="#" target="_blank">
+                      <img  class="avar" src="/img/avatar-basic.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="detail-list-comment-infor">
+                    <p class="detail-list-comment-title">
+                      thiaomie.ou
+                      <span>1 ngày trước</span>
+                    </p>
+                    <p class="detail-list-comment-content recommentbtn">
+                      thiếu chương thì phải ad ơi
+                    </p>
+                    <div class="chan">
+                      <span id="comment_reaction_31128_1">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 1)"
+                      >
+                        <i class="fas fa-heart comment-tags"></i>
+                      </span>
+                      <span id="comment_reaction_31128_2">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 2)"
+                      >
+                      <i class="fas fa-comment comment-tags"></i>
+                      </span>
+                      <span id="comment_reaction_31128_3">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 3)"
+                      >
+                      <i class="fas fa-flag comment-tags"></i>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="detail-list-comment-cover">
+                    <a href="#" target="_blank">
+                      <img class="avar" src="/img/avatar-basic.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="detail-list-comment-infor">
+                    <p class="detail-list-comment-title">
+                      thiaomie.ou
+                      <span>1 ngày trước</span>
+                    </p>
+                    <p class="detail-list-comment-content recommentbtn">
+                      thiếu chương thì phải ad ơi
+                    </p>
+                    <div class="chan">
+                      <span id="comment_reaction_31128_1">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 1)"
+                      >
+                        <i class="fas fa-heart comment-tags"></i>
+                      </span>
+                      <span id="comment_reaction_31128_2">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 2)"
+                      >
+                      <i class="fas fa-comment comment-tags"></i>
+                      </span>
+                      <span id="comment_reaction_31128_3">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 3)"
+                      >
+                      <i class="fas fa-flag comment-tags"></i>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="detail-list-comment-cover">
+                    <a href="#" target="_blank">
+                      <img class="avar" src="/img/avatar-basic.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="detail-list-comment-infor">
+                    <p class="detail-list-comment-title">
+                      thiaomie.ou
+                      <span>1 ngày trước</span>
+                    </p>
+                    <p class="detail-list-comment-content recommentbtn">
+                      thiếu chương thì phải ad ơi
+                    </p>
+                    <div class="chan">
+                      <span id="comment_reaction_31128_1">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 1)"
+                      >
+                        <i class="fas fa-heart comment-tags"></i>
+                      </span>
+                      <span id="comment_reaction_31128_2">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 2)"
+                      >
+                      <i class="fas fa-comment comment-tags"></i>
+                      </span>
+                      <span id="comment_reaction_31128_3">0</span>
+                      <span class="reaction-comment"
+                      onclick="comment_reaction(31128, 3)"
+                      >
+                      <i class="fas fa-flag comment-tags"></i>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- mainComment -->
+        </div>
+      </div>
+    </div>
+    <!-- mainChapterList -->
+    <div class="comic-type widget-comic">
+      <div class="widget-comic-inner">
+        <div class="widget-comic-hd">
+          <h3 style="text-align: center; padding-left: 0; text-transform: uppercase;">
+            Thể loại
+          </h3>
+        </div>
+        <div class="the-loai">
+          <div class="widget-comic-body the-loai-comic-wrap">
+            <div class="theloai-list">
+              <a href="index.html">18+</a>
+              <a href="#">Âu Cổ</a>
+              <a href="#">Bách Hợp</a>
+              <a href="#">Cổ Đại</a>
+              <a href="#">Đam Mỹ</a>
+              <a href="#">Hài Hước</a>
+              <a href="#">Harem</a>
+              <a href="#">Không màu</a>
+              <a href="#">Manga</a>
+              <a href="#">Manhwa</a>
+              <a href="#">Novel</a>
+              <a href="#">Xuyên Không</a>
+              <a href="#">Sugar Daddy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="space">
+        <div class="widget-comic-inner">
+          <div class="widget-comic-hd widget-space"></div>
+        </div>
+      </div>
+    </div><!-- the loai 
+    --><footer class="comic-foot">
+      <div class="foot-wrapper">
+        <div class="facebook">
+          <a href="https://www.facebook.com/thaomy317/"><img src="/img/facebook.png" alt=""></a>
+        </div>
+        <ul class="foot-list">
+          <li>Trang chủ</li>
+          <li>Về chúng tôi</li>
+          <li>Điều khoản sử dụng</li>
+          <li>Hỏi & Đáp</li>
+          <li>Liên hệ</li>
+        </ul>
+        <div class="title">
+          EC © 2021 Eel Comic - Nền tảng truyện tranh bản quyền duy nhất tại Việt Nam. 
+        </div>
+      </div>
+      
+    </footer>
+    <!-- foot -->
+  </body>
+</html>

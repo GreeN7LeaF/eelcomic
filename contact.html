@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ</title>
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="/bootstrap-5.1.2-dist/bootstrap-5.1.2-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.1.2-dist/bootstrap-5.1.2-dist/js/bootstrap.min.js"></script>
+
+    <!-- fontawsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ulkit -->
+    <link rel="stylesheet" href="./uikit-3.9.1/css/uikit.min.css" />
+    <script src="./uikit-3.9.1/js/uikit.min.js"></script>
+    <script src="./uikit-3.9.1/js/uikit-icons.min.js"></script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scroll-up-bar.min.js"></script>
+
+    <link rel="stylesheet" href="/style/main-content.css" />
+    <link rel="stylesheet" href="/style/nav.css" />
+    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="stylesheet" href="/style/slidebar.css" />
+    <link rel="stylesheet" href="/style/foot.css">
+    <link rel="stylesheet" href="/style/nav/contact.css">
+  </head>
+  <body>
+    <button onclick="topFunction()" id="btn_top" title="Go to top"
+    style="display: none;"
+    >
+      <i class="fas fa-chevron-up"
+      style="color: white;"
+      ></i>
+    </button>
+    <script>
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction(){
+        if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
+          document.getElementById("btn_top").style.display = "block";
+          document.getElementById("menu-left-balloon").style.display = "block";
+        }else{
+          document.getElementById("btn_top").style.display = "none";
+          document.getElementById("menu-left-balloon").style.display = "none";
+        }
+      }
+
+      function topFunction(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+      }
+    </script>
+    <header>
+      <div id="search-area">
+          <div class="search-area-wrap">
+              <input type="text" placeholder="Nhập tên truyện, tên nhóm dịch, thể loại" id="find">
+              <div class="btn">
+                <i class="fas fa-search"
+                style="font-size: 30px; color: white; margin-top: 15px;"
+                ></i>
+              </div>
+          </div>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav-wrap">
+          <div class="container-tool">
+            <div class="logo">
+              <a href="/index.html"><img src="img/logo.png" alt="" /></a>
+            </div>
+            <ul class="toolbar-list">
+              <li class="comic"><a href="#">TRUYỆN TRANH</a></li>
+              <li class="novel"><a href="#">TIỂU THUYẾT</a></li>
+              <li class="post"><a href="#">ĐĂNG TRUYỆN</a></li>
+            </ul>
+          </div>
+          <div class="container-btn">
+            <ul class="btn-list">
+              <li class="book-wrapper">
+                  <a href="/bookshelf.html">
+                    <div class="book icon">
+                    </div>
+                  </a>
+              </li>
+              <button type="button" onclick="showSearch()" class="search-btn icon">
+              </button>
+              <li class="open-side-menu">
+                <a class="open" onclick="openSideMenu()"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="sub-nav">
+        <div class="sub-nav-wrap">
+          <div class="sub-nav-content">
+            <ul class="content-list">
+              <li class="books"><a href="/index.html">TRANG CHỦ</a></li>
+              <li class="question"><a href="#">HỎI & ĐÁP</a></li>
+              <li class="contact"><a href="/contact.html">LIÊN HỆ</a></li>
+              <li class="about"><a href="/about.html">VỀ CHÚNG TÔI</a></li>
+            </ul>
+          </div>
+          <div class="registion">
+            <a href="/login.html">Đăng nhập</a>
+            <a href="/sign-up.html">Đăng ký</a>
+          </div>
+        </div>
+      </nav>
+      <script>
+        var content = document.getElementById('search-area');
+        function showSearch(){
+          // console.log(content);
+          if(content.style.display == "none"){
+            content.style.display = "block";
+          }else{
+            content.style.display = "none";
+          }
+        }
+      </script>
+    </header>
+    <div id="side-menu">
+      <div class="btn-close">
+        <a href="#" class="--close" onclick="closeSideMenu()">&times;</a>
+      </div>
+      <div class="regis-side">
+        <a href="/login/login.html">Đăng nhập</a>
+        <a href="/Sign up/sign-up.html">Đăng ký</a>
+      </div>
+      <div class="nav-side">
+        <ul class="menu-list">
+          <li class="comic"><a href="#">TRUYỆN TRANH</a></li>
+          <li class="novel"><a href="#">TIỂU THUYẾT</a></li>
+          <li class="books"><a href="/bookshelf.html">TỦ SÁCH CỦA TUI</a></li>
+          <li class="post"><a href="#">ĐĂNG TRUYỆN</a></li>
+        </ul>
+      </div>
+      <script>
+        function openSideMenu() {
+          document.getElementById("side-menu").style.width = "400px";
+        }
+        function closeSideMenu() {
+          document.getElementById("side-menu").style.width = "0px";
+        }
+      </script>
+    </div>
+    <div class="slide-container" uk-slideshow=" animation: slide">
+      <div
+        class="slidebar uk-position-relative uk-visible-toggle uk-light"
+        tabindex="-1"
+        uk-slideshow="autoplay: true
+      autoplay-interval: 500
+      pause-on-hover: true
+      ratio: 7:3"
+        uk-slider="center: true"
+      >
+        <ul class="uk-slideshow-items">
+          <li>
+            <img src="/img/slide1.jpg" alt="" uk-cover />
+          </li>
+          <li>
+            <img src="/img/slide2.jpg" alt="" uk-cover />
+          </li>
+          <li>
+            <img src="/img/slide4.jpg" alt="" uk-cover />
+          </li>
+        </ul>
+        <a
+          class="uk-position-center-left uk-position-small uk-hidden-hover"
+          href="#"
+          uk-slidenav-previous
+          uk-slideshow-item="previous"
+        ></a>
+        <a
+          class="uk-position-center-right uk-position-small uk-hidden-hover"
+          href="#"
+          uk-slidenav-next
+          uk-slideshow-item="next"
+        ></a>
+      </div>
+      <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+    </div>
+    <div class="site-content">
+      <div class="content-area">
+        <div class="container">
+          <div class="row">
+            <div class="main-col-inner col-md-12 col-sm-12">
+              <div id="post" class="c-blog-post">
+                <div class="entry-header"></div>
+                <div class="entry-content container-fluid">
+                  <div class="entry-content-wrap row">
+                    <div class="col-12 map">
+                        <div class="br">
+                        </div>
+                        <h1  class="br-content">EEL COMIC</h1>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 intro">
+                      <h2>Cổng truyện tranh <span class="comic-name">EEL Comic</span> - Truyện tranh bản quyền duy nhất tại Việt Nam</h2>
+                      <p>
+                        Email: <span class="comic-name"> eelcomic33718@gmail.com</span> <br>
+                        Facebook: <span class="comic-name">facebook.com/groups/eelcomic </span>
+                      </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 form-wrap">
+                      <form>
+                        <div style="display: none"></div>
+                        <p>
+                          <label>
+                            Tên của bạn (*)
+                            <br />
+                            <span id="yourname">
+                              <input
+                                type="text"
+                                name="your-name"
+                                size="40"
+                                aria-required="true"
+                                aria-invalid="false"
+                              />
+                            </span>
+                          </label>
+                        </p>
+                        <p>
+                            <label>
+                            Địa chỉ Email (*)
+                            <br />
+                            <span id="yourmail">
+                                <input
+                                type="text"
+                                name="your-mail"
+                                size="40"
+                                aria-required="true"
+                                aria-invalid="false"
+                                />
+                            </span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Thông điệp 
+                                <br/>
+                                <span id="yourmessage">
+                                    <textarea
+                                    name="your-message"
+                                    cols="40"
+                                    rows="3"
+                                    aria-invalid="false">
+                                    </textarea>
+                                </span>
+                            </label>
+                        </p>
+                        <button type="button"
+                        class="send"                        
+                        >
+                        Gửi thông điệp
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="banner">
+        <div class="widget-main-inner">
+          <div class="widget-main-hd" style="height: 60px;"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="foot-wrapper">
+          <div class="facebook">
+            <a href="https://www.facebook.com/thaomy317/"><img src="./img/facebook.png" alt=""></a>
+          </div>
+          <ul class="foot-list">
+            <li>Trang chủ</li>
+            <li>Về chúng tôi</li>
+            <li>Điều khoản sử dụng</li>
+            <li>Hỏi & Đáp</li>
+            <li>Liên hệ</li>
+          </ul>
+          <div class="title">
+            EC © 2021 Eel Comic - Nền tảng truyện tranh bản quyền duy nhất tại Việt Nam. 
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>

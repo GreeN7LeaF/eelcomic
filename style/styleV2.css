@@ -1,0 +1,831 @@
+@media (max-width: 1900px){
+    #side-slideshow,
+    #menu-right{
+        display: none !important;
+    }
+}
+@media (min-width: 1501px){
+    .cw--list .infor{
+        height: 60px;
+        font-size: 15px;
+    }
+    .cw--list .thumbBox{
+        width: 190px;
+        height: 260px;
+    }
+
+    .cw--list li:nth-child(19),
+    .cw--list li:nth-child(20),
+    .cw--list li:nth-child(21){
+        display: none;
+    }
+
+    .swiper--slide .comic--img{
+        /* height: 250px; */
+    }
+
+    /*  */
+    .infor{
+        font-size: 22px;
+    }
+
+    .link-chapter-wrap{
+        font-size: 17px;   
+    }
+
+    .link-chapter-wrap .viewer{
+        padding-left: 5px;
+        padding-top: 18px;
+    }
+}
+
+@media (max-width: 1500px){
+    #main-hot-content,
+    .main-hot-content{
+        height: 435px;
+    }
+
+    li.swiper--slide{
+        margin-right: 20px;
+    }
+
+    .swiper--slide .comic--img{
+        height: 250px;
+    }
+    /*  */
+    .extra-div{
+        display: block;
+    }
+
+    .product-btn{
+        width: 95%;
+    }
+
+    .product-btn{
+        height: 200px;
+    }
+
+    .view-groups{
+        transform: translate(200px);
+    }
+
+    .btn-subcribe,
+    .btn-like{
+        height: 60px;
+        font-size: 25px;
+        border-radius: 50px;
+    }
+
+    .col1,
+    .col2{
+        width: 40%;
+    }
+    /* widget */
+    .widget-comic-hd,
+    .widget-comic-inner,
+    .episode-list,
+    .widget-comic-hd
+    {
+        margin-left: auto;
+        margin-right: auto;
+        width: 98% !important;
+    }
+     
+     .cw-list-item{
+        width: auto;
+        margin-right: 0;
+    }
+    #manhwaLastestList li:nth-child(4),
+    #novelLastestList li:nth-child(4),
+    #novelLastestList li:nth-child(3),
+    #manhwaLastestList li:nth-child(3),
+    #mainLastestList li:nth-child(10)
+    {
+        display: none;
+    }
+
+    #rankList .top-list{
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    
+}
+@media (max-width: 1200px){
+    /* rank */
+    .top-list .top-item{
+        width: 100%;
+    }
+    .top-list{
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 1500px) and (min-width: 1201px){
+    /* main-content */
+    .manga-wrapper{
+        height: auto;
+        padding-bottom: 150px;
+        /* height: 1800px; */
+        /* background-color: pink; */
+        /* height: var(--height--comic--img--V2); */
+    }
+
+    .main-comic-list{
+        transform: translateY(150px);
+    }
+
+    .manhwa-wrapper,
+    .novel-wrapper{
+        height: auto;
+    }
+    /*  */
+    #mainLastestList{
+        height: 1900px;
+    }
+    
+    #manhwaLastestList,
+    #novelLastestList{
+        height: 720px;
+    }
+    
+    #rankList{
+        height: 1160px;
+    }
+    
+    .main-comment{
+        height: 1350px;
+    }
+    
+    .main-type{
+        height: 300px;
+    }
+    /*  */
+    .banner{
+        height: 120px;
+    }
+
+    .main-comic .comic--img{
+        width: 100%;
+        height: 450px;
+
+        margin-left: -5px;
+        margin-right: 20px;
+    }
+
+    .manhwa-list,
+    .main-comic-list,
+    .novel-list{
+        margin-left: 50px;
+        margin-bottom: 0;
+    }
+
+    .manhwa-list li,
+    .main-comic-list li,
+    .novel-list li{
+        width: var(--height--comic--img--V2);
+    }
+
+    .main-comic-list{
+        margin-top: -10%;
+    }
+    /*  */
+
+    .widget-comic-hd h3{
+        font-size: 25px;
+    }
+
+    /*  */
+    .infor{
+        font-size: 23px;
+    }
+
+    .link-chapter-wrap{
+        font-size: 20px;
+    }
+    
+    .link-chapter-wrap .viewer{
+        padding-top: 15px;
+    }
+
+    /*  */
+
+    .text-binh-luan input{
+        width: 88%;
+    }
+
+    /* new_comic */
+    .cw--list,
+    .cw-list{
+        padding: 15px 30px;
+    }
+
+    .cw--list li,
+    .cw-list li{
+        display: inline-block;
+        width: 29%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .cw--list li{
+        margin-right: 40px;
+    }
+
+    .cw-list li{
+        margin-right: 10px;
+    }
+
+
+    .cw--list .thumbBox{
+        height: 450px;
+        width: 100%;
+    }
+
+    .cw--list .infor{
+        height: 100%;
+        width: 100%;
+    }
+    /*  */
+
+    .cover-spec i{
+        font-size: 35px;
+    }
+
+    .cover-spec{
+        font-size: 25px;
+    }
+
+    .cover-spec h2{
+        font-size: 50px;
+        color: var(--clr-font-link);
+    }
+    .cover-img img{
+        margin-top: 30px;
+        height: 500px;
+        width: 350px;
+    }
+    /* chapter */
+    .comic-infor{
+        display: none;
+    }
+
+}    
+
+@media (max-width: 1500px){
+    /* comic */
+    .product-inner{
+        flex-direction: column;
+        width: 95%;
+    }
+    .product-synosis{
+        width: 100%;
+    }
+    .product-synosis-content{
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .cover-wrapper{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+    #see-more{
+        display: block;
+    }
+    
+
+    /*  */
+    
+}
+
+@media (max-width: 1200px) and (min-width: 993px){
+     /*  */
+     #mainLastestList{
+        height: 1140px;
+    }
+    
+    #manhwaLastestList,
+    #novelLastestList{
+        height: 625px;
+    }
+    
+    #rankList{
+        height: 1200px;
+    }
+    
+    .main-comment{
+        height: 1330px;
+    }
+    
+    .main-type{
+        height: 350px;
+    }
+    
+    #rankList{
+        height: 1650px;
+    }
+    /*  */
+    .top-list{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        overflow: hidden;
+        height: 1470px;
+    }
+
+    .top-list .top-item{
+        width: 100%;
+        flex-grow: 1;
+    }
+    .top-list .top-item .txt{
+        width: 82%;
+    }
+
+    .top-list .top-item a{
+        min-width: 22%;
+    }
+
+    /* cw-list */
+    .cw-list li{
+        width: 26vw;
+    }
+
+    .cw-list .comic--img{
+        width: 100%;
+        height: 400px;
+    }
+
+    /* new_comic */
+    .cw--list,
+    .cw-list{
+        padding: 15px 30px;
+    }
+
+    .cw-list li{
+        width: 25vw;
+    }
+
+    .cw-list li:nth-child(10),
+    .cw-list li:nth-child(9),
+    .cw-list li:nth-child(8),
+    .cw-list li:nth-child(7)
+    {
+        display: none;
+    }
+
+
+    .cw--list li{
+        display: inline-block;
+        width: 30%;
+        height: auto;
+        padding: 10px 0;
+        margin-right: 30px;
+    }
+
+    .cw--list .thumbBox{
+        height: 450px;
+        width: 100%;
+    }
+
+    .cw--list .infor{
+        height: 100%;
+        width: 100%;
+    }
+    /*  */
+    .infor{
+        font-size: 23px;
+    }
+
+    .link-chapter-wrap{
+        font-size: 20px;   
+    }
+
+    .link-chapter-wrap .viewer{
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+    /*  */
+    .cover-spec i{
+        font-size: 30px;
+    }
+
+    .cover-spec{
+        font-size: 20px;
+    }
+
+    .cover-spec h2{
+        font-size: 50px;
+        color: var(--clr-font-link);
+    }
+}
+
+@media (max-width: 1000px){
+    .product-inner{
+        flex-direction: column;
+        width: 98%;
+    }
+
+    /* new_comic */
+    .cw-list li{
+        /* margin-right: 15px; */
+    }
+}
+
+/* tables */
+@media screen and (max-width: 992px) and (min-width: 769px){
+     /* manhwa novel main list */
+     .cw-list li
+     {
+         width: 25vw;
+         /* background-color: pink; */
+     }
+
+     .cw-list .comic--img{
+         width: 300px;
+         height: 330px;
+     }
+
+     .cw--list .infor{
+         height: 66px;
+     }
+
+     .cw--list .thumbBox{
+        width: 265px;
+        height: 350px;
+     }
+     
+     /*  */
+ 
+     #mainLastestList{
+         height: 1475px;
+     }
+ 
+     #manhwaLastestList,
+     #novelLastestList{
+         height: 575px;
+     }
+ 
+     #rankList{
+         height: 2380px;
+     }
+ 
+     .main-comment{
+         height: 1370px;
+     }
+ 
+     .main-type{
+         height: 230px;
+     }
+ 
+     .banner{
+         height: 120px;
+     }
+     /* rank */
+     .top-list{
+         overflow: scroll;
+         overflow-x: hidden;
+     }
+     .top-list .top-item .views{
+         font-size: 20px;
+     }
+     .top-list .top-item .title{
+         font-size: 30px;
+     }
+     .top-list .top-item .status img{
+         height: 35px;
+     }
+     .top-item .rank--img{
+         height: 250px;
+         width: 100%;
+     }
+
+     /* comment */
+     .detail-list-comment-cover img{
+         height: 75px;
+     }
+
+     .detail-list-comment-cover{
+         margin-right: 10px;
+         margin-top: 5px;
+     }
+     /* the loai */
+     .theloai-list{
+         font-size: 18px;
+     }
+     /* comic-infor */
+     #user_action{
+         width: 100%;
+     }
+     .extra-div{
+        display: block;
+    }
+
+    .product-btn{
+        width: 95%;
+        height: 200px;
+    }
+
+    .view-groups{
+        transform: translate(200px);
+    }
+
+    .btn-subcribe,
+    .btn-like{
+        height: 60px;
+        font-size: 25px;
+        border-radius: 50px;
+    }
+
+    .col1,
+    .col2{
+        width: 40%;
+    }
+
+    /* widget */
+    .widget-comic-hd{
+        width: 100%;
+    }
+
+    /* chapter-list */
+    #episode_list li{
+        height: 50px;
+    }
+
+    #episode_list li a .infor{
+        transform: translateY(-50%);
+    }
+    .episode-item-cols .infor{
+        margin-top: 15px;
+    }
+
+    /*  */
+    .infor{
+        font-size: 23px;
+    }
+
+    .link-chapter-wrap{
+        font-size: 18px;   
+    }
+
+    .link-chapter-wrap .viewer{
+        padding-left: 0px;
+        padding-top: 15px;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 768px){
+    body{
+        font-size: 15px;
+    }
+    /* comment */
+    .widget-comic-inner,
+    .detail-list-comment-content{
+        font-size: 15px;
+    }
+    /* img */
+    #showComments .avar,
+    .avatar-binh-luan,
+    .avatar-binh-luan .avar{
+        height: 60px;
+        width: 60px;
+    }
+    .detail-list-comment-cover{
+        margin-right: 10px;
+    }
+    .text-binh-luan,
+    .btn-comment,
+    #content-comment{
+        height: 45px;
+        font-size: 15px;
+    }
+    .btn-comment i{
+        font-size: 20px;
+        padding-top: 5px;
+    }
+    #khungpostComment{
+        margin: 10px 0;
+    }
+    /* widget-comic*/
+    .widget-comic-hd{
+        height: 40px;
+    }
+    .widget-comic-hd .h3-before,
+    .widget-main-hd .h3-before{
+        height: 15px;
+    }
+
+    .widget-comic-hd h3,
+    .widget-main-hd h3{
+        /* font-size: 18px; */
+        padding-top: 5px;
+        margin-left: 0;
+    }
+    .widget-comic-body a{
+        font-size: 15px;
+        padding: 0 10px;
+    }
+    .widget-main-hd .more{
+        padding: 5px;
+        font-size: 22px;
+    }
+    .schedule-tabs button{
+        height: 60px;
+        font-size: 22px;
+    }
+
+    /* chapter.html */
+    .chapter-btn #comic-infor{
+        display: none;
+    }
+
+    .chapter-btn .pre-chapter,
+    .chapter-btn .next-chapter{
+        padding: 5px 0; 
+    }
+
+    .chapter-btn .pre-chapter,
+    .chapter-btn .next-chapter,
+    .chapter-btn .selectChapter
+    {
+        font-size: 11px;
+        margin-left: 5px;
+        width: 30%;
+    }
+
+    .chapter-name h2{
+        font-size: 12px;
+    }
+    /* nav */
+    .sub-nav-wrap{
+        width: 100%;
+    }
+    .content-list li{
+        margin-right: 10px;
+        padding: 0 20px; 
+    }
+
+    .content-list a{
+        font-size: 15px;
+    }
+
+    .toolbar-list{
+        display: none;
+    }
+
+    .container-btn .icon::before{
+        font-size: 20px;
+    }
+
+    /* mainLastestList */
+    .swiper--slide{
+        width: 120px;
+    }
+
+    /* manhwa novel main list */
+    .cw-list li{
+        width: 24vw;
+    }
+
+    .cw-list .comic--img{
+        height: 245px;
+    }
+
+    .cw--list li{
+        width: 30%;
+        margin-right: 20px;
+    }
+
+    .cw--list .infor{
+        font-size: 15px;
+        height: auto;
+    }
+
+    .cw--list .thumbBox{
+        width: 100%;
+        height: 300px;
+    }
+    /*  */
+
+    #mainLastestList{
+        height: 1230px;
+    }
+
+    #manhwaLastestList,
+    #novelLastestList{
+        height: 490px;
+    }
+
+    #rankList{
+        height: 1990px;
+    }
+
+    .main-comment{
+        height: 1040px;
+    }
+
+    .main-type{
+        height: 280px;
+    }
+
+    .banner{
+        height: 120px;
+    }
+    /* rank */
+    .top-list{
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .top-list .top-item .views{
+        font-size: 15px;
+    }
+
+    .top-list .top-item .title{
+        font-size: 23px;
+    }
+
+    .top-list .top-item .status img{
+        height: 20px;
+    }
+
+    /* mainComment */
+    .detail-list-comment-cover a{
+        padding: 0;
+    }
+
+    .avatar-binh-luan .avar{
+        height: 50px;
+        width: 50px;
+        transform: translateX(-15%);
+    }
+
+    .widget-comic-inner,
+    .detail-list-comment-content{
+        font-size: 15px;
+    }
+
+    .detail-list-comment-cover img{
+        height: 4rem;
+    }
+
+    #showComments .avar,
+    .avatar-binh-luan,
+    .avatar-binh-luan .avar{
+        height: 60px;
+        width: 60px;
+    }
+
+    .detail-list-comment-cover{
+        margin-right: 10px;
+    }
+
+    /* theloai-main */
+    .theloai-list{
+        margin: 10px;
+        text-align: center;
+    }
+
+    /* foot */
+    .foot-list li{
+        font-size: 20px;
+    }
+
+    /* chapter list */
+    #episode_list li{
+        height: 50px;
+    }
+
+    #episode_list .infor{
+        transform: translateY(-50%);
+    }
+    /*  */
+    .infor{
+        font-size: 23px;
+        margin-top: -6px;
+    }
+
+    .link-chapter-wrap{
+        font-size: 16px;   
+    }
+
+    .link-chapter-wrap .viewer{
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+
+    /*  */
+    .cover-spec h2{
+        font-size: 30px;
+        color: var(--clr-font-link);
+    }
+
+    .cover-img img{
+        margin-top: 30px;
+        height: 320px;
+        width: 220px;
+    }
+
+}
