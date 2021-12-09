@@ -472,11 +472,11 @@
      }
  
      .main-comment{
-         height: 1370px;
+         height: 1345px;
      }
  
      .main-type{
-         height: 230px;
+         height: 320px;
      }
  
      .banner{
@@ -710,7 +710,7 @@
     /*  */
 
     #mainLastestList{
-        height: 1230px;
+        height: 1210px;
     }
 
     #manhwaLastestList,
@@ -719,15 +719,15 @@
     }
 
     #rankList{
-        height: 1990px;
+        height: 2055px;
     }
 
     .main-comment{
-        height: 1040px;
+        height: 1060px;
     }
 
     .main-type{
-        height: 280px;
+        height: 300px;
     }
 
     .banner{
