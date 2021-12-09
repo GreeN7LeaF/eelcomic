@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
 :root{
     --clr-primary-content: rgb(253, 163, 178);
 }
@@ -22,7 +24,8 @@
 .cw-list,
 .cw--list,
 .schedule-tabs .on,
-.theloai-wrapper,
+/* .theloai-wrapper, */
+.widget-main-body,
 .the-loai-comic-wrap,
 .widget-comic-hd,
 #episode_list,
@@ -41,11 +44,13 @@
 }
 
 .cw-list,
-.theloai-wrapper{
+.widget-main-body
+{
     background-color: var(--clr-br-content);
     padding: 15px 10px;
     margin: 30px 10px;    
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .cw-list li{
@@ -515,7 +520,103 @@ div.swiper--slide{
     cursor: pointer;
 }
 
+/* our team */
+.aboutus{
+    height: 5000px;
+}
 
+.our-team{
+    margin: 0 50px;
+    position: relative;
+}
+
+.our-team h2{
+    color: var(--clr-font);
+    font-weight: 800;
+    font-size: 50px;
+    font-family: 'Neucha', cursive;
+    margin-bottom: 100px;
+}
+
+.our-team h3{
+    font-weight: 600;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.member-img,
+.member-infor{
+    margin-top: -50px;
+}
+
+.member-img{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    z-index: 1;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 
+    inset 10px -10px 2px 1px rgba(0, 16, 247, 0.3);
+}
+
+.member-img.right {
+    margin-left: auto;
+}
+
+.member-infor{
+    width: 85%;
+    height: 200px;
+    transform: translate(10%, -25%);
+    background: white;
+    text-align: left;
+    padding-left: 100px;
+    border-radius: 20px;
+
+    position: relative;
+}
+
+.one{
+    background-image: url(/img/member/my.jpg);
+    background-size: cover;
+}
+
+.two{
+    background-image: url(/img/member/quynh.jpg);
+    background-size: cover;
+}
+
+.three{
+    background-image: url(/img/member/phuc.jpg);
+    background-size: cover;
+}
+
+.four{
+    background-image: url(/img/member/hao.jpg);
+    background-size: cover;
+}
+
+.member-infor .infor{
+    color: var(--clr-second-font);
+    overflow: unset;
+    width: 80%;
+    white-space: normal;
+}
+
+.member-infor span{
+    font-weight: bold;
+}
+
+.member-infor .contact-us{
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+}
+
+.member-infor .contact-us img{
+    height: 35px;
+    border-radius: 50%;
+}
 
 
 /*  */
