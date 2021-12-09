@@ -522,20 +522,30 @@ div.swiper--slide{
 
 /* our team */
 .aboutus{
-    height: 5000px;
+    height: 3120px;
 }
 
 .our-team{
     margin: 0 50px;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .our-team h2{
+    margin-bottom: 100px;
+}
+
+.aboutus h2,
+.aboutus h1{
     color: var(--clr-font);
     font-weight: 800;
     font-size: 50px;
     font-family: 'Neucha', cursive;
-    margin-bottom: 100px;
+}
+
+.aboutus h1{
+    font-size: 70px;
+    padding: 30px 0;
 }
 
 .our-team h3{
@@ -576,22 +586,31 @@ div.swiper--slide{
     position: relative;
 }
 
-.one{
+/* .member-infor.right {
+    text-align: right;
+    padding-right: 120px;
+}
+
+.member-infor.right .infor{
+    transform: translateX(140px);
+} */
+
+.our-team .one{
     background-image: url(/img/member/my.jpg);
     background-size: cover;
 }
 
-.two{
+.our-team .two{
     background-image: url(/img/member/quynh.jpg);
     background-size: cover;
 }
 
-.three{
+.our-team .three{
     background-image: url(/img/member/phuc.jpg);
     background-size: cover;
 }
 
-.four{
+.our-team .four{
     background-image: url(/img/member/hao.jpg);
     background-size: cover;
 }
@@ -618,6 +637,69 @@ div.swiper--slide{
     border-radius: 50%;
 }
 
+/* colors */
+.colors{
+    display: flex;
+    justify-content: space-around;
+
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.colors-wrap{
+    margin-bottom: 100px;
+}
+
+.colors-wrap h2{
+    margin-bottom: 50px;
+}
+
+.color{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+
+    box-shadow: 12px 12px 2px 1px rgba(11, 11, 22, 0.3);
+}
+
+.colors .one{
+    background-color: var(--clr-font);
+}
+
+.colors .two{
+    background-color: var(--clr-second-font);
+}
+
+.colors .three{
+    background-color: var(--clr-primary-content);
+}
+
+.colors .four{
+    background-color: var(--clr-main-nav);
+}
+
+/* source */
+.sources-wrap .source{
+    height: 550px;
+    width: 90%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    border-radius: 10px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sources-wrap .one{
+    background-image: url(/img/source-img/001.jpg);
+}
+
+.sources-wrap .two{
+    background-image: url(/img/source-img/002.png);
+}
 
 /*  */
 footer{
