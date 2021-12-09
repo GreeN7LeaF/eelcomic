@@ -88,7 +88,7 @@
         $('html, body').animate({scrollTop:0}, 'slow');
       }
     </script>
-    <div id="menu-right">
+    <div id="menu-left">
       <button class="open-shortcut" onclick="openShortcut()">
         <i class="fas fa-chevron-left"></i>
       </button>
@@ -238,7 +238,10 @@
         }
         function openShortcut(){
           var sc = document.getElementById('shortcut');
-          console.log(sc);
+          var scParent = sc.parentElement;
+          var btnOpen = scParent.querySelector('.fas');
+
+          btnOpen.classList.remove(btnOpen.classList[1]);
 
           if(sc.style.display == "none"){
             sc.style.display = "block";
@@ -246,12 +249,16 @@
             sc.style.opacity = 1;
             sc.style.transform = 'scale(1)';
             },0);
+
+            btnOpen.classList.add('fa-chevron-left');
           }else{
             sc.style.opacity = 0;
             sc.style.transform = 'scale(0)';
             window.setTimeout(function(){
               sc.style.display = 'none';
             },700);
+
+            btnOpen.classList.add('fa-chevron-right');
           }
         }
       </script>
@@ -394,9 +401,9 @@
        uk-light
       "
       tabindex="-1"
-      uk-slideshow="autoplay: true;
-      autoplay-interval: 4000;
-      pause-on-hover: true;
+      uk-slideshow="autoplay: true
+      autoplay-interval: 500
+      pause-on-hover: true
       ratio: 7:3"
       uk-slider="center: true"
       >
