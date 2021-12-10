@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TỒN TẠI NHƯ MỘT NỮ HẦU - chương 1</title>
     <!-- ulkit -->
-  <link rel="stylesheet" href="./uikit-3.9.1/css/uikit.min.css" />
-  <script src="./uikit-3.9.1/js/uikit.min.js"></script>
-  <script src="./uikit-3.9.1/js/uikit-icons.min.js"></script>
+  <link rel="stylesheet" href="/uikit-3.9.1/css/uikit.min.css" />
+  <script src="/uikit-3.9.1/js/uikit.min.js"></script>
+  <script src="/uikit-3.9.1/js/uikit-icons.min.js"></script>
 
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -38,8 +38,9 @@
 <link rel="stylesheet" href="/style/foot.css">
 
 <link rel="stylesheet" href="/style/comic/chapter.css">
-<script src="/comicColection/comic/change.js"></script>
+<!-- <script src="/comicColection/comic/change.js"></script> -->
 
+<script src="/comicColection/comic/js/gotoChapter.js"></script>
 
 </head>
 <body>
@@ -157,7 +158,15 @@
         }
       </script>
     </div>
-    <div class="hyper-link"></div>
+    <div class="hyper-link">
+      <nav class="breadcrumb-wrap" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/home.html">Trang chủ</a></li>
+          <li class="breadcrumb-item"><a href="/comicColection/novelList/novel-page1.html">Manhwa</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Cách hiệp sĩ sống như một tiểu thư quyền quý</li>
+        </ol>
+      </nav>
+    </div>
     <div class="product--wrapper">
         <div class="product-inner header-chapters">
             <div class="chapter-name">
@@ -212,7 +221,7 @@
                 </select>
               </div>
               <div class="next-chapter" onclick="nextChapter()">Chương sau</div>
-              <script>
+              <!-- <script>
                 // const select = document.querySelector(".danh-sach-chuong");
                 // const options = document.querySelectorAll(".danh-sach-chuong option");
 
@@ -232,7 +241,7 @@
                 //     break;
                 //   }
                 // }
-              </script>
+              </script> -->
           </div>
       </div>
   </div>

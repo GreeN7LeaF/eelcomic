@@ -681,6 +681,12 @@ a{
     border-radius: 10px;
 }
 
+.btn-main,
+#menu-left .title{
+    border: 0.5px solid var(--clr-sub-nav);
+    box-shadow: 5px 5px 1px var(--clr-second-font);
+}
+
 #menu-left .title h2,
 #menu-right .title h2{
     padding: 0;
