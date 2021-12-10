@@ -6,8 +6,8 @@ function preChapter(){
     var match = thisHref.match(/chap_(\d+)/)
     if (match) {
         if(match[1] > 1){
-            var temp = parseInt(match[1]) - 1;
-            var tmp = thisHref.replace(match[1], next);
+            var pre = parseInt(match[1]) - 1;
+            var tmp = thisHref.replace(match[1], pre);
             window.location.href = tmp;
         }
     }
@@ -21,7 +21,7 @@ function nextChapter(){
 
     var match = thisHref.match(/chap_(\d+)/)
     if (match) {
-        if(match[1] <= chapters){
+        if(match[1] < chapters){
             var next = parseInt(match[1]) + 1;
             var tmp = thisHref.replace(match[1], next);
             window.location.href = tmp;

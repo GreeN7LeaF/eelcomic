@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* breadcrumb */
-.hyper-link{
-    height: 75px;
-}
 .breadcrumb{
     background-color: transparent;
     padding-top: 20px;
