@@ -156,7 +156,7 @@ button{
   width: 70px;
   border-radius: 50%;
   background-color: var(--clr-font);
-  background-image: url(/img/avatar-basic.jpg);
+  background-image: url(../img/avatar-basic.jpg);
   background-size: cover;
   margin-bottom: 20px;
 

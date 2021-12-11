@@ -400,7 +400,7 @@ a{
     border-radius: 50%;
     float: left;
     cursor: pointer;
-    background-image: url(/img/avatar-basic.jpg);
+    background-image: url(../img/avatar-basic.jpg);
     background-size: cover;
 }
 

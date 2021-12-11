@@ -596,22 +596,22 @@ div.swiper--slide{
 } */
 
 .our-team .one{
-    background-image: url(/img/member/my.jpg);
+    background-image: url(../img/member/my.jpg);
     background-size: cover;
 }
 
 .our-team .two{
-    background-image: url(/img/member/quynh.jpg);
+    background-image: url(../img/member/quynh.jpg);
     background-size: cover;
 }
 
 .our-team .three{
-    background-image: url(/img/member/phuc.jpg);
+    background-image: url(../img/member/phuc.jpg);
     background-size: cover;
 }
 
 .our-team .four{
-    background-image: url(/img/member/hao.jpg);
+    background-image: url(../img/member/hao.jpg);
     background-size: cover;
 }
 
@@ -694,11 +694,11 @@ div.swiper--slide{
 }
 
 .sources-wrap .one{
-    background-image: url(/img/source-img/001.jpg);
+    background-image: url(../img/source-img/001.jpg);
 }
 
 .sources-wrap .two{
-    background-image: url(/img/source-img/002.png);
+    background-image: url(../img/source-img/002.png);
 }
 
 /*  */
