@@ -45,7 +45,7 @@ function validation(){
     if(user in localStorage){
         if(localStorage[user] === pw){
             // console.log('yes');
-            window.location.href = "/home.html";
+            window.location.href = "./home.html";
         }else{
             alert('Mật khẩu chưa đúng');
         }

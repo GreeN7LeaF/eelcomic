@@ -46,12 +46,16 @@
       window.onscroll = function() {scrollFunction()};
 
       function scrollFunction(){
-        if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
+        var tmp = (document.body.scrollHeight - 1000);
+
+        if((document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) && document.documentElement.scrollTop < tmp){
           document.getElementById("btn_top").style.display = "block";
           document.getElementById("menu-left-balloon").style.display = "block";
+          document.getElementById("side-slideshow").style.display = "block";
         }else{
           document.getElementById("btn_top").style.display = "none";
           document.getElementById("menu-left-balloon").style.display = "none";
+          document.getElementById("side-slideshow").style.display = "none";
         }
       }
 
@@ -59,6 +63,53 @@
         $('html, body').animate({scrollTop:0}, 'slow');
       }
     </script>
+    <div id="menu-left-balloon" style="display: none;"
+    > 
+      <div id="user-balloon">
+        <ul class="menu--list">
+          <li class="item one">
+            <a href="./login.html">
+              <div class="book icon"></div>
+            </a>
+            <div class="name-tag">Tủ sách</div>
+          </li>
+          <li class="item two">
+            <a href="./login.html">
+              <div class="log-out icon">
+                <i class="fas fa-sign-out-alt"></i>
+              </div>  
+            </a>
+            <div class="name-tag">Đăng xuất</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="side-slideshow"
+    class="uk-visible-toggle uk-light" 
+      tabindex="-1" 
+      uk-slideshow="ratio: 3:7; animation: push; autoplay: true; autoplay-interval: 5000">
+        <h1>
+          Cập nhật nhanh nhất tại Eel Comic
+        </h1>
+
+        <ul class="uk-slideshow-items">
+          <li>
+            <img src="./img/sideSlideshow/001.jpg" alt="" uk-cover>
+          </li>
+          <li>
+            <img src="./img/sideSlideshow/002.jpg" alt="" uk-cover>
+          </li>
+          <li>
+            <img src="./img/sideSlideshow/003.jpg" alt="" uk-cover>
+          </li>
+          <li>
+            <img src="./img/sideSlideshow/004.jpg" alt="" uk-cover>
+          </li>
+          <li>
+            <img src="./img/sideSlideshow/005.jpg" alt="" uk-cover>
+          </li>
+        </ul>
+      </div>
     <header>
       <div id="search-area">
           <div class="search-area-wrap">
