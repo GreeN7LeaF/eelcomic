@@ -7,6 +7,14 @@ ul{
     padding: 0;
 }
 
+footer a{
+    color: var(--clr-second-font);
+}
+
+footer a:hover{
+    color: var(--clr-font-link-hover);
+}
+
 .comic-foot{
     margin-top: 30px;
 }
