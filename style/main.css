@@ -37,7 +37,8 @@
     /* shadow */
     --shadow-content: 0 0 5px 5px rgba(0, 0, 0, 0.30),
     4px 4px 6px rgba(0, 0, 0, 0.12);
-
+    /* --shadow: rgba(11, 11, 22, 0.3); */
+    --shadow: rgba(0, 4, 247, 0.2);
     /*  */
     --width--comic--img: 12.7%;
     --height--comic--img--V2: 30%;

@@ -611,7 +611,7 @@ a{
     font-size: 25px;
     font-weight: 800;
     box-shadow: 
-    12px 12px 2px 1px rgba(0, 16, 247, 0.2);
+    12px 12px 2px 1px var(--shadow);
 }
 
 .bxh-list{
@@ -754,7 +754,7 @@ a{
 
 #side-slideshow h1{
     font-weight: 900;
-    color: var(--clr-main-nav);
+    color: var(--clr-font-link);
 }
 
 @media (max-width: 990px){

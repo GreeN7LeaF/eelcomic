@@ -5,7 +5,7 @@
     color: var(--clr-font);
     border-radius: 0 0 20px 20px;
     box-shadow: 
-    12px 12px 2px 1px rgba(0, 0, 255, .2);
+    12px 12px 2px 1px var(--shadow);
 }
 
 .entry-content{
@@ -60,7 +60,7 @@
   transition: 0.4s;
 
   box-shadow: 
-  12px 12px 2px 1px rgba(0, 0, 255, .2);
+  12px 12px 2px 1px var(--shadow);
 }
 
 #yourmail input,
@@ -82,7 +82,7 @@
     width: 300px;
     transform: translateY(-20px);
     box-shadow: 
-    12px 12px 2px 1px rgba(0, 0, 255, .2);
+    12px 12px 2px 1px var(--shadow);
 
     color: var(--clr-font-content);
     background-color: var(--clr-font);
@@ -102,7 +102,7 @@
 
 .send:hover{
     box-shadow: none;
-  background-color: rgba(0, 0, 255, .2);
+  background-color: var(--shadow);
   color: var(--clr-font);
 }
 

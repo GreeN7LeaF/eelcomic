@@ -36,7 +36,7 @@
 {
     border-radius: 20px;
     box-shadow: 
-    12px 12px 2px 1px rgba(0, 16, 247, 0.2);
+    12px 12px 2px 1px var(--shadow);
 }
 
 .widget-main{
@@ -71,7 +71,7 @@
 
     background-color: var(--clr-primary-content);
     box-shadow: 
-    7px 7px 2px 1px rgba(0, 4, 247, 0.2);
+    7px 7px 2px 1px var(--shadow);
     transition: var(--trans-time);
 }
 
@@ -567,7 +567,7 @@ div.swiper--slide{
     position: relative;
     border-radius: 50%;
     box-shadow: 
-    inset 10px -10px 2px 1px rgba(0, 16, 247, 0.3);
+    inset 10px -10px 2px 1px var(--shadow);
 }
 
 .member-img.right {
@@ -660,7 +660,7 @@ div.swiper--slide{
     width: 200px;
     border-radius: 50%;
 
-    box-shadow: 12px 12px 2px 1px rgba(11, 11, 22, 0.3);
+    box-shadow: 12px 12px 2px 1px var(--shadow);
 }
 
 .colors .one{

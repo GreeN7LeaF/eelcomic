@@ -54,11 +54,19 @@
 
 .pre-chapter,
 .next-chapter{
-    background-color: red;
     width: 20%;
     text-align: center;
     padding-top: 10px;
     background-color: var(--clr-sub-nav);
+
+    transition: var(--trans-time);
+}
+
+.pre-chapter:hover,
+.next-chapter:hover{
+    transform: translate(8%, 8%);
+    border: 0.5px transparent;
+    box-shadow: none;
 }
 
 .selectChapter{
@@ -99,17 +107,57 @@ pre{
 }
 
 /* checkbox */
-.checkmark{
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
+#novel-mode > *{
+    font-weight: 900;
+    color: var(--clr-font-link);
 }
 
-input[type="checkbox"]{
-    background-color: pink;
+#novel-mode .wrap{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-wrap{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+input[type="radio"]{
     display: inline-block;
     opacity: 0;
     height: 0;
     width: 0;
 }
-/* side slideshow */
+/* mode */
+#novel-mode .row1{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#novel-mode .wrap:hover .checkmark{
+    background-color: var(--clr-main-nav);
+}
+
+#novel-mode input:checked ~ .checkmark{
+    background-color: var(--clr-sub-nav);
+}

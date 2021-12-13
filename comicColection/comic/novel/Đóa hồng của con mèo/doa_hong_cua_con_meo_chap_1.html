@@ -12,7 +12,7 @@
 
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="scroll-up-bar.min.js"></script>
+  <!-- <script src="scroll-up-bar.min.js"></script> -->
 
   <!-- bootstrap cdn -->
   <link
@@ -42,6 +42,9 @@
 <script src="../../../../comicColection/comic/js/gotoChapter.js"></script>
 </head>
 <body>
+  <script id="changeMode" type="text/javascript" src="../../../../js/chapter.js"></script>
+
+
     <button onclick="topFunction()" id="btn_top" title="Go to top"
     >
       <i class="fas fa-chevron-up"
@@ -180,8 +183,8 @@
             </ul>
           </div>
           <div class="registion">
-            <a href="../../../../login/login.html">Đăng nhập</a>
-            <a href="../../../../Sign up/sign-up.html">Đăng ký</a>
+            <a href="../../../../login.html">Đăng nhập</a>
+            <a href="../../../../sign-up.html">Đăng ký</a>
           </div>
         </div>
       </nav>
@@ -202,8 +205,8 @@
         <a href="#" class="--close" onclick="closeSideMenu()">&times;</a>
       </div>
       <div class="regis-side">
-        <a href="../../../../login/login.html">Đăng nhập</a>
-        <a href="../../../../Sign up/sign-up.html">Đăng ký</a>
+        <a href="../../../../login.html">Đăng nhập</a>
+        <a href="../../../../sign-up.html">Đăng ký</a>
       </div>
       <div class="nav-side">
         <ul class="menu-list">
@@ -240,7 +243,7 @@
                 </h2>
             </div>
             <div class="chapter-btn">
-                <button id="comic-infor" onclick="window.location.href='/comicColection/comic/novel/Đóa hồng của con mèo/doa_hong_cua_con_meo.html'">
+                <button id="comic-infor" onclick="window.location.href='../../../../comicColection/comic/novel/Đóa hồng của con mèo/doa_hong_cua_con_meo.html'">
                     <i class="fas fa-info"></i>
                 </button>
                 <div class="pre-chapter" onclick="preChapter()">Chương trước</div>
@@ -253,24 +256,56 @@
             </div>
         </div>
     </div>
-    <div class="novel-mode">
+    <div id="novel-mode">
       <div class="row1">
         Mode: <br>
-        <label for="darkMode">
-          Dark
-          <input type="checkbox" name="novelMode" id="darkMode" value="dark">
-          <span class="checkmark"></span>
-        </label>
-        <label for="lightMode">
-          Light
-          <input type="checkbox" name="novelMode" id="lightMode" value="light">
-          <span class="checkmark"></span>
-        </label>
+        <div class="btn-wrap">
+          <label class="wrap" onclick="changeMode()">
+            Dark
+            <input type="radio" name="novelMode" id="darkMode" value="dark" >
+            <span class="checkmark"></span>
+          </label>
+          <label class="wrap" onclick="changeMode()">
+            Light
+            <input type="radio" name="novelMode" id="lightMode" value="light" checked>
+            <span class="checkmark"></span>
+          </label>
+        </div>
       </div>
+      
     </div>
     <script>
+      function changeMode(){
+        var novelMode = document.getElementById('novel-mode');
+        const darkMode = novelMode.querySelector('#darkMode');
+        const lightMode = novelMode.querySelector('#lightMode');
 
+        // light-color
+
+        if(lightMode.checked == true){
+          document.documentElement.style.setProperty('--clr-body', '#8cb4aa');
+
+          document.documentElement.style.setProperty('--clr-main-nav', '#14785C');
+          document.documentElement.style.setProperty('--clr-sub-nav', '#246452');
+          document.documentElement.style.setProperty('--clr-font', 'white');
+          document.documentElement.style.setProperty('--clr-font-link', '#0e4935');
+          document.documentElement.style.setProperty('--clr-second-font', '#43494e');
+          document.documentElement.style.setProperty('--clr-primary-content', '#1a6953');
+          document.documentElement.style.setProperty('--shadow', 'rgba(0, 4, 247, 0.2)');
+        }else{
+          document.documentElement.style.setProperty('--clr-body', '#2A2B31');
+
+          document.documentElement.style.setProperty('--clr-main-nav', '#594442');
+          document.documentElement.style.setProperty('--clr-sub-nav', '#402C28');
+          document.documentElement.style.setProperty('--clr-font', 'white');
+          document.documentElement.style.setProperty('--clr-font-link', '#D9C6B0');
+          document.documentElement.style.setProperty('--clr-second-font', '#8C775E');
+          document.documentElement.style.setProperty('--clr-primary-content', '#43494e');
+          document.documentElement.style.setProperty('--shadow', 'rgba(11, 11, 22, 0.3)');
+        }
+      }
     </script>
+  
     <div class="viewer">
       <div class="pageWrapper cw-list">
         <pre>
@@ -725,7 +760,7 @@
     <div class="product--wrapper">
       <div class="product-inner header-chapters">
           <div class="chapter-btn">
-              <button id="comic-infor" onclick="window.location.href='/comicColection/comic/manhwa/cach_hiep_si_song_nhu_tieu_thu_quyen_quy/cach_hiep_si_song_nhu_tieu_thu_quyen_quy.html'">
+              <button id="comic-infor" onclick="window.location.href='../../../../comicColection/comic/manhwa/cach_hiep_si_song_nhu_tieu_thu_quyen_quy/cach_hiep_si_song_nhu_tieu_thu_quyen_quy.html'">
                   <i class="fas fa-info"></i>
               </button>
               <div class="pre-chapter" onclick="preChapter()">Chương trước</div>
