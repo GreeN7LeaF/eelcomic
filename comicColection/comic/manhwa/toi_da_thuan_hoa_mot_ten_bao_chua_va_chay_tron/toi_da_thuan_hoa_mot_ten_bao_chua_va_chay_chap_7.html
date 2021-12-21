@@ -39,6 +39,8 @@
 
 <link rel="stylesheet" href="../../../../style/comic/chapter.css">
 <script src="../../../../comicColection/comic/js/gotoChapter.js"></script>
+<script src="../../../../js/general.js"></script>
+
 </head>
 <body>
     <button onclick="topFunction()" id="btn_top" title="Go to top"
@@ -282,13 +284,13 @@
               <input id="content-comment" type="text"
               name="content-comment" placeholder="Nhập bình luận của bạn"
               >
-              <a class="btn btn-comment" href="#"
+              <div class="btn btn-comment" onclick="upComment()"
               style="margin-top: auto; margin-bottom: auto;"
               >
                 <!-- Đăng nhập -->
                 <i class="fas fa-paper-plane"
                 ></i>
-              </a>
+              </div>
             </div>
           </div>
           <!-- end-comments -->
@@ -306,7 +308,9 @@
                 </div>
                 <div class="detail-list-comment-infor">
                   <p class="detail-list-comment-title">
+                    <span>
                     thiaomie.ou
+                    </span>
                     <span>1 ngày trước</span>
                   </p>
                   <p class="detail-list-comment-content recommentbtn">
@@ -342,7 +346,9 @@
                 </div>
                 <div class="detail-list-comment-infor">
                   <p class="detail-list-comment-title">
-                    thiaomie.ou
+                    <span>
+                      thiaomie.ou
+                    </span>
                     <span>1 ngày trước</span>
                   </p>
                   <p class="detail-list-comment-content recommentbtn">
@@ -378,7 +384,9 @@
                 </div>
                 <div class="detail-list-comment-infor">
                   <p class="detail-list-comment-title">
-                    thiaomie.ou
+                    <span>
+                      thiaomie.ou
+                    </span>
                     <span>1 ngày trước</span>
                   </p>
                   <p class="detail-list-comment-content recommentbtn">
@@ -414,7 +422,9 @@
                 </div>
                 <div class="detail-list-comment-infor">
                   <p class="detail-list-comment-title">
-                    thiaomie.ou
+                    <span>
+                      thiaomie.ou
+                    </span>
                     <span>1 ngày trước</span>
                   </p>
                   <p class="detail-list-comment-content recommentbtn">
@@ -450,7 +460,9 @@
                 </div>
                 <div class="detail-list-comment-infor">
                   <p class="detail-list-comment-title">
-                    thiaomie.ou
+                    <span>
+                      thiaomie.ou
+                    </span>
                     <span>1 ngày trước</span>
                   </p>
                   <p class="detail-list-comment-content recommentbtn">
