@@ -21,7 +21,7 @@ function topFunction(){
 function fixedNav(){
     var nav = document.querySelector('.main-nav');
     var lastScrollTop = 0;
-    console.log('run');
+    // console.log('run');
     
     var st = window.pageYOffset || document.documentElement.scroll; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
     if (st > lastScrollTop ){
@@ -29,7 +29,7 @@ function fixedNav(){
         nav.style.position = "relative";
         nav.style.height = "150px";
         nav.style.boxShadow = "none";
-        console.log('down');
+        // console.log('down');
     } else{
         // upscroll code
         if(document.documentElement.scrollTop > 500){
@@ -37,7 +37,7 @@ function fixedNav(){
         nav.style.height = "110px";
         nav.style.zIndex = "200";
         nav.style.boxShadow = "2px 2px 20px 1px black";
-        console.log('up');
+        // console.log('up');
         }
     }
     lastScrollTop = st <= 0 ? 0 : st;
@@ -51,15 +51,15 @@ function gohome(){
         if(localStorage["currUser"] != 'user'){
             if(link.href.indexOf('index') > -1){
                 var tmp = link.href.replace('index','home');
-                console.log('ok');
+                // console.log('ok');
                 link.href = tmp;
-                console.log(link);
+                // console.log(link);
             }else{
-                console.log("don't need to change");
+                // console.log("don't need to change");
             }
     
         }else{
-            console.log('false');
+            // console.log('false');
         }
     }
 }
@@ -82,3 +82,36 @@ function hello(){
 }
 
 // comment
+function upComment(){
+    var input = document.querySelector('#content-comment').value;
+    var list = document.querySelector('#showComments');
+    var childs = list.children;
+    var name = localStorage['currUser'];
+
+    var tmp = childs[childs.length-1];
+    var nameC = tmp.querySelector('.detail-list-comment-title').firstElementChild;
+    var content = tmp.querySelector('.detail-list-comment-content');
+    var time = tmp.querySelector('.detail-list-comment-title').lastElementChild;
+    // change infor of last comment
+    content.innerHTML = input;
+    nameC.innerHTML = name;
+    time.innerHTML = "1 giây trước";
+    document.querySelector('#content-comment').value = '';
+    // remove last child from list
+    list.removeChild(childs[childs.length-1]);
+    // add list to temp array to reverse
+    var t = []; 
+    for(var i = 0; i < childs.length; i++){
+        t.push(childs[i]);
+    }
+
+    // clear all DOM curr in list
+    while(list.firstElementChild){
+        list.removeChild(list.firstChild);
+    }
+    // append child form array to list DOM .. and done :333 (lam lan 2 trong bat luc)
+    list.appendChild(tmp);
+    for(var i = 0; i < t.length; i++){
+        list.appendChild(t[i]);
+    }
+}
