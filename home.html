@@ -21,10 +21,9 @@
   <link rel="stylesheet" href="./style/main-content.css" />
   <link rel="stylesheet" href="./style/styleV2.css" />
   <link rel="stylesheet" href="./style/main.css" />
-  <link rel="stylesheet" href="./style/comment.css">
   <link rel="stylesheet" href="./style/foot.css">
 
-
+  <script src="./js/general.js"></script>
   <!-- ulkit -->
   <link rel="stylesheet" href="./uikit-3.9.1/css/uikit.min.css" />
   <script src="./uikit-3.9.1/js/uikit.min.js"></script>
@@ -32,7 +31,6 @@
 
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script src="scroll-up-bar.min.js"></script> -->
 </head>
 
 <body>
@@ -75,13 +73,11 @@
           document.getElementById("btn_top").style.display = "block";
           document.getElementById("menu-left-balloon").style.display = "block";
           document.getElementById("side-slideshow").style.display = "block";
-          document.getElementById("menu-right").style.display = "block";
 
         }else{
           document.getElementById("btn_top").style.display = "none";
           document.getElementById("menu-left-balloon").style.display = "none";
           document.getElementById("side-slideshow").style.display = "none";
-          document.getElementById("menu-right").style.display = "none";
         }
       }
 
@@ -383,7 +379,7 @@
         <div class="main-nav-wrap">
           <div class="container-tool">
             <div class="logo">
-              <a href="./index.html"><img src="./img/logo.png" alt="" /></a>
+              <a href="./home.html"><img src="./img/logo.png" alt="" /></a>
             </div>
             <ul class="toolbar-list">
               <li class="comic"><a href="./comicColection/manhwaList/manhwaList-page1.html">TRUYỆN TRANH</a></li>
@@ -412,7 +408,7 @@
         <div class="sub-nav-wrap">
           <div class="sub-nav-content">
             <ul class="content-list">
-              <li class="books"><a href="./home.html">TRANG CHỦ</a></li>
+              <li class="home"><a href="./home.html">TRANG CHỦ</a></li>
               <li class="question"><a href="./ask.html">HỎI & ĐÁP</a></li>
               <li class="contact"><a href="./contact.html">LIÊN HỆ</a></li>
               <li class="about"><a href="./about.html">VỀ CHÚNG TÔI</a></li>
@@ -421,7 +417,7 @@
           <div class="registion">
             <div class="user">
               <div class="user-logo">
-                <div class="hello">Hello User223302</div>
+                <div class="hello"></div>
               </div>
             </div>
             <a href="./login.html">Đăng xuất</a>
@@ -452,7 +448,7 @@
         <ul class="menu-list">
           <li class="comic"><a href="./comicColection/manhwaList/manhwaList-page1.html">TRUYỆN TRANH</a></li>
           <li class="novel"><a href="./comicColection/novelList/novel-page1.html">TIỂU THUYẾT</a></li>
-          <li class="books"><a href="./bookshelf.html">TỦ SÁCH CỦA TUI</a></li>
+          <li class="home"><a href="./bookshelf.html">TỦ SÁCH CỦA TUI</a></li>
           <li class="post"><a href="./postComic.html">ĐĂNG TRUYỆN</a></li>
         </ul>
       </div>
@@ -540,7 +536,7 @@
             </li>
             <li class="swiper--slide">
               <div class="swiper--slide">
-                <a class="cw-list-item" href="./comicColection/comic/manhwa/toi_da_thuan_hoa_mot_ten_bao_chua_va_chay_tron/" itemprop="url">
+                <a class="cw-list-item" href="./comicColection/comic/manhwa/toi_da_thuan_hoa_mot_ten_bao_chua_va_chay_tron/toi_da_thuan_hoa_mot_ten_bao_chua_va_chay.html" itemprop="url">
                   <img src="./img/Kho truyện/truyện tranh/manhwa/Tôi đã thuần hóa một tên bạo chúa và chạy trốn/bìa/bia.png" alt="ten truyen" class="comic--img" />
                   <span class="infor">Tôi đã thuần hóa một tên bạo chúa và chạy trốn</span>
                 </a>

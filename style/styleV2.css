@@ -108,8 +108,27 @@
         overflow: scroll;
         overflow-x: hidden;
     }
+     /* comic */
+     .product-inner{
+        flex-direction: column;
+        width: 95%;
+    }
+    .product-synosis{
+        width: 100%;
+    }
+    .product-synosis-content{
+        height: 100px;
+        overflow: hidden;
+    }
 
+    .cover-wrapper{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
     
+    #see-more{
+        display: block;
+    }
 }
 @media (max-width: 1200px){
     /* rank */
@@ -271,34 +290,6 @@
     }
 
 }    
-
-@media (max-width: 1500px){
-    /* comic */
-    .product-inner{
-        flex-direction: column;
-        width: 95%;
-    }
-    .product-synosis{
-        width: 100%;
-    }
-    .product-synosis-content{
-        height: 100px;
-        overflow: hidden;
-    }
-
-    .cover-wrapper{
-        font-size: 20px;
-        margin-bottom: 30px;
-    }
-    
-    #see-more{
-        display: block;
-    }
-    
-
-    /*  */
-    
-}
 
 @media (max-width: 1200px) and (min-width: 993px){
      /*  */

@@ -474,6 +474,27 @@ div.swiper--slide{
     /* background-color: rgb(253, 163, 178); */
 }
 
+#showComments i{
+    font-size: 19px;
+    transition: var(--trans-time);
+}
+
+#showComments .fa-heart{
+    color: rgb(134, 18, 38);
+}
+
+#showComments .fa-comment{
+    color: var(--clr-font);
+}
+
+#showComments .fa-flag{
+    color: var(--clr-font-sub);
+}
+
+#showComments i:hover{
+    font-size: 22px;
+}
+
 .detail-list-comment-cover{
     height: 100%;
     border-radius: 50%;
@@ -489,6 +510,10 @@ div.swiper--slide{
 .detail-list-comment-title span{
     flex-grow: 1;
     text-align: right;
+}
+
+.detail-list-comment-title span:first-child{
+    text-align: left;
 }
 
 .detail-list-comment-infor{
@@ -507,6 +532,11 @@ div.swiper--slide{
     font-size: 20px;
     border-radius: 10px;
     margin: 0;
+}
+
+#showComments .chan span{
+    color: white;
+    padding: 2px;
 }
 
 .chan{

@@ -96,6 +96,10 @@ ul{
   padding-left: 30px;
 }
 
+*:focus{
+  outline: none;
+}
+
 a,
 .uk-link,
 a:hover{

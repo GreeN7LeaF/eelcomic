@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="../../../../style/foot.css">
     <link rel="stylesheet" href="../../../../style/comic/chapter.css">
 
+    <script src="../../js/comic.js"></script>
+
  <!-- ulkit -->
  <link rel="stylesheet" href="../../../../uikit-3.9.1/css/uikit.min.css" />
  <script src="../../../../uikit-3.9.1/js/uikit.min.js"></script>
@@ -169,7 +171,6 @@
         </div>
       </div>
     </div>
-    
     <header>
       <div id="search-area">
           <div class="search-area-wrap">
@@ -214,15 +215,26 @@
         <div class="sub-nav-wrap">
           <div class="sub-nav-content">
             <ul class="content-list">
-              <li class="books"><a href="../../../../home.html">TRANG CHỦ</a></li>
+              <li class="home"><a href="../../../../home.html">TRANG CHỦ</a></li>
               <li class="question"><a href="../../../../ask.html">HỎI & ĐÁP</a></li>
               <li class="contact"><a href="../../../../contact.html">LIÊN HỆ</a></li>
               <li class="about"><a href="../../../../about.html">VỀ CHÚNG TÔI</a></li>
             </ul>
           </div>
           <div class="registion">
-            <a href="../../../../login.html">Đăng nhập</a>
-            <a href="../../../../sign-up.html">Đăng ký</a>
+            <div class="one">
+              <a href="../../../../login.html">Đăng nhập</a>
+              <a href="../../../../sign-up.html">Đăng ký</a>
+            </div>
+            
+            <div class="two" style="display: none;">
+              <div class="user">
+                <div class="user-logo">
+                  <div class="hello"></div>
+                </div>
+              </div>
+              <a href="../../../../login.html">Đăng xuất</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -412,20 +424,6 @@
             <button id="see-more" onclick="openMore()">
                 Xem thêm
             </button>
-            <script>
-              function openMore(){
-                var tb = document.getElementById('infor-content');
-                var moreBtn = document.getElementById('see-more');
-
-                if(tb.style.height === "100px"){
-                  tb.style.height = "200px";
-                  moreBtn.innerHTML = "Rút gọn";
-                }else{
-                  tb.style.height = "100px";
-                  moreBtn.innerHTML = "Xem thêm";
-                }
-              }
-            </script>
           </div>
         </div>
       </div>
@@ -602,13 +600,14 @@
                 <input id="content-comment" type="text"
                 name="content-comment" placeholder="Nhập bình luận của bạn"
                 >
-                <a class="btn btn-comment" href="#"
+                <div class="btn btn-comment"
                 style="margin-top: auto; margin-bottom: auto;"
+                onclick="upComment(this)"
                 >
                   <!-- Đăng nhập -->
                   <i class="fas fa-paper-plane"
                   ></i>
-                </a>
+                </div>
               </div>
             </div>
             <!-- end-comments -->
@@ -618,7 +617,7 @@
             <div id="comment" class="selector-zero">
               <ul id="showComments" class="detail-list-comment"
               >
-                <li>
+                <li class="comment-item">
                   <div class="detail-list-comment-cover">
                     <a href="#" target="_blank">
                       <img class="avar" src="../../../../img/avatar-basic.jpg" alt="">
@@ -626,35 +625,35 @@
                   </div>
                   <div class="detail-list-comment-infor">
                     <p class="detail-list-comment-title">
-                      thiaomie.ou
+                      <span>thiaomie.ou</span>
                       <span>1 ngày trước</span>
                     </p>
                     <p class="detail-list-comment-content recommentbtn">
                       thiếu chương thì phải ad ơi
                     </p>
                     <div class="chan">
-                      <span id="comment_reaction_31128_1">0</span>
+                      <span id="comment_reaction_1">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 1)"
+                      onclick="comment_reaction(1, this)"
                       >
                         <i class="fas fa-heart comment-tags"></i>
                       </span>
-                      <span id="comment_reaction_31128_2">0</span>
+                      <span id="comment_reaction_2">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 2)"
+                      onclick="comment_reaction(2, this)"
                       >
                       <i class="fas fa-comment comment-tags"></i>
                       </span>
-                      <span id="comment_reaction_31128_3">0</span>
+                      <span id="comment_reaction_3">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 3)"
+                      onclick="comment_reaction(3, this)"
                       >
                       <i class="fas fa-flag comment-tags"></i>
                       </span>
                     </div>
                   </div>
                 </li>
-                <li>
+                <li class="comment-item">
                   <div class="detail-list-comment-cover">
                     <a href="#" target="_blank">
                       <img  class="avar" src="../../../../img/avatar-basic.jpg" alt="">
@@ -662,35 +661,35 @@
                   </div>
                   <div class="detail-list-comment-infor">
                     <p class="detail-list-comment-title">
-                      thiaomie.ou
+                      <span>thiaomie.ou</span>
                       <span>1 ngày trước</span>
                     </p>
                     <p class="detail-list-comment-content recommentbtn">
                       thiếu chương thì phải ad ơi
                     </p>
                     <div class="chan">
-                      <span id="comment_reaction_31128_1">0</span>
+                      <span id="comment_reaction_1">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 1)"
+                      onclick="comment_reaction(1, this)"
                       >
                         <i class="fas fa-heart comment-tags"></i>
                       </span>
-                      <span id="comment_reaction_31128_2">0</span>
+                      <span id="comment_reaction_2">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 2)"
+                      onclick="comment_reaction(2, this)"
                       >
                       <i class="fas fa-comment comment-tags"></i>
                       </span>
-                      <span id="comment_reaction_31128_3">0</span>
+                      <span id="comment_reaction_3">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 3)"
+                      onclick="comment_reaction(3, this)"
                       >
                       <i class="fas fa-flag comment-tags"></i>
                       </span>
                     </div>
                   </div>
                 </li>
-                <li>
+                <li class="comment-item">
                   <div class="detail-list-comment-cover">
                     <a href="#" target="_blank">
                       <img  class="avar" src="../../../../img/avatar-basic.jpg" alt="">
@@ -698,35 +697,35 @@
                   </div>
                   <div class="detail-list-comment-infor">
                     <p class="detail-list-comment-title">
-                      thiaomie.ou
+                      <span>thiaomie.ou</span>
                       <span>1 ngày trước</span>
                     </p>
                     <p class="detail-list-comment-content recommentbtn">
                       thiếu chương thì phải ad ơi
                     </p>
                     <div class="chan">
-                      <span id="comment_reaction_31128_1">0</span>
+                      <span id="comment_reaction_1">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 1)"
+                      onclick="comment_reaction(1, this)"
                       >
                         <i class="fas fa-heart comment-tags"></i>
                       </span>
-                      <span id="comment_reaction_31128_2">0</span>
+                      <span id="comment_reaction_2">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 2)"
+                      onclick="comment_reaction(2, this)"
                       >
                       <i class="fas fa-comment comment-tags"></i>
                       </span>
-                      <span id="comment_reaction_31128_3">0</span>
+                      <span id="comment_reaction_3">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 3)"
+                      onclick="comment_reaction(3, this)"
                       >
                       <i class="fas fa-flag comment-tags"></i>
                       </span>
                     </div>
                   </div>
                 </li>
-                <li>
+                <li class="comment-item">
                   <div class="detail-list-comment-cover">
                     <a href="#" target="_blank">
                       <img class="avar" src="../../../../img/avatar-basic.jpg" alt="">
@@ -734,35 +733,35 @@
                   </div>
                   <div class="detail-list-comment-infor">
                     <p class="detail-list-comment-title">
-                      thiaomie.ou
+                      <span>thiaomie.ou</span>
                       <span>1 ngày trước</span>
                     </p>
                     <p class="detail-list-comment-content recommentbtn">
                       thiếu chương thì phải ad ơi
                     </p>
                     <div class="chan">
-                      <span id="comment_reaction_31128_1">0</span>
+                      <span id="comment_reaction_1">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 1)"
+                      onclick="comment_reaction(1, this)"
                       >
                         <i class="fas fa-heart comment-tags"></i>
                       </span>
-                      <span id="comment_reaction_31128_2">0</span>
+                      <span id="comment_reaction_2">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 2)"
+                      onclick="comment_reaction(2, this)"
                       >
                       <i class="fas fa-comment comment-tags"></i>
                       </span>
-                      <span id="comment_reaction_31128_3">0</span>
+                      <span id="comment_reaction_3">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 3)"
+                      onclick="comment_reaction(3, this)"
                       >
                       <i class="fas fa-flag comment-tags"></i>
                       </span>
                     </div>
                   </div>
                 </li>
-                <li>
+                <li class="comment-item">
                   <div class="detail-list-comment-cover">
                     <a href="#" target="_blank">
                       <img class="avar" src="../../../../img/avatar-basic.jpg" alt="">
@@ -770,28 +769,28 @@
                   </div>
                   <div class="detail-list-comment-infor">
                     <p class="detail-list-comment-title">
-                      thiaomie.ou
+                      <span>thiaomie.ou</span>
                       <span>1 ngày trước</span>
                     </p>
                     <p class="detail-list-comment-content recommentbtn">
                       thiếu chương thì phải ad ơi
                     </p>
                     <div class="chan">
-                      <span id="comment_reaction_31128_1">0</span>
+                      <span id="comment_reaction_1">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 1)"
+                      onclick="comment_reaction(1, this)"
                       >
                         <i class="fas fa-heart comment-tags"></i>
                       </span>
-                      <span id="comment_reaction_31128_2">0</span>
+                      <span id="comment_reaction_2">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 2)"
+                      onclick="comment_reaction(2, this)"
                       >
                       <i class="fas fa-comment comment-tags"></i>
                       </span>
-                      <span id="comment_reaction_31128_3">0</span>
+                      <span id="comment_reaction_3">0</span>
                       <span class="reaction-comment"
-                      onclick="comment_reaction(31128, 3)"
+                      onclick="comment_reaction(3, this)"
                       >
                       <i class="fas fa-flag comment-tags"></i>
                       </span>
@@ -799,6 +798,63 @@
                   </div>
                 </li>
               </ul>
+              <script>
+                function comment_reaction(val, ele){
+                  var tmp = ele.parentNode;
+                  var target = "comment_reaction_" + val;
+                  var child = tmp.children;
+
+                  for(var i = 0; i < child.length; i++){
+                    if(child[i].id == target){
+                      var get = parseInt(child[i].innerHTML, 10);
+                      get++;
+                      child[i].innerHTML = get;
+                      break; 
+                    }
+                  }
+                }
+
+                function upComment(ele){
+                  var child = ele.parentNode.firstElementChild;
+                  var getName = 'User123455';
+                  var getCmt = child.value;
+
+                  var list = document.getElementById('showComments');
+                  var list_item = document.getElementById('showComments').querySelectorAll('.comment-item');
+ 
+                  var new_li = document.getElementById('showComments').lastElementChild;
+                  var nameC = new_li.querySelector('.detail-list-comment-title').firstElementChild;
+                  var content = new_li.querySelector('.detail-list-comment-content');
+                  // var time = new_li.querySelector('.detail-list-comment-title').lastChild;
+
+                  // update value
+                  nameC.innerHTML = getName;
+                  content.innerHTML = getCmt;
+                  list.removeChild(list.lastElementChild);
+                  //store all childs in an array
+                  var tab = [];
+                  for(var i = 0; i < list_item.length; i++){
+                    tab.push(list_item[i].innerHTML);
+                  }
+                  console.log(tab);
+
+                  // remove all child in list
+                  while(list.firstElementChild){
+                    list.removeChild(list.firstElementChild);
+                  }
+                  //add new comment first
+                  list.append(new_li);
+                  //then add the old ones
+                  for(var i = 0; i < tab.length - 1; i++){
+                    var li = document.createElement("li");
+                    li.innerHTML = tab[i];
+                    li.className = "comment-item";
+                    list.append(li);
+                  }
+
+                  child.value = "";
+                }
+              </script>
             </div>
           </div>
           <!-- mainComment -->

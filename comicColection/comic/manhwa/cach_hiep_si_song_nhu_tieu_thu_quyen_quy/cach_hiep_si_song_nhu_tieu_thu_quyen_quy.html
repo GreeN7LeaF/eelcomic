@@ -27,6 +27,10 @@
     <link rel="stylesheet" href="../../../../style/styleV2.css">
     <link rel="stylesheet" href="../../../../style/foot.css">
 
+    <script src="../../../../js/general.js"></script>
+    <script src="../../js/comic.js"></script>
+    <script src="../../../../comicColection/comic/js/gotoChapter.js"></script>
+
  <!-- ulkit -->
  <link rel="stylesheet" href="../../../../uikit-3.9.1/css/uikit.min.css" />
  <script src="../../../../uikit-3.9.1/js/uikit.min.js"></script>
@@ -34,23 +38,7 @@
 
     <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="scroll-up-bar.min.js"></script>
-  <script src="../../../../comicColection/comic/js/gotoChapter.js"></script>
     
-    <script>
-      var onResizing = function(event){
-        var tb = document.getElementById('infor-content');
-
-        if(window.innerWidth > 1500){
-          tb.style.height = "390px";
-        }else{
-          tb.style.height = "100px";
-        }
-      };
-
-      window.onresize = onResizing;
-      window.onload = onResizing;
-    </script>
   </head>
   <body>
     <button onclick="topFunction()" id="btn_top" title="Go to top"
@@ -60,25 +48,7 @@
       ></i>
     </button>
     <script type="text/javascript">
-      window.onscroll = function() {scrollFunction()};
-
-     function scrollFunction(){
-       var tmp = (document.body.scrollHeight - 1000);
-
-       if((document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) && document.documentElement.scrollTop < tmp){
-         document.getElementById("btn_top").style.display = "block";
-         document.getElementById("menu-right").style.display = "block";
-         document.getElementById("side-slideshow").style.display = "block";
-       }else{
-         document.getElementById("btn_top").style.display = "none";
-         document.getElementById("menu-right").style.display = "none";
-         document.getElementById("side-slideshow").style.display = "none";
-       }
-     }
-
-     function topFunction(){
-       $('html, body').animate({scrollTop:0}, 'slow');
-     }
+      
    </script>
      <div id="side-slideshow"
      class="uk-visible-toggle uk-light left" 
@@ -181,7 +151,7 @@
       <nav class="main-nav">
         <div class="main-nav-wrap">
           <div class="container-tool">
-            <div class="logo">
+            <div class="logo home">
               <a href="../../../../index.html"><img src="../../../../img/logo.png" alt="" /></a>
             </div>
             <ul class="toolbar-list">
@@ -211,19 +181,26 @@
         <div class="sub-nav-wrap">
           <div class="sub-nav-content">
             <ul class="content-list">
-              <li class="question"><a href="../../../../index.html">TRANG CHỦ</a></li>
-              <li class="books"><a href="#">HỎI & ĐÁP</a></li>
+              <li class="home"><a href="../../../../index.html">TRANG CHỦ</a></li>
+              <li class="question"><a href="../../../../ask.html">HỎI & ĐÁP</a></li>
               <li class="contact"><a href="../../../../contact.html">LIÊN HỆ</a></li>
               <li class="about"><a href="../../../../about.html">VỀ CHÚNG TÔI</a></li>
-              <!-- <li class="three-dots">
-                <input type="checkbox" id="dots" />
-                <label for="dots"></label>
-              </li> -->
             </ul>
           </div>
           <div class="registion">
-            <a href="../../../../login.html">Đăng nhập</a>
-            <a href="../../../../sign-up.html">Đăng ký</a>
+            <div class="one">
+              <a href="../../../../login.html">Đăng nhập</a>
+              <a href="../../../../sign-up.html">Đăng ký</a>
+            </div>
+            
+            <div class="two" style="display: none;">
+              <div class="user">
+                <div class="user-logo">
+                  <div class="hello"></div>
+                </div>
+              </div>
+              <a href="../../../../login.html">Đăng xuất</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -414,18 +391,18 @@
                 Xem thêm
             </button>
             <script>
-              function openMore(){
-                var tb = document.getElementById('infor-content');
-                var moreBtn = document.getElementById('see-more');
+              // function openMore(){
+              //   var tb = document.getElementById('infor-content');
+              //   var moreBtn = document.getElementById('see-more');
 
-                if(tb.style.height === "100px"){
-                  tb.style.height = "200px";
-                  moreBtn.innerHTML = "Rút gọn";
-                }else{
-                  tb.style.height = "100px";
-                  moreBtn.innerHTML = "Xem thêm";
-                }
-              }
+              //   if(tb.style.height === "100px"){
+              //     tb.style.height = "auto";
+              //     moreBtn.innerHTML = "Rút gọn";
+              //   }else{
+              //     tb.style.height = "100px";
+              //     moreBtn.innerHTML = "Xem thêm";
+              //   }
+              // }
             </script>
           </div>
         </div>
@@ -441,7 +418,7 @@
             </a>
           </span>
           <span class="groups-name">
-            <a href="#">GangBang</a>
+            <a href="#">Gangstar</a>
           </span>
         </div>
         <div class="extra-div" style="clear: both;"></div>
@@ -728,7 +705,9 @@
                   </div>
                   <div class="detail-list-comment-infor">
                     <p class="detail-list-comment-title">
+                      <span>
                       thiaomie.ou
+                      </span>
                       <span>1 ngày trước</span>
                     </p>
                     <p class="detail-list-comment-content recommentbtn">
@@ -764,7 +743,9 @@
                   </div>
                   <div class="detail-list-comment-infor">
                     <p class="detail-list-comment-title">
-                      thiaomie.ou
+                      <span>
+                        thiaomie.ou
+                      </span>
                       <span>1 ngày trước</span>
                     </p>
                     <p class="detail-list-comment-content recommentbtn">
@@ -800,7 +781,9 @@
                   </div>
                   <div class="detail-list-comment-infor">
                     <p class="detail-list-comment-title">
-                      thiaomie.ou
+                      <span>
+                        thiaomie.ou
+                      </span>
                       <span>1 ngày trước</span>
                     </p>
                     <p class="detail-list-comment-content recommentbtn">
@@ -836,7 +819,9 @@
                   </div>
                   <div class="detail-list-comment-infor">
                     <p class="detail-list-comment-title">
-                      thiaomie.ou
+                      <span>
+                        thiaomie.ou
+                      </span>
                       <span>1 ngày trước</span>
                     </p>
                     <p class="detail-list-comment-content recommentbtn">
@@ -872,7 +857,9 @@
                   </div>
                   <div class="detail-list-comment-infor">
                     <p class="detail-list-comment-title">
-                      thiaomie.ou
+                      <span>
+                        thiaomie.ou
+                      </span>
                       <span>1 ngày trước</span>
                     </p>
                     <p class="detail-list-comment-content recommentbtn">

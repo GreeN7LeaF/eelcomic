@@ -393,6 +393,10 @@ a{
     position: relative;
 }
 
+.two{
+    display: flex;
+}
+
 .user .user-logo{
     height: 60px;
     width: 60px;
@@ -409,6 +413,7 @@ a{
     top: 55px;
     left: -250px;
     cursor: unset;
+    font-size: 16px;
 
     padding: 10px 20px;
     width: 250px;
@@ -572,11 +577,11 @@ a{
 
 /* menu right */
 #menu-right{
-    position: fixed;
+    position: absolute;
     z-index: 200;
-    top: 20px;
+    top: 1000px;
     right: 10px;
-    display: none;
+    /* display: none; */
 }
 
 #menu-left{
