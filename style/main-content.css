@@ -156,11 +156,11 @@
 }
 
 #rankList{
-    height: 1220px;
+    height: 945px;
 }
 
 .main-comment{
-    height: 1340px;
+    height: 740px;
 }
 
 .main-type{
@@ -269,6 +269,8 @@ div.swiper--slide{
 
 .swiper--slide .infor{
     height: 45px;
+    padding: 5px;
+    margin: 5px 0;
 }
 
 /*  */
@@ -412,11 +414,13 @@ div.swiper--slide{
     justify-content: space-between;
     
     padding: 20px 0;
+    /* height: 800px; */
 }
 
 .top-list .top-item{
     display: inline-flex;
     width: 48%;
+    height: 220px;
     /* border: 2px solid black; */
     margin: 10px 0 10px 20px;
 }

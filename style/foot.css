@@ -22,7 +22,7 @@ footer a:hover{
 .foot-list{
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    /* width: 70%; */
     margin-right: auto;
     margin-left: auto;
     margin-top: 40px;
@@ -33,14 +33,16 @@ footer a:hover{
     padding-left: 50px;
     margin-top: 10px;
     font-weight: 800;
+    /* width: 100%; */
     border-left: 1px solid black;
 }
 
 .foot-list li:first-child{
     border-left: none;
     margin-right: 0;
-    margin-left: 0;
     padding-right: 0;
+
+    margin-left: auto;
 }
 
 .foot-list li:last-child{

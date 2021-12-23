@@ -47,7 +47,7 @@ function validation(){
             alert("Hello " + user);
             // localStorage.removeItem();
             localStorage["currUser"] = user;
-            window.location.href = "./home.html";
+            window.location.href = "./index.html";
         }else{
             alert('Mật khẩu chưa đúng');
         }
