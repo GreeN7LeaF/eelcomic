@@ -125,11 +125,11 @@ function comment_reaction(val, ele){
     var child = tmp.children;
 
     for(var i = 0; i < child.length; i++){
-      if(child[i].id == target){
+        if(child[i].id == target){
         var get = parseInt(child[i].innerHTML, 10);
         get++;
         child[i].innerHTML = get;
         break; 
-      }
+        }
     }
-  }
+}

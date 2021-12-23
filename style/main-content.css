@@ -156,7 +156,7 @@
 }
 
 #rankList{
-    height: 1170px;
+    height: 1220px;
 }
 
 .main-comment{
@@ -426,6 +426,7 @@ div.swiper--slide{
     text-align: left;
     color: white;
     text-transform: uppercase;
+    width: 60%;
 }
 
 .top-item .txt .title{
