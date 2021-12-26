@@ -112,6 +112,7 @@
     display: flex;
     height: 60px;
     padding-left: 10px;
+    white-space: nowrap;
 }
 
 .link-chapter-wrap .viewer{

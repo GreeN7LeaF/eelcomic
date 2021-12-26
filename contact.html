@@ -25,7 +25,6 @@
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scroll-up-bar.min.js"></script>
 
     <link rel="stylesheet" href="./style/main-content.css" />
     <link rel="stylesheet" href="./style/nav.css" />
@@ -33,6 +32,9 @@
     <link rel="stylesheet" href="./style/slidebar.css" />
     <link rel="stylesheet" href="./style/foot.css">
     <link rel="stylesheet" href="./style/nav/contact.css">
+    <link rel="stylesheet" href="./style/styleV2.css">
+
+    <script src="./js/general.js"></script>
   </head>
   <body>
     <button onclick="topFunction()" id="btn_top" title="Go to top"
@@ -161,8 +163,19 @@
             </ul>
           </div>
           <div class="registion">
-            <a href="./login.html">Đăng nhập</a>
-            <a href="./sign-up.html">Đăng ký</a>
+            <div class="one">
+              <a href="./login.html">Đăng nhập</a>
+              <a href="./sign-up.html">Đăng ký</a>
+            </div>
+            
+            <div class="two" style="display: none;">
+              <div class="user">
+                <div class="user-logo">
+                  <div class="hello"></div>
+                </div>
+              </div>
+              <a href="./login.html">Đăng xuất</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -261,11 +274,12 @@
                       </p>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 form-wrap">
-                      <form>
+                      <form id="contactForm">
                         <div style="display: none"></div>
                         <p>
                           <label>
                             Tên của bạn (*)
+                            <span class="warning" style="color: yellow; font-size: 15px; display: none;">*Không được để trống ô này</span>
                             <br />
                             <span id="yourname">
                               <input
@@ -280,25 +294,28 @@
                         </p>
                         <p>
                             <label>
-                            Địa chỉ Email (*)
-                            <br />
-                            <span id="yourmail">
-                                <input
-                                type="text"
-                                name="your-mail"
-                                size="40"
-                                aria-required="true"
-                                aria-invalid="false"
-                                />
-                            </span>
+                              Địa chỉ Email (*)
+                              <span class="warning" style="color: yellow; font-size: 15px; display: none;">*Vui lòng nhập email</span>
+                              <br />
+                              <span id="yourmail">
+                                  <input
+                                  type="text"
+                                  name="your-mail"
+                                  size="40"
+                                  aria-required="true"
+                                  aria-invalid="false"
+                                  />
+                              </span>
                             </label>
                         </p>
                         <p>
                             <label>
                                 Thông điệp 
+                                <span class="warning" style="color: yellow; font-size: 15px; display: none;">*Không được để trống ô này</span>
                                 <br/>
                                 <span id="yourmessage">
                                     <textarea
+                                    cols="50" rows="10"
                                     name="your-message"
                                     cols="40"
                                     rows="3"
@@ -308,7 +325,9 @@
                             </label>
                         </p>
                         <button type="button"
-                        class="send"                        
+                        class="send"       
+                        onclick="informed();"
+                        style="font-weight: 700;"
                         >
                         Gửi thông điệp
                         </button>
@@ -333,7 +352,7 @@
             <a href="https://www.facebook.com/thaomy317/"><img src="./img/facebook.png" alt=""></a>
           </div>
           <ul class="foot-list">
-            <li><a href="./home.html">Trang chủ</a></li>
+            <li><a href="./index.html">Trang chủ</a></li>
             <li><a href="./about.html">Về chúng tôi</a></li>
             <li><a href="#">Điều khoản sử dụng</a></li>
             <li><a href="./ask.html">Hỏi & Đáp</a></li>

@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tủ sách</title>
+    <!-- fis favicon bug -->
+    <link rel="shortcut icon" href="#">
+
         <!-- bootstrap cdn -->
     <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
@@ -18,9 +21,10 @@
     <link rel="stylesheet" href="./style/main-content.css" />
     <link rel="stylesheet" href="./style/styleV2.css" />
     <link rel="stylesheet" href="./style/main.css" />
-    <link rel="stylesheet" href="./style/comment.css">
     <link rel="stylesheet" href="./style/foot.css">
     <link rel="stylesheet" href="./style/comic/newComic.css">
+
+    <script src="./js/general.js"></script>
   
     <!-- ulkit -->
     <link rel="stylesheet" href="./uikit-3.9.1/css/uikit.min.css" />
@@ -29,7 +33,6 @@
   
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scroll-up-bar.min.js"></script>
 </head>
 <body>
     <div class="allWrapper">
@@ -46,10 +49,10 @@
             function scrollFunction(){
               if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
                 document.getElementById("btn_top").style.display = "block";
-                document.getElementById("menu-left-balloon").style.display = "block";
+                // document.getElementById("menu-left-balloon").style.display = "block";
               }else{
                 document.getElementById("btn_top").style.display = "none";
-                document.getElementById("menu-left-balloon").style.display = "none";
+                // document.getElementById("menu-left-balloon").style.display = "none";
               }
             }
       
@@ -72,7 +75,7 @@
               <div class="main-nav-wrap">
                 <div class="container-tool">
                   <div class="logo">
-                    <a href="./home.html"><img src="./img/logo.png" alt="" /></a>
+                    <a href="./index.html"><img src="./img/logo.png" alt="" /></a>
                   </div>
                   <ul class="toolbar-list">
                     <li class="comic"><a href="./comicColection/manhwaList/manhwaList-page1.html">TRUYỆN TRANH</a></li>
@@ -101,15 +104,26 @@
               <div class="sub-nav-wrap">
                 <div class="sub-nav-content">
                   <ul class="content-list">
-                    <li class="books"><a href="./home.html">TRANG CHỦ</a></li>
+                    <li class="books"><a href="./index.html">TRANG CHỦ</a></li>
                     <li class="question"><a href="./ask.html">HỎI & ĐÁP</a></li>
                     <li class="contact"><a href="./contact.html">LIÊN HỆ</a></li>
                     <li class="about"><a href="./about.html">VỀ CHÚNG TÔI</a></li>
                   </ul>
                 </div>
                 <div class="registion">
-                  <a href="./login.html">Đăng nhập</a>
-                  <a href="./sign-up.html">Đăng ký</a>
+                  <div class="one">
+                    <a href="./login.html">Đăng nhập</a>
+                    <a href="./sign-up.html">Đăng ký</a>
+                  </div>
+                  
+                  <div class="two" style="display: none;">
+                    <div class="user">
+                      <div class="user-logo">
+                        <div class="hello"></div>
+                      </div>
+                    </div>
+                    <a href="./login.html">Đăng xuất</a>
+                  </div>
                 </div>
               </div>
             </nav>
@@ -153,7 +167,22 @@
           <div class="wrapper">
               <div class="genre-list">
                   <ul class="cw-list">
-                    <li>
+                    <li id="form">
+                      <div class="swiper-slide main-comic">
+                        <a href="#" itemprop="url" class="cw-list-item">
+                          <img src="" alt="ten truyen" class="comic--img" />
+                          <span class="infor">
+                            <!-- input -->
+                          </span>
+                          <div class="link-chapter-wrap">
+                            <div class="viewer">50.6k</div>
+                            <button class="link-chapter">
+                                <!-- chap moi nhat --></button>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <!-- <li>
                       <div class="swiper-slide main-comic">
                         <a href="#" itemprop="url" class="cw-list-item">
                           <img src="./img/bìa truyện/bia_004.png" alt="ten truyen" class="comic--img" />
@@ -212,7 +241,7 @@
                           </div>
                         </a>
                       </div>
-                    </li>
+                    </li> -->
                   </ul>
               </div>
           </div>
@@ -256,7 +285,7 @@
                 <a href="https://www.facebook.com/thaomy317/"><img src="./img/facebook.png" alt=""></a>
               </div>
               <ul class="foot-list">
-                <li><a href="./home.html">Trang chủ</a></li>
+                <li><a href="./index.html">Trang chủ</a></li>
                 <li><a href="./about.html">Về chúng tôi</a></li>
                 <li><a href="#">Điều khoản sử dụng</a></li>
                 <li><a href="./ask.html">Hỏi & Đáp</a></li>

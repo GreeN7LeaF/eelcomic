@@ -438,6 +438,8 @@ a{
     border-radius: 50px;
     box-shadow: 0 0 0 2px var(--clr-second-font);
     width: 150px;
+    height: 95%;
+    white-space: nowrap;
     cursor: pointer;
 
     display: inline-block;

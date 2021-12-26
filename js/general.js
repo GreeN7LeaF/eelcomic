@@ -1,4 +1,4 @@
-window.onload = function() {gohome(); hello()};
+window.onload = function() {hello(); baloonLinked(); loadingComic()};
 window.onscroll = function() {scrollFunction(); fixedNav()};
 
 
@@ -65,19 +65,21 @@ function gohome(){
 }
 
 function hello(){
-    var item = document.querySelector('.hello');
-    if(item != null){
-        item.innerHTML = localStorage['currUser'];
-    }
-    // login
-    var login = document.querySelector('.registion').querySelector('.two');
-    var signin = document.querySelector('.registion').querySelector('.one');
-    if(localStorage['currUser'] != 'user'){
-        signin.style.display = 'none';
-        login.style.display = 'flex';
-    }else{
-        signin.style.display = 'flex';
-        login.style.display = 'none';
+    if(document.querySelector('.hello') != null){
+        var item = document.querySelector('.hello');
+        if(item != null){
+            item.innerHTML = localStorage['currUser'];
+        }
+        // login
+        var login = document.querySelector('.registion').querySelector('.two');
+        var signin = document.querySelector('.registion').querySelector('.one');
+        if(localStorage['currUser'] != 'user'){
+            signin.style.display = 'none';
+            login.style.display = 'flex';
+        }else{
+            signin.style.display = 'flex';
+            login.style.display = 'none';
+        }
     }
 }
 
@@ -132,4 +134,129 @@ function comment_reaction(val, ele){
         break; 
         }
     }
+}
+
+// contact
+var flag =  new Array(3).fill(0);
+function ValidateEmail(input) {
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  
+    if (input.value.match(validRegex)) {
+      input.blur();
+      return true;
+    } else {
+    //   alert("Email không hợp lệ");
+    //   input.focus();
+      return false;
+    }
+}
+
+function informed(){
+    var fm = document.getElementById('contactForm');
+    var name = fm.querySelector('#yourname').firstElementChild;
+    var mail = fm.querySelector('#yourmail').firstElementChild;
+    var content = fm.querySelector('#yourmessage').firstElementChild;
+    var warning = fm.querySelectorAll('.warning');
+
+    var tmp = setInterval(() => {
+        if(flag.includes(0)){
+            if(!ValidateEmail(mail)){
+                warning[1].style.display="inline";
+                flag[2] = 0;
+            }else{
+                warning[1].style.display="none";
+                flag[1] = 1;
+            }
+            if(content.value.length == 36){
+                warning[2].style.display="inline";
+                flag[1] = 0;
+            }else{
+                warning[2].style.display="none";
+                flag[2] = 1;
+            }
+            if(name.value.length == 0){
+                warning[0].style.display="inline";
+                flag[0] = 0;
+            }else{
+                warning[0].style.display="none";
+                flag[0] = 1;
+            }
+        }else{
+            console.log(flag);
+            clearInterval(tmp);
+        }
+    }, 50);
+
+    if(!flag.includes(0)){
+        console.log('run');
+        alert('Thông tin của bạn đã được chúng tôi tiếp nhận, chúng tôi sẽ phản hồi bạn sớm nhất có thể.');
+        flag.fill(0);
+    }
+    console.log(flag.includes(0));
+    console.log(flag);
+}
+
+// user balloon
+function baloonLinked(){
+    if(document.getElementById('menu-left-balloon') != null){
+        var user = document.getElementById('menu-left-balloon');
+        var book = user.querySelector('.one').firstElementChild;
+        // var logOut = user.querySelector('.two').firstElementChild;
+    
+        if(localStorage['currUser'] != 'user'){
+            var temp = book.href.replace('login', 'bookshelf');
+            book.href = temp;
+        }
+    }
+}
+
+//follow
+function follow(){
+    var i = document.querySelector('.cover-img').firstElementChild.src.substring(22);
+    var tl = document.querySelector('.cover-title').innerHTML;
+    var chapterNew = document.querySelector('#episode_list').lastElementChild.querySelector('.no').innerHTML;
+
+    var comics = [];
+    comics = JSON.parse(localStorage.getItem('followComics')) || [];
+    console.log(comics[0]);
+    const tmp = {image: i, title: tl, chap: chapterNew};
+    var exists = 0;
+    for(var i = 0; i < comics.length; i++){
+        console.log(comics[0].title);
+        if(comics[0].title == tmp.title){
+            exists = 1;
+        }
+    }
+    if(exists == 0){
+        comics.push(tmp);
+        localStorage.setItem("followComics", JSON.stringify(comics));  
+    }
+}
+
+// bookshelf
+function loadingComic(){
+    var item = document.querySelector('.genre-list').querySelector('#form');
+    var comics = [];
+    comics = JSON.parse(localStorage.getItem('followComics')) || [];
+
+    var list = document.querySelector('.cw-list');
+    list.innerHTML = '';
+    var li = document.createElement('li'); 
+
+    for(var i = 0; i < comics.length; i++){
+        li = item.cloneNode(true);  
+
+        var content = comics[i];
+        var tl = li.querySelector('.infor');
+        var link = li.querySelector('.link-chapter');
+        var img = li.querySelector('.comic--img');
+
+        tl.innerHTML = content.title;
+        img.src = './' + content.image;
+        link.innerHTML = content.chap;
+
+        list.appendChild(li);
+    }
+
+    localStorage.setItem("followComics", JSON.stringify(comics)); 
 }

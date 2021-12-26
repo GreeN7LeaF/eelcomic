@@ -77,7 +77,6 @@ function match() {
         return true;
     }
 }
-
 function registion(){
     var email = document.getElementById('email');
     var pw = document.getElementById('pss');
