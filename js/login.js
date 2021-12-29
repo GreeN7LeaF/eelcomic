@@ -93,8 +93,8 @@ function registion(){
             alert('Tài khoản này đã tồn tại');
         }else{
             if(pw.value.length > 5 && match()){
-                alert('Đăng kí thành công, hãy đăng nhập lại bằng tài khoản này nhé');
                 localStorage.setItem(email.value, pw.value);
+                alert('Đăng kí thành công, hãy đăng nhập lại bằng tài khoản này nhé');
             }else{
                 alert('Mật khẩu chưa khớp');
             }

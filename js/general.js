@@ -73,12 +73,14 @@ function hello(){
         // login
         var login = document.querySelector('.registion').querySelector('.two');
         var signin = document.querySelector('.registion').querySelector('.one');
-        if(localStorage['currUser'] != 'user'){
+        if(localStorage['currUser'] == 'user'){
             signin.style.display = 'none';
             login.style.display = 'flex';
+            console.log('ok');
         }else{
             signin.style.display = 'flex';
             login.style.display = 'none';
+            console.log('ko');
         }
     }
 }
@@ -223,6 +225,9 @@ function follow(){
         var tl = document.querySelector('.cover-title').innerHTML;
         var chapterNew = document.querySelector('#episode_list').lastElementChild.querySelector('.no').innerHTML;
         var link = window.location.href.substring(21);
+        if(window.location.href.includes('github')){
+            link = window.location.href.substring(38);
+        }
     
         var comics = [];
         comics = JSON.parse(localStorage.getItem('followComics')) || [];
