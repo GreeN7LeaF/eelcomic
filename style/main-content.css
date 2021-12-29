@@ -75,7 +75,14 @@
     transition: var(--trans-time);
 }
 
-.cw-list-item:hover{
+.swiper-slide,
+.swiper--slide
+{
+    transition: var(--trans-time);
+}
+
+.swiper-slide:hover,
+.swiper--slide:hover{
     transform: translateY(-10px);
     margin-bottom: auto;
 }
@@ -133,6 +140,40 @@
     -webkit-font-smoothing: antialiased;
 }
 
+/* .link-chapter{
+    z-index: 200;
+} */
+
+/* removeItem */
+.removeItem
+{
+    display: flex;
+}
+
+.removeItem button.remove
+{
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-10px);
+
+    height: 40px;
+    width: 50%;
+    background-color: rgb(1, 83, 72);
+    border-radius: 20px;
+    box-shadow: 5px 5px 2px 1px var(--shadow);
+
+    transition: var(--trans-time);
+}
+
+.removeItem button.remove:hover
+{
+    box-shadow: none;
+}
+
+.removeItem i
+{
+    color: var(--clr-font);
+}
 /*  */
 
 .widget-main{

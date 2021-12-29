@@ -38,21 +38,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- <script src="scroll-up-bar.min.js"></script> -->
     
-    <script>
-      var onResizing = function(event){
-        var tb = document.getElementById('infor-content');
-
-        if(window.innerWidth > 1500){
-          tb.style.height = "390px";
-        }else{
-          tb.style.height = "100px";
-        }
-      };
-
-      window.onresize = onResizing;
-      window.onload = onResizing;
-    </script>
-
     <script scr="../../../../comicColection/comic/js/gotoChapter.js"></script>
   </head>
   <body>
@@ -351,7 +336,7 @@
         <div class="extra-div" style="clear: both;"></div>
         <div class="col1">
           <button id="subcribe_button" class="btn-subcribe"
-          type="button" onclick="">
+          type="button" onclick="follow()">
             Theo dõi [
             <em id="count_bookmark">2470</em>
             ]

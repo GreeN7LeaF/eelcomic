@@ -95,27 +95,33 @@ function upComment(){
         var nameC = tmp.querySelector('.detail-list-comment-title').firstElementChild;
         var content = tmp.querySelector('.detail-list-comment-content');
         var time = tmp.querySelector('.detail-list-comment-title').lastElementChild;
-        // change infor of last comment
-        content.innerHTML = input;
-        nameC.innerHTML = name;
-        time.innerHTML = "1 giây trước";
-        document.querySelector('#content-comment').value = '';
-        // remove last child from list
-        list.removeChild(childs[childs.length-1]);
-        // add list to temp array to reverse
-        var t = []; 
-        for(var i = 0; i < childs.length; i++){
-            t.push(childs[i]);
-        }
+        
+        console.log(input.length);
+        if(input > 0){
+            // change infor of last comment
+            content.innerHTML = input;
+            nameC.innerHTML = name;
+            time.innerHTML = "1 giây trước";
+            document.querySelector('#content-comment').value = '';
+            // remove last child from list
+            list.removeChild(childs[childs.length-1]);
+            // add list to temp array to reverse
+            var t = []; 
+            for(var i = 0; i < childs.length; i++){
+                t.push(childs[i]);
+            }
 
-        // clear all DOM curr in list
-        while(list.firstElementChild){
-            list.removeChild(list.firstChild);
-        }
-        // append child form array to list DOM .. and done :333 (lam lan 2 trong bat luc)
-        list.appendChild(tmp);
-        for(var i = 0; i < t.length; i++){
-            list.appendChild(t[i]);
+            // clear all DOM curr in list
+            while(list.firstElementChild){
+                list.removeChild(list.firstChild);
+            }
+            // append child form array to list DOM .. and done :333 (lam lan 2 trong bat luc)
+            list.appendChild(tmp);
+            for(var i = 0; i < t.length; i++){
+                list.appendChild(t[i]);
+            }
+        }else{
+            document.querySelector('#content-comment').focus;
         }
     }else{
         window.location.href = 'login.html';
@@ -212,51 +218,106 @@ function baloonLinked(){
 
 //follow
 function follow(){
-    var i = document.querySelector('.cover-img').firstElementChild.src.substring(22);
-    var tl = document.querySelector('.cover-title').innerHTML;
-    var chapterNew = document.querySelector('#episode_list').lastElementChild.querySelector('.no').innerHTML;
-
-    var comics = [];
-    comics = JSON.parse(localStorage.getItem('followComics')) || [];
-    console.log(comics[0]);
-    const tmp = {image: i, title: tl, chap: chapterNew};
-    var exists = 0;
-    for(var i = 0; i < comics.length; i++){
-        console.log(comics[0].title);
-        if(comics[0].title == tmp.title){
-            exists = 1;
+    if(localStorage['currUser'] !== 'user'){
+        var i = document.querySelector('.cover-img').firstElementChild.src.substring(22);
+        var tl = document.querySelector('.cover-title').innerHTML;
+        var chapterNew = document.querySelector('#episode_list').lastElementChild.querySelector('.no').innerHTML;
+        var link = window.location.href.substring(21);
+    
+        var comics = [];
+        comics = JSON.parse(localStorage.getItem('followComics')) || [];
+        const tmp = {image: i, title: tl, chap: chapterNew, url: link};
+    
+        var exists = 0;
+        for(var i = 0; i < comics.length; i++){
+            if(comics[i].title == tl){
+                exists = 1;
+            }
         }
-    }
-    if(exists == 0){
-        comics.push(tmp);
-        localStorage.setItem("followComics", JSON.stringify(comics));  
-    }
+        if(exists == 0){
+            comics.push(tmp);
+            localStorage.setItem("followComics", JSON.stringify(comics)); 
+            
+            var count = parseInt(document.getElementById('count_bookmark').innerHTML, 10);
+            count++;
+            document.getElementById('count_bookmark').innerHTML = count;
+
+        }else{
+            alert("Truyện đã được lưu vào tủ sách");
+        }
+    }else{
+        window.location.href = "../../../../login.html";
+    }    
 }
 
 // bookshelf
+// insert a string into a string with index
+String.prototype.splice = function(idx, rem, str) {
+    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+};
+
 function loadingComic(){
-    var item = document.querySelector('.genre-list').querySelector('#form');
-    var comics = [];
-    comics = JSON.parse(localStorage.getItem('followComics')) || [];
+    if(document.querySelector('.genre-list') != null){
+        var item = document.querySelector('.genre-list').querySelector('#form');
+        var comics = [];
+        comics = JSON.parse(localStorage.getItem('followComics')) || [];
 
-    var list = document.querySelector('.cw-list');
-    list.innerHTML = '';
-    var li = document.createElement('li'); 
+        var list = document.querySelector('.cw-list');
+        list.innerHTML = '';
 
-    for(var i = 0; i < comics.length; i++){
-        li = item.cloneNode(true);  
+        if(localStorage['currUser'] != 'user'){
+            for(var i = 0; i < comics.length; i++){
+                var li = document.createElement('li'); 
+                li = item.cloneNode(true);  
+    
+                var content = comics[i];
+                var tl = li.querySelector('.infor');
+                var chap = li.querySelector('.link-chapter');
+                var img = li.querySelector('.comic--img');
+    
+                tl.innerHTML = content.title;
+                img.src = './' + content.image;
+                chap.innerHTML = content.chap;
 
-        var content = comics[i];
-        var tl = li.querySelector('.infor');
-        var link = li.querySelector('.link-chapter');
-        var img = li.querySelector('.comic--img');
+                // link chapter
+                var chapterNum = chap.innerHTML;
+                var comicLinkContainer = li.querySelector('.cw-list-item');
+                comicLinkContainer.href = content.url; 
 
-        tl.innerHTML = content.title;
-        img.src = './' + content.image;
-        link.innerHTML = content.chap;
-
-        list.appendChild(li);
+                li.querySelectorAll('.link-chapter').forEach(button => {
+                    button.addEventListener('click', e => {
+                        var comicLinkContainer = li.querySelector('.cw-list-item');
+                        var temp = '_chap_' + chapterNum[chapterNum.length - 1];
+                        var chapterLink = comicLinkContainer.href.splice(comicLinkContainer.href.length - 5, 0, temp);
+                        
+                        comicLinkContainer.href = chapterLink;
+                    });
+                });
+                
+                // remove
+                li.querySelectorAll('.remove').forEach(button => {
+                    button.addEventListener('click', () => {
+                        var comics = [];
+                        comics = JSON.parse(localStorage.getItem('followComics')) || [];
+    
+                        var item = button.parentElement.parentElement;
+                        var parent = item.parentElement;
+                        var tl = item.querySelector('.infor');
+    
+                        for(var i = 0; i < comics.length; i++)
+                        {
+                            if(comics[i].title == tl.innerHTML){
+                                comics.splice(i, 1);
+                            }
+                        }
+                        parent.removeChild(item);
+                        localStorage.setItem("followComics", JSON.stringify(comics)); 
+                    });
+                });
+    
+                list.appendChild(li);
+            }
+            localStorage.setItem("followComics", JSON.stringify(comics));
+        }
     }
-
-    localStorage.setItem("followComics", JSON.stringify(comics)); 
 }

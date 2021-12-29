@@ -16,12 +16,9 @@
 
     .cw--list li:nth-child(19),
     .cw--list li:nth-child(20),
-    .cw--list li:nth-child(21){
+    .cw--list li:nth-child(21),
+    .list-item li:nth-child(4){
         display: none;
-    }
-
-    .swiper--slide .comic--img{
-        /* height: 250px; */
     }
 
     /*  */
@@ -421,6 +418,10 @@
     /* new_comic */
     .cw-list li{
         /* margin-right: 15px; */
+    }
+
+    .br-content{
+        font-size: 55px;
     }
 }
 
