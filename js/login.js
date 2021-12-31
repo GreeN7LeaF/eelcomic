@@ -39,14 +39,11 @@ var begin = setInterval(() => {
 function validation(){
     var user = document.getElementById('username').value;
     var pw = document.getElementById('pss').value;
-    // var valid = false;
 
     // check a valid username
     if(user in localStorage){
         if(localStorage[user] === pw){
             alert("Hello " + user);
-            // localStorage.removeItem();
-            // localStorage["currUser"] = user;
             window.localStorage.setItem('currUser', JSON.stringify(user));
             window.location.href = "./index.html";
         }else{

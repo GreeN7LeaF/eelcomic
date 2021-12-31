@@ -227,24 +227,29 @@ function baloonLinked(){
 //follow
 function follow(){
     if(localStorage['currUser'] !== 'user'){
+        //ảnh bìa
         var i = document.querySelector('.cover-img').firstElementChild.src.substring(22);
+        //tiêu đề truyện
         var tl = document.querySelector('.cover-title').innerHTML;
+        //chap mới nhất hiện tại của truyện
         var chapterNew = document.querySelector('#episode_list').lastElementChild.querySelector('.no').innerHTML;
         var url = window.location.href;
-        var link = url.substring(21);
-
+        //ink ảnh
+        var link = url.substring(21); //khi web được bật thông qua file trong folder zip
+        
+        //trường hợp web được host lên
         if(url.includes('eelcomic')){
             link = url.splice(url.indexOf('eelcomic') + 8, url.length-1, '');
-        }
-
-        if(window.location.href.includes('github')){
-            link = window.location.href.substring(38);
+            console.log(link);
+        }else{
+            console.log('nope');
         }
     
         var comics = [];
         comics = JSON.parse(localStorage.getItem('followComics')) || [];
         const tmp = {image: i, title: tl, chap: chapterNew, url: link};
     
+        //kiểm tra xem truyện đã lưu vào tủ sách chưa
         var exists = 0;
         for(var i = 0; i < comics.length; i++){
             if(comics[i].title == tl){
@@ -263,6 +268,7 @@ function follow(){
             alert("Truyện đã được lưu vào tủ sách");
         }
     }else{
+        //yêu cầu người dùng đăng nhập
         window.location.href = "../../../../login.html";
     }    
 }
