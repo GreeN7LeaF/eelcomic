@@ -366,6 +366,5 @@ if(document.getElementsByClassName('pw-container') != null){
                 temp.classList.add('valid');
             }
         }
-        
     }, 1000);
 }
