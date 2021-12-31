@@ -86,6 +86,7 @@ function hello(){
         }else{
             signin.style.display = 'flex';
             login.style.display = 'none';
+            console.log('ko');
         }
     }
 }
@@ -229,7 +230,13 @@ function follow(){
         var i = document.querySelector('.cover-img').firstElementChild.src.substring(22);
         var tl = document.querySelector('.cover-title').innerHTML;
         var chapterNew = document.querySelector('#episode_list').lastElementChild.querySelector('.no').innerHTML;
-        var link = window.location.href.substring(21);
+        var url = window.location.href;
+        var link = url.substring(21);
+
+        if(url.includes('eelcomic')){
+            link = url.splice(url.indexOf('eelcomic') + 8, url.length-1, '');
+        }
+
         if(window.location.href.includes('github')){
             link = window.location.href.substring(38);
         }
