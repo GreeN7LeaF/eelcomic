@@ -1,4 +1,8 @@
-window.onload = function() {hello(); baloonLinked(); loadingComic()};
+var usernameArray = ['thaomy310702', 'eelcomic2021', 'thaomy310702@gmail.com'];
+var passwordArray = ['310702', '123456', '123456'];
+// var currUser = "user";
+
+window.onload = function() {baloonLinked(); loadingComic(); hello()};
 window.onscroll = function() {scrollFunction(); fixedNav()};
 
 
@@ -73,14 +77,15 @@ function hello(){
         // login
         var login = document.querySelector('.registion').querySelector('.two');
         var signin = document.querySelector('.registion').querySelector('.one');
-        if(localStorage['currUser'] == 'user'){
+
+        console.log(window.localStorage.getItem('currUser'));
+        if(window.localStorage.getItem('currUser') != 'user'){
             signin.style.display = 'none';
             login.style.display = 'flex';
             console.log('ok');
         }else{
             signin.style.display = 'flex';
             login.style.display = 'none';
-            console.log('ko');
         }
     }
 }
@@ -325,4 +330,42 @@ function loadingComic(){
             localStorage.setItem("followComics", JSON.stringify(comics));
         }
     }
+}
+
+
+//registion
+// for(var i = 0; i < usernameArray.length; i++){
+//     if(usernameArray[i] in localStorage){
+//     }else{
+//         localStorage.setItem(usernameArray[i],passwordArray[i]);
+//     }
+// }
+
+localStorage.setItem('thaomy310702','310702');
+localStorage.setItem('eelcomic2021','123456');
+// localStorage.setItem('currUser','user');
+
+if(document.getElementsByClassName('pw-container') != null){
+    var begin = setInterval(() => {
+        var pwC = document.getElementsByClassName('pw-container');
+        for(var i = 0; i < pwC.length; i++){
+            if(pwC[i].classList.contains('valid')){
+                pwC[i].classList.remove('valid');
+            }
+        }
+    
+        var ps = document.getElementById("pss");
+        var rp = document.getElementById("rp-pss");
+        if(rp != null){
+            if(ps.value.length > 5){
+                var temp = ps.parentElement;
+                temp.classList.add('valid');
+            }
+            if(rp.value.length > 5){
+                var temp = rp.parentElement;
+                temp.classList.add('valid');
+            }
+        }
+        
+    }, 1000);
 }

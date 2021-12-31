@@ -46,7 +46,8 @@ function validation(){
         if(localStorage[user] === pw){
             alert("Hello " + user);
             // localStorage.removeItem();
-            localStorage["currUser"] = user;
+            // localStorage["currUser"] = user;
+            window.localStorage.setItem('currUser', JSON.stringify(user));
             window.location.href = "./index.html";
         }else{
             alert('Mật khẩu chưa đúng');
