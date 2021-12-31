@@ -16,7 +16,9 @@
       referrerpolicy="no-referrer"
     />
 
+    <script src="./js/general.js"></script>
     <script src="./js/login.js"></script>
+
   </head>
   <body>
     <div class="wrapper">
@@ -24,7 +26,8 @@
       <form
         id="sign-up-form"
         class="container"
-        action="action_page.php"
+        action="login.html"
+        method="get"
         autocomplete="on"
         onsubmit="signUp()"
       >
@@ -78,7 +81,7 @@
         
 
         <div class="clearfix">
-          <input type="button" id="sign-up" value="Đăng kí" onclick="registion()">
+          <input type="submit" id="sign-up" value="Đăng kí" onclick="registion()">
         </div>
         <br />
         <p class="container-2">

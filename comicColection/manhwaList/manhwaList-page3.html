@@ -33,48 +33,6 @@
   <script src="scroll-up-bar.min.js"></script>
 </head>
 <body>
-    <div id="menu-left-balloon" style="display: none;">
-        <div id="user-balloon">
-          <ul class="menu--list">
-            <li class="item">
-              <a href="../../bookshelf.html">
-                <div class="book icon"></div>
-              </a>
-            </li>
-            <li class="item">
-              <a href="../../login.html">
-                <div class="log-out icon">
-                  <i class="fas fa-sign-out-alt"></i>
-                </div>  
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <button onclick="topFunction()" id="btn_top" title="Go to top"
-      style="display: none;"
-      >
-        <i class="fas fa-chevron-up"
-        style="color: white;"
-        ></i>
-      </button>
-      <script>
-        window.onscroll = function() {scrollFunction()};
-  
-        function scrollFunction(){
-          if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
-            document.getElementById("btn_top").style.display = "block";
-            document.getElementById("menu-left-balloon").style.display = "block";
-          }else{
-            document.getElementById("btn_top").style.display = "none";
-            document.getElementById("menu-left-balloon").style.display = "none";
-          }
-        }
-  
-        function topFunction(){
-          $('html, body').animate({scrollTop:0}, 'slow');
-        }
-      </script>
       <header>
         <div id="search-area">
             <div class="search-area-wrap">

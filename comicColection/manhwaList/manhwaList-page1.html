@@ -33,48 +33,6 @@
   <!-- <script src="scroll-up-bar.min.js"></script> -->
 </head>
 <body>
-    <div id="menu-left-balloon" style="display: none;">
-        <div id="user-balloon">
-          <ul class="menu--list">
-            <li class="item">
-              <a href="../../bookshelf.html">
-                <div class="book icon"></div>
-              </a>
-            </li>
-            <li class="item">
-              <a href="../../login.html">
-                <div class="log-out icon">
-                  <i class="fas fa-sign-out-alt"></i>
-                </div>  
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <button onclick="topFunction()" id="btn_top" title="Go to top"
-      style="display: none;"
-      >
-        <i class="fas fa-chevron-up"
-        style="color: white;"
-        ></i>
-      </button>
-      <script>
-        window.onscroll = function() {scrollFunction()};
-  
-        function scrollFunction(){
-          if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
-            document.getElementById("btn_top").style.display = "block";
-            document.getElementById("menu-left-balloon").style.display = "block";
-          }else{
-            document.getElementById("btn_top").style.display = "none";
-            document.getElementById("menu-left-balloon").style.display = "none";
-          }
-        }
-  
-        function topFunction(){
-          $('html, body').animate({scrollTop:0}, 'slow');
-        }
-      </script>
       <header>
         <div id="search-area">
             <div class="search-area-wrap">
@@ -153,8 +111,8 @@
         </div>
         <div class="nav-side">
           <ul class="menu-list">
-            <li class="comic"><a href="#">TRUYỆN TRANH</a></li>
-            <li class="novel"><a href="#">TIỂU THUYẾT</a></li>
+            <li class="comic"><a href="../../comicColection/manhwaList/manhwaList-page1.html">TRUYỆN TRANH</a></li>
+            <li class="novel"><a href="../../comicColection/novelList/novel-page1.html">TIỂU THUYẾT</a></li>
             <li class="books"><a href="../../bookshelf.html">TỦ SÁCH CỦA TUI</a></li>
             <li class="post"><a href="../../postComic.html">ĐĂNG TRUYỆN</a></li>
           </ul>
@@ -262,7 +220,7 @@
             <div class="page-nav-inline">
                 <ul class="pagination">
                 <li class="page-prev">
-                    <a class="disabled">
+                    <a class="disable">
                         <i class="fas fa-chevron-left"></i>
                     </a>
                 </li>
@@ -272,7 +230,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./manhwaList-page2.html">
+                    <a  href="./manhwaList-page2.html">
                         2
                     </a>
                 </li>
@@ -282,40 +240,12 @@
                     </a>
                 </li>
                 <li class="page-next">
-                    <a href="./new_comic-page2.html">
+                    <a href="./manhwaList-page3.html">
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </li>
                 </ul>
             </div>
-              <!-- <nav class="pagination-container">
-                <ul class="uk-pagination uk-flex-center">
-                  <li class="prev uk-disabled">
-                    <a href="#">
-                      <span
-                        class="uk-margin-small-right uk-icon uk-pagination-previous"
-                        uk-pagination-prevous=""
-                      >
-                        <i class="fas fa-chevron-left"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li class="page uk-active">
-                    <a href="#">1</a>
-                  </li>
-                  <li class="page">
-                    <a href="#">2</a>
-                  </li>
-                  <li class="page">
-                    <a href="#"> 3 </a>
-                  </li>
-                  <li class="next">
-                      <a href="#">
-                          <i class="fas fa-chevron-right"></i>
-                      </a>
-                  </li>
-                </ul>
-              </nav> -->
             </div>
           </div>
           <div id="main-hot-content" class="widget-main">
@@ -435,7 +365,7 @@
               <div class="the-loai">
                 <div class="widget-comic-body the-loai-comic-wrap">
                   <div class="theloai-list">
-                    <a href="#">18+</a>
+                    <a href="index.html">18+</a>
                     <a href="#">Âu Cổ</a>
                     <a href="#">Bách Hợp</a>
                     <a href="#">Cổ Đại</a>

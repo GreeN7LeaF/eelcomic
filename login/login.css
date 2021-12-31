@@ -88,7 +88,8 @@ body {
 }
 
 input[type=email],
-input[type=password] {
+input[type=password],
+input[type=submit] {
   height: 70px;
   width: 50%;
   padding: 15px 20px;
@@ -131,7 +132,8 @@ input:focus{
 }
 
 button,
-input[type="button"]{
+input[type="button"],
+input[type="submit"]{
   box-shadow: 
   12px 12px 2px 1px rgba(0, 0, 255, .2);
 
@@ -152,7 +154,8 @@ input[type="button"]{
 }
 
 button:hover,
-input[type="button"]:hover{
+input[type="button"]:hover,
+input[type="submit"]:hover{
   box-shadow: none;
   background-color: rgba(0, 0, 255, .2);
   color: var(--clr-font);

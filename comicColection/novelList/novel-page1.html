@@ -33,27 +33,6 @@
   <script src="scroll-up-bar.min.js"></script>
 </head>
 <body>
-    <button onclick="topFunction()" id="btn_top" title="Go to top"
-    >
-      <i class="fas fa-chevron-up"
-      style="color: white;"
-      ></i>
-    </button>
-    <script>
-      window.onscroll = function() {scrollFunction()};
-
-      function scrollFunction(){
-        if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 20){
-          document.getElementById("btn_top").style.display = "block";
-        }else{
-          document.getElementById("btn_top").style.display = "none";
-        }
-      }
-
-      function topFunction(){
-        $('html, body').animate({scrollTop:0}, 'slow');
-      }
-    </script>
     <header>
         <div id="search-area">
             <div class="search-area-wrap">

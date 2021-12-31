@@ -393,7 +393,11 @@ a{
     position: relative;
 }
 
-.two{
+.registion .two{
+    display: none;
+}
+
+.registion .one{
     display: flex;
 }
 
