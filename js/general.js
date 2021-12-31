@@ -239,7 +239,7 @@ function follow(){
         
         //trường hợp web được host lên
         if(url.includes('eelcomic')){
-            link = url.splice(url.indexOf('eelcomic') + 8, url.length-1, '');
+            link = url.splice(0, url.indexOf('eelcomic') + 8, '');
             console.log(link);
         }else{
             console.log('nope');
