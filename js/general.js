@@ -248,9 +248,6 @@ function follow(){
             i = document.querySelector('.cover-img').firstElementChild.src.substring(22);
             console.log('nope');
         }
-        
-        console.log(link);
-        console.log(i);
 
         var comics = [];
         comics = JSON.parse(localStorage.getItem('followComics')) || [];
@@ -325,9 +322,6 @@ function loadingComic(){
                         comicLinkContainer.href = chapterLink;
                     });
                 });
-
-                console.log(comicLinkContainer.href);
-                
                 // remove
                 li.querySelectorAll('.remove').forEach(button => {
                     button.addEventListener('click', () => {
