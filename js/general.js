@@ -299,6 +299,7 @@ function loadingComic(){
             for(var i = 0; i < comics.length; i++){
                 var li = document.createElement('li'); 
                 li = item.cloneNode(true);  
+                var currPage = window.location.href;
     
                 var content = comics[i];
                 var tl = li.querySelector('.infor');
@@ -311,8 +312,9 @@ function loadingComic(){
 
                 // link chapter
                 var chapterNum = chap.innerHTML;
+                var head = currPage.splice(currPage.indexOf('eelcomic') + 8, currPage.length-1, '');
                 var comicLinkContainer = li.querySelector('.cw-list-item');
-                comicLinkContainer.href = content.url; 
+                 comicLinkContainer.href = head + content.url; 
 
                 li.querySelectorAll('.link-chapter').forEach(button => {
                     button.addEventListener('click', e => {
@@ -323,6 +325,8 @@ function loadingComic(){
                         comicLinkContainer.href = chapterLink;
                     });
                 });
+
+                console.log(comicLinkContainer.href);
                 
                 // remove
                 li.querySelectorAll('.remove').forEach(button => {
