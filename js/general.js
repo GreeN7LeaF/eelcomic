@@ -234,17 +234,24 @@ function follow(){
         //chap mới nhất hiện tại của truyện
         var chapterNew = document.querySelector('#episode_list').lastElementChild.querySelector('.no').innerHTML;
         var url = window.location.href;
-        //ink ảnh
-        var link = url.substring(21); //khi web được bật thông qua file trong folder zip
+        //link liên kết
+        var link;
         
+        //link liên kết
         //trường hợp web được host lên
         if(url.includes('eelcomic')){
             link = url.splice(0, url.indexOf('eelcomic') + 8, '');
-            console.log(link);
+            i = document.querySelector('.cover-img').firstElementChild.src.splice(0, url.indexOf('eelcomic') + 8, '');
         }else{
+            //khi web được bật thông qua file trong folder zip
+            link = url.substring(21); 
+            i = document.querySelector('.cover-img').firstElementChild.src.substring(22);
             console.log('nope');
         }
-    
+        
+        console.log(link);
+        console.log(i);
+
         var comics = [];
         comics = JSON.parse(localStorage.getItem('followComics')) || [];
         const tmp = {image: i, title: tl, chap: chapterNew, url: link};
