@@ -105,7 +105,7 @@ function upComment(){
         var time = tmp.querySelector('.detail-list-comment-title').lastElementChild;
         
         console.log(input.length);
-        if(input > 0){
+        if(input.length > 0){
             // change infor of last comment
             content.innerHTML = input;
             nameC.innerHTML = name;
@@ -319,7 +319,7 @@ function loadingComic(){
 
                 var comicLinkContainer = li.querySelector('.cw-list-item');
                  comicLinkContainer.href = head + content.url; 
-                 
+
                 li.querySelectorAll('.link-chapter').forEach(button => {
                     button.addEventListener('click', e => {
                         var comicLinkContainer = li.querySelector('.cw-list-item');
