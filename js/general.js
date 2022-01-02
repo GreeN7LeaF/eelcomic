@@ -309,10 +309,17 @@ function loadingComic(){
 
                 // link chapter
                 var chapterNum = chap.innerHTML;
-                var head = currPage.splice(currPage.indexOf('eelcomic') + 8, currPage.length-1, '');
+                var head;
+
+                if(currPage.includes('eelcomic')){
+                    head = currPage.splice(currPage.indexOf('eelcomic') + 8, currPage.length-1, '');
+                }else{
+                    head = currPage.substring(0, currPage.indexOf('/') + 1);
+                }
+
                 var comicLinkContainer = li.querySelector('.cw-list-item');
                  comicLinkContainer.href = head + content.url; 
-
+                 
                 li.querySelectorAll('.link-chapter').forEach(button => {
                     button.addEventListener('click', e => {
                         var comicLinkContainer = li.querySelector('.cw-list-item');
@@ -322,6 +329,7 @@ function loadingComic(){
                         comicLinkContainer.href = chapterLink;
                     });
                 });
+
                 // remove
                 li.querySelectorAll('.remove').forEach(button => {
                     button.addEventListener('click', () => {

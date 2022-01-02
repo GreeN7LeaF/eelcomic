@@ -1,20 +1,19 @@
 function preChapter(){
     var thisHref = window.location.href;
     var url;
+    var head;
 
     if(thisHref.includes('eelcomic')){
         url = thisHref.splice(0, thisHref.indexOf('eelcomic') + 8, '');
+        head = thisHref.splice(thisHref.indexOf('eelcomic') + 8, thisHref.length - 1, '');
     }else{
         url = thisHref.substring(21);
+        head = thisHref.substring(0, 21);
     }
-
-    var head = thisHref.splice(thisHref.indexOf('eelcomic') + 8, thisHref.length - 1, '');
-
-    var chapters = document.getElementsByClassName('danh-sach-chuong')[0].options.length;
 
     var match = url.match(/chap_(\d+)/)
     if (match) {
-        if(match[1] < chapters){
+        if(match[1] > 1){
             var pre = parseInt(match[1]) - 1;
             var tmp = url.replace(match[1], pre);
 
@@ -27,16 +26,15 @@ function preChapter(){
 function nextChapter(){
     var thisHref = window.location.href;
     var url;
+    var head;
 
     if(thisHref.includes('eelcomic')){
         url = thisHref.splice(0, thisHref.indexOf('eelcomic') + 8, '');
+        head = thisHref.splice(thisHref.indexOf('eelcomic') + 8, thisHref.length - 1, '');
     }else{
         url = thisHref.substring(21);
+        head = thisHref.substring(0, 21);
     }
-
-    var head = thisHref.splice(thisHref.indexOf('eelcomic') + 8, thisHref.length - 1, '');
-    console.log(url);
-    console.log(head);
 
     var chapters = document.getElementsByClassName('danh-sach-chuong')[0].options.length;
 
