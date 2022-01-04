@@ -49,3 +49,11 @@ function nextChapter(){
         }
     }
 }
+
+function changeChapter(ele){
+    var thisPage = window.location.href;
+    var chapLink = ele.value.substring(ele.value.indexOf('chap'), ele.value.indexOf('chap') + 6);
+
+    var destination = thisPage.splice(thisPage.indexOf('html') - 7, 6, chapLink);
+    window.location.href = destination;
+}

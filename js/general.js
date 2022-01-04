@@ -104,7 +104,6 @@ function upComment(){
         var content = tmp.querySelector('.detail-list-comment-content');
         var time = tmp.querySelector('.detail-list-comment-title').lastElementChild;
         
-        console.log(input.length);
         if(input.length > 0){
             // change infor of last comment
             content.innerHTML = input;
@@ -329,6 +328,11 @@ function loadingComic(){
                         comicLinkContainer.href = chapterLink;
                     });
                 });
+
+                if(comicLinkContainer.href.includes('comiccollection')){
+                    comicLinkContainer.href.replace('comiccollection', 'comicCollection');
+                    console.log('replace');
+                }
 
                 // remove
                 li.querySelectorAll('.remove').forEach(button => {
