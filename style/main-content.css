@@ -788,9 +788,10 @@ footer{
     background-color: gray;
 }
 @media all and (min-width: 1200px){
-    .theloai-wrapper .theloai-list{
+    /* .theloai-wrapper .theloai-list{
         margin: 30px;
-    }
+        padding: 0;
+    } */
     #showComments li img{
         margin-top: 0;
         height: 6rem;

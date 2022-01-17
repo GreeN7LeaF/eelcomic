@@ -34,6 +34,18 @@
         padding-left: 5px;
         padding-top: 18px;
     }
+
+    .main-type{
+        height: 310px;
+    }
+
+    .main-type .theloai-list{
+        padding: 10px 20px;
+    }
+
+    .main-type .theloai-list a{
+        margin: 2px 10px;
+    }
 }
 
 @media (max-width: 1500px){
@@ -680,12 +692,17 @@
     }
 
     /* manhwa novel main list */
+    .cw-list
+    {
+        margin: auto;
+    }
+
     .cw-list li{
         width: 24vw;
     }
 
     .cw-list .comic--img{
-        height: 245px;
+        height: 180px;
     }
 
     .cw--list li{
@@ -693,9 +710,30 @@
         margin-right: 20px;
     }
 
-    .cw--list .infor{
-        font-size: 15px;
-        height: auto;
+    .cw-list .link-chapter-wrap 
+    {
+        font-size: 12px;
+    }
+
+    .cw-list .link-chapter-wrap button
+    {
+        width: 50%;
+        padding: 0 1px;
+        margin-left: 5px;
+        line-height: 5px;
+    }
+
+    .cw-list .link-chapter-wrap .viewer::before
+    {
+        margin: 0;
+        margin-right: 2px;   
+    }
+
+    .cw--list .infor,
+    .cw-list .infor
+    {
+        padding-top: 10px;
+        font-size: 15px !important;
     }
 
     .cw--list .thumbBox{
